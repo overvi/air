@@ -20,7 +20,7 @@ module.exports = {
         "auth/password-reset/index": "./src/auth/password-reset/index.html",
         "auth/code/index": "./src/auth/code/index.html",
         "home/index": "./src/home/index.html",
-        "home/temp-header": "./src/home/temp-header.html",
+     
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag
