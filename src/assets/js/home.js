@@ -1046,6 +1046,16 @@ const blog = new Splide(".splide", {
   direction: "rtl",
 
   arrows: false,
+
+  mediaQuery: 'min',
+  breakpoints: {
+		1440: {
+			perPage : 5
+		},
+    1660 : {
+      perPage : 6
+    }
+  }
 }).mount();
 
 document
