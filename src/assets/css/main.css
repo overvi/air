@@ -1,0 +1,398 @@
+@import "@splidejs/splide/css/core";
+@import "tailwindcss";
+
+/* Font Faces */
+
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Light.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Black.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-Regular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Yekan";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/yekan/YekanBakhFaNum-SemiBold.woff2") format("woff2");
+}
+
+@theme {
+  /* Colors */
+
+  --color-gray-100: oklch(96.72% 0 0); /* #f4f4f4 */
+  --color-gray-150: oklch(89.45% 0 0); /* #dcdcdc */
+  --color-gray-200: oklch(76.04% 0 0); /* #b1b1b1 */
+  --color-gray-250: oklch(0.95 0 0); /* #efefef */
+  --color-gray-300: oklch(92.8% 0 0); /* #e7e7e7 */
+  --color-gray-400: oklch(91.89% 0 0); /* #e4e4e4 */
+  --color-gray-500: oklch(76.68% 0 0); /* #b3b3b3 */
+  --color-gray-tag: oklch(93.7% 0 0); /* #eaeaea */
+  --color-gray-700: oklch(36% 0 0); /* #3d3d3d */
+  --color-gray-750: oklch(0.26 0 0); /* #232323 */
+  --color-gray-550: oklch(0.52 0 0); /* #696969 */
+  --color-gray-800: oklch(0.28 0 0); /* #292929 */
+  --color-red-700: oklch(0.55 0.2265 29.23); /* #d70000 */
+  --color-pink-200: oklch(0.91 0.0357 17.82) /* #f8d8d8*/;
+
+  /* Borders */
+
+  --radius-6xl: 3.125rem;
+  --radius-xxl: 0.875rem;
+  --radius-3xl: 1.875rem;
+  --radius-xxs: 0.625rem;
+
+  /* Typography */
+
+  --text-sm: 0.875rem;
+  --text-tiny: 0.625rem;
+  --text-so-tiny: 0.5rem;
+
+  /* Screen */
+
+  --breakpoint-lg: 68.5625rem;
+  --breakpoint-xl: 85.5625rem;
+  --breakpoint-xs: 24.375rem;
+
+  /* Fonts */
+
+  --font-poopins: "Poppins", "sens-serif";
+}
+
+@layer base {
+  html::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    scrollbar-width: none;
+  }
+  body {
+    color: #000;
+    font-family: "Yekan";
+  }
+  button {
+    cursor: pointer;
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield !important;
+    appearance: none;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+    font: inherit;
+  }
+}
+
+.page-content {
+  padding-left: clamp(14px, calc(3vw - 4px), 72px);
+  padding-right: clamp(14px, calc(3vw - 4px), 72px);
+}
+
+.input:has(input:not(:placeholder-shown)) .input-mimic-label {
+  font-size: var(--text-so-tiny);
+}
+.input:has(input:not(:placeholder-shown)) .input-icon path {
+  fill: black;
+}
+.input:has(input:not(:placeholder-shown)) {
+  border-color: black;
+}
+
+.custom-select:has(select[placeholder]) .select-value {
+  @apply font-light;
+}
+
+.custom-select {
+  font-family: Yekan;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.custom-select .select-value {
+  @apply font-bold;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,
+.select-selected {
+  @apply text-black;
+
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
+  @apply absolute top-full right-0 left-0 z-50 mt-[0.25rem] rounded-lg bg-white !p-4 !pb-5 *:!text-sm;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.active-nav-link {
+  @apply font-bold text-black;
+}
+
+.active-nav-link::before {
+  content: url('data:image/svg+xml,<svg width="43" height="15" viewBox="0 0 43 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.0007 5L41.0007 5C42.1053 5 43.0007 5.89543 43.0007 7C43.0007 8.10457 42.1053 9 41.0007 9L13.4063 9L15.0007 5Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M4.70226 8.75H2.18976C1.77536 8.75 1.37793 8.58538 1.0849 8.29235C0.791876 7.99933 0.627256 7.6019 0.627256 7.1875C0.627256 6.7731 0.791876 6.37567 1.0849 6.08265C1.37793 5.78962 1.77536 5.625 2.18976 5.625H10.866C10.982 5.62494 11.0958 5.59257 11.1945 5.53153C11.2931 5.47049 11.3729 5.38318 11.4248 5.27937L11.7048 4.72062C11.7566 4.61682 11.8364 4.52951 11.9351 4.46847C12.0337 4.40743 12.1475 4.37506 12.2635 4.375H13.4291C13.5326 4.37491 13.6345 4.40051 13.7256 4.44951C13.8168 4.49851 13.8943 4.56937 13.9513 4.65573C14.0083 4.7421 14.043 4.84126 14.0522 4.94433C14.0614 5.0474 14.0449 5.15114 14.0041 5.24625L12.6648 8.37125C12.6165 8.48375 12.5363 8.57961 12.4341 8.64694C12.3319 8.71427 12.2122 8.75011 12.0898 8.75H9.67538C9.5733 8.75006 9.47279 8.77513 9.38263 8.82301C9.29247 8.87089 9.21542 8.94013 9.1582 9.02466C9.10098 9.1092 9.06533 9.20646 9.05438 9.30796C9.04343 9.40945 9.05751 9.51208 9.09538 9.60688L9.65851 11.0187C9.69623 11.1135 9.71021 11.216 9.69922 11.3173C9.68824 11.4187 9.65263 11.5158 9.5955 11.6003C9.53836 11.6847 9.46144 11.7539 9.37144 11.8018C9.28143 11.8496 9.18108 11.8748 9.07913 11.875H7.80288C7.70915 11.875 7.61661 11.854 7.53212 11.8134C7.44763 11.7728 7.37334 11.7138 7.31476 11.6406L5.18976 8.98438C5.13124 8.91129 5.05705 8.85228 4.97267 8.81172C4.8883 8.77115 4.79588 8.75006 4.70226 8.75ZM9.06476 5H6.09601L7.31476 3.375C7.37297 3.29738 7.44846 3.23438 7.53525 3.19098C7.62203 3.14759 7.71773 3.125 7.81476 3.125H8.99101C9.0975 3.12506 9.20221 3.15232 9.29521 3.20422C9.38821 3.25611 9.4664 3.3309 9.52238 3.4215C9.57835 3.51209 9.61025 3.61549 9.61504 3.72188C9.61983 3.82827 9.59736 3.93411 9.54976 4.02938L9.06476 5Z" fill="black"/></svg>');
+
+  @apply absolute right-0 -bottom-5 left-0 mx-auto w-fit;
+}
+.active-nav-link-mobile::before {
+  content: url('data:image/svg+xml,<svg width="183" height="21" viewBox="0 0 183 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 8L181 8C182.105 8 183 8.89543 183 10C183 11.1046 182.105 12 181 12L19 12L21 8Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.58336 12.25H3.06586C2.48569 12.25 1.92929 12.0195 1.51906 11.6093C1.10882 11.1991 0.878355 10.6427 0.878355 10.0625C0.878355 9.48234 1.10882 8.92594 1.51906 8.5157C1.92929 8.10547 2.48569 7.875 3.06586 7.875H15.2126C15.3751 7.87491 15.5343 7.8296 15.6724 7.74414C15.8106 7.65868 15.9222 7.53645 15.9949 7.39112L16.3869 6.60888C16.4595 6.46355 16.5711 6.34132 16.7093 6.25586C16.8474 6.1704 17.0067 6.12509 17.1691 6.125H18.801C18.9458 6.12487 19.0885 6.16071 19.2161 6.22931C19.3437 6.29791 19.4523 6.39712 19.5321 6.51803C19.6118 6.63894 19.6604 6.77777 19.6733 6.92206C19.6862 7.06636 19.6631 7.2116 19.606 7.34475L17.7309 11.7197C17.6633 11.8773 17.5511 12.0115 17.408 12.1057C17.2648 12.2 17.0972 12.2502 16.9259 12.25H13.5457C13.4028 12.2501 13.2621 12.2852 13.1359 12.3522C13.0097 12.4192 12.9018 12.5162 12.8217 12.6345C12.7416 12.7529 12.6917 12.889 12.6763 13.0311C12.661 13.1732 12.6807 13.3169 12.7337 13.4496L13.5221 15.4262C13.5749 15.5589 13.5945 15.7024 13.5791 15.8443C13.5637 15.9862 13.5139 16.1221 13.4339 16.2404C13.3539 16.3586 13.2462 16.4554 13.1202 16.5225C12.9942 16.5895 12.8537 16.6247 12.711 16.625H10.9242C10.793 16.625 10.6635 16.5956 10.5452 16.5388C10.4269 16.482 10.3229 16.3993 10.2409 16.2969L7.26586 12.5781C7.18393 12.4758 7.08007 12.3932 6.96194 12.3364C6.84381 12.2796 6.71443 12.2501 6.58336 12.25ZM12.6909 7H8.53461L10.2409 4.725C10.3224 4.61633 10.428 4.52813 10.5495 4.46738C10.671 4.40663 10.805 4.375 10.9409 4.375H12.5876C12.7367 4.37508 12.8833 4.41325 13.0135 4.4859C13.1437 4.55855 13.2532 4.66326 13.3315 4.7901C13.4099 4.91693 13.4545 5.06169 13.4613 5.21063C13.468 5.35957 13.4365 5.50776 13.3699 5.64112L12.6909 7Z" fill="black"/></svg>');
+}
+
+.active-tab {
+  @apply relative font-black;
+}
+.active-tab::before {
+  @apply absolute right-0 -bottom-4.5 left-0 mx-auto;
+  content: url('data:image/svg+xml,<svg width="69" height="3" viewBox="0 0 69 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.000488281H69V1.00049C69 2.10506 68.1046 3.00049 67 3.00049H2C0.89543 3.00049 0 2.10506 0 1.00049V0.000488281Z" fill="white"/></svg>');
+}
+
+.radio {
+  @apply relative mr-2 inline-block size-[12px] rounded-[50%] outline content-none after:absolute after:top-[50%] after:left-[50%] after:size-[6px] after:-translate-x-1/2 after:-translate-y-1/2 after:rounded-[50%] after:opacity-0 after:outline-4 after:outline-white after:transition-all;
+}
+.radio--black {
+  @apply after:outline-black;
+}
+
+.radio-hidden:checked + .radio::after {
+  @apply opacity-100;
+}
+.radio-hidden:checked + .radio {
+  @apply outline-0;
+}
+
+@keyframes moveRight {
+  0% {
+    right: 4rem;
+    top: 0;
+    rotate: 0deg;
+  }
+
+  30% {
+    right: 75.2rem;
+    top: 0;
+    rotate: 0deg;
+  }
+
+  35% {
+    right: 75.2rem;
+    top: 0;
+    rotate: -90deg;
+  }
+
+  40% {
+    right: 75.2rem;
+    rotate: -90deg;
+    top: 0;
+  }
+
+  45% {
+    right: 75.1rem;
+    rotate: -90deg;
+    top: 7.5rem;
+  }
+
+  55% {
+    right: 75.1rem;
+    rotate: -90deg;
+    top: 7.5rem;
+  }
+
+  60% {
+    right: 75.1rem;
+    top: 7.5rem;
+    rotate: -270deg;
+  }
+  65% {
+    right: 75.1rem;
+    top: 0rem;
+    rotate: -270deg;
+  }
+  70% {
+    right: 75.1rem;
+    top: 0rem;
+    rotate: -180deg;
+  }
+
+  100% {
+    right: 4rem;
+    top: 0rem;
+    rotate: -180deg;
+  }
+}
+
+.airplane-animation {
+  animation: moveRight 20s ease infinite;
+}
+
+.ticket-search-box {
+  position: relative;
+}
+.ticket-search-overlay {
+  --r: 13px;
+  overflow: visible;
+  height: 50%;
+  width: 100%;
+
+  position: absolute;
+}
+
+.ticket-search-overlay--half {
+  mask: radial-gradient(var(--r) at var(--r) 65px, #0000 calc(100% - 1px), #000)
+    calc(-1 * var(--r));
+  @apply lg:h-full lg:rounded-b-4xl;
+}
+
+.ticket-search-overlay--full {
+  @apply lg:hidden;
+  bottom: 0;
+  mask: radial-gradient(var(--r) at var(--r) 145px, #0000 98%, #000)
+    calc(-1 * var(--r));
+}
+
+.checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--form-background);
+  margin: 0;
+  border-radius: 5px !important;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.1em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+.checkbox:checked::before {
+  content: url('data:image/svg+xml,<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.05297 5.38624C2.91964 5.38624 2.79297 5.33291 2.69964 5.23958L0.812969 3.35291C0.619635 3.15958 0.619635 2.83958 0.812969 2.64624C1.0063 2.45291 1.3263 2.45291 1.51964 2.64624L3.05297 4.17958L6.47964 0.75291C6.67297 0.559577 6.99297 0.559577 7.1863 0.75291C7.37964 0.946243 7.37964 1.26624 7.1863 1.45958L3.4063 5.23958C3.31297 5.33291 3.1863 5.38624 3.05297 5.38624Z" fill="black"/></svg>');
+}
+.checkbox:checked {
+  border: 0;
+  background-color: var(--color-gray-500);
+}
+
+.checkbox:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+
+.checkbox:disabled {
+  --form-control-color: var(--form-control-disabled);
+
+  color: var(--form-control-disabled);
+  cursor: not-allowed;
+}
+
+.options-list > * {
+  direction: rtl;
+}
+
+.options-list::-webkit-scrollbar-thumb {
+  @apply rounded-[3px] !bg-black;
+}
+.options-list::-webkit-scrollbar-track {
+  @apply bg-gray-tag rounded-r-full;
+}
+.options-list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+@-moz-document url-prefix() {
+  .options-list {
+    scrollbar-width: thin; /* Makes scrollbar thin */
+    scrollbar-color: black #eaeaea; /* Thumb color | Track color */
+  }
+}
+
+.outer {
+  clip-path: inset(-100vw -100vw -100vw 0);
+}
+
+.card {
+  transition: transform 0.5s ease;
+}
+.primary-fs {
+  font-size: clamp(0.875rem, 0.3659rem + 1.2195vw, 1rem);
+}
+.secondary-fs {
+  font-size: clamp(0.625rem, 0.3659rem + 1.2195vw, 1rem);
+}
+
+.ticket-grid-cols {
+  grid-template-columns: 1fr 22.5% 15% 15%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.2s,
+    visibility 0.2s;
+  z-index: 10;
+  margin-top: 0.5rem;
+}
+
+.selected {
+  z-index : 999999
+}
+
+@media (min-width: 68.5625rem) {
+  .ticket-search-overlay {
+    --r: 30px;
+  }
+
+  .ticket-search-overlay--half {
+    mask: radial-gradient(var(--r) at var(--r), #0000 calc(100% - 1px), #000)
+      calc(-1 * var(--r));
+  }
+}

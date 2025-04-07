@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Reset</title>
+    <link rel="stylesheet" href="@assets/css/main.css" />
+  </head>
+  <body class="px-6 pt-6 pb-6">
+    <main class="bg-gray-100 rounded-6xl min-h-[calc(100vh-3rem)]">
+      <div class="flex items-center py-6 mx-auto">
+        <div class="basis-[60%]">
+          <div class="relative flex justify-center">
+            <div
+              class="bg-contain w-[63vw] h-[58vw] bg-no-repeat bg-[url(../images/image.png)]"
+            ></div>
+          </div>
+        </div>
+        <div class="flex basis-[40%] flex-col justify-center items-center">
+          <img src="@assets/images/logo.svg" alt="" />
+          <h1 class="text-3xl text-center font-bold leading-normal">
+            لورم ایپسوم متن ساختگی با<br />
+            تولید سادگی نامفهوم!
+          </h1>
+
+          <div class="mt-[3.65rem] max-w-[22.75rem] w-full">
+            <form class="w-full">
+              <input
+                type="text"
+                name="username"
+                autocomplete="username"
+                hidden
+              />
+              <label
+                for="password-input-pre"
+                class="bg-white input mt-4 has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+              >
+                <div>
+                  <div class="relative pb-2.5">
+                    <p
+                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
+                    >
+                      کلمه عبور
+                    </p>
+                  </div>
+                  <input
+                    class="text-xs font-bold placeholder:text-tiny w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
+                    type="password"
+                    autocomplete="new-password"
+                    id="password-input-pre"
+                    placeholder="کلمه عبور خود را وارد کنید..."
+                  />
+                </div>
+                <button type="button" class="password-visibility">
+                  <svg
+                    class="input-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M21.25 9.15018C18.94 5.52017 15.56 3.43018 12 3.43018C10.22 3.43018 8.49 3.95018 6.91 4.92018C5.33 5.90018 3.91 7.33017 2.75 9.15018C1.75 10.7202 1.75 13.2702 2.75 14.8402C5.06 18.4802 8.44 20.5602 12 20.5602C13.78 20.5602 15.51 20.0402 17.09 19.0702C18.67 18.0902 20.09 16.6602 21.25 14.8402C22.25 13.2802 22.25 10.7202 21.25 9.15018ZM12 16.0402C9.76 16.0402 7.96 14.2302 7.96 12.0002C7.96 9.77018 9.76 7.96018 12 7.96018C14.24 7.96018 16.04 9.77018 16.04 12.0002C16.04 14.2302 14.24 16.0402 12 16.0402Z"
+                      fill="#6A6A6A"
+                    />
+                    <path
+                      d="M12.0004 9.14014C10.4304 9.14014 9.15039 10.4201 9.15039 12.0001C9.15039 13.5701 10.4304 14.8501 12.0004 14.8501C13.5704 14.8501 14.8604 13.5701 14.8604 12.0001C14.8604 10.4301 13.5704 9.14014 12.0004 9.14014Z"
+                      fill="#6A6A6A"
+                    />
+                  </svg>
+                </button>
+              </label>
+              <label
+                for="password-input-confirm"
+                class="bg-white input mt-4 has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+              >
+                <div>
+                  <div class="relative pb-2.5">
+                    <p
+                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
+                    >
+                      تکرار کلمه عبور
+                    </p>
+                  </div>
+                  <input
+                    class="text-xs font-bold placeholder:text-tiny w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
+                    type="password"
+                    autocomplete="new-password"
+                    id="password-input-confirm"
+                    placeholder="کلمه عبور خود را وارد کنید..."
+                  />
+                </div>
+                <button class="password-visibility" type="button">
+                  <svg
+                    class="input-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M21.25 9.15018C18.94 5.52017 15.56 3.43018 12 3.43018C10.22 3.43018 8.49 3.95018 6.91 4.92018C5.33 5.90018 3.91 7.33017 2.75 9.15018C1.75 10.7202 1.75 13.2702 2.75 14.8402C5.06 18.4802 8.44 20.5602 12 20.5602C13.78 20.5602 15.51 20.0402 17.09 19.0702C18.67 18.0902 20.09 16.6602 21.25 14.8402C22.25 13.2802 22.25 10.7202 21.25 9.15018ZM12 16.0402C9.76 16.0402 7.96 14.2302 7.96 12.0002C7.96 9.77018 9.76 7.96018 12 7.96018C14.24 7.96018 16.04 9.77018 16.04 12.0002C16.04 14.2302 14.24 16.0402 12 16.0402Z"
+                      fill="#6A6A6A"
+                    />
+                    <path
+                      d="M12.0004 9.14014C10.4304 9.14014 9.15039 10.4201 9.15039 12.0001C9.15039 13.5701 10.4304 14.8501 12.0004 14.8501C13.5704 14.8501 14.8604 13.5701 14.8604 12.0001C14.8604 10.4301 13.5704 9.14014 12.0004 9.14014Z"
+                      fill="#6A6A6A"
+                    />
+                  </svg>
+                </button>
+              </label>
+
+              <button
+                class="bg-black text-sm font-bold mt-6 rounded-xxl py-3.5 text-white w-full"
+              >
+                ثبت‌نام
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      const passwordVisibilityToggle = document.querySelectorAll(
+        ".password-visibility"
+      );
+      passwordVisibilityToggle.forEach((toggle) => {
+        toggle.addEventListener("click", (e) => {
+          const target = e.target
+            .closest("button")
+            .previousElementSibling.querySelector("input");
+          target.type = target.type == "text" ? "password" : "text";
+        });
+      });
+    </script>
+  </body>
+</html>

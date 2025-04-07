@@ -1,0 +1,328 @@
+:root {
+  --font: "Yekan";
+}
+
+.dp-btn {
+  border: 0;
+  background-color: inherit;
+}
+
+.whole-wrapper , .select-value , .select-items {
+  font-family: var(--font);
+}
+
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+.fw-bold {
+  font-weight: bold;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.dp .date_picker_calendar {
+  min-height: fit-content;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 1.25rem;
+}
+
+.dp .date_picker_calendar {
+  border-radius: 28px;
+  background: #fff;
+  width: 25.75rem;
+}
+
+.dp .calendar_header {
+  width: 100%;
+  min-height: 30px;
+
+  margin-bottom: 8px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #bebebe;
+  padding-bottom: 0.5rem;
+}
+
+.dp .cal-btn {
+  width: 20px;
+  height: 20px;
+  background: var(--dark-arrows-bg);
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.dp .cal-btn img {
+  width: 42%;
+  height: 42%;
+}
+
+.dp .cal-btn.back img {
+  transform: rotate(-90deg);
+}
+
+.dp .cal-btn.front img {
+  transform: rotate(90deg);
+}
+
+.dp .cal_days,
+.dp .calendar_main {
+  display: grid;
+  grid-template-columns: repeat(7, 1.8125rem);
+  gap: 10px;
+  color: var(--dark-inactive-fg);
+}
+
+.dp .cal_days {
+  white-space: nowrap;
+  margin-bottom: 10px;
+  font-size: 0.5rem;
+}
+
+.dp .calendar_main {
+  grid-template-rows: repeat(5, min(30px));
+}
+
+.dp .cell_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+
+  position: relative;
+}
+.dp .cal_label {
+  margin-inline-end: 0.875rem;
+  margin-block: 0;
+}
+.dp .current {
+  background: transparent;
+  color: black;
+}
+
+.dp.cal-btn:hover,
+.dp .current:hover {
+  cursor: pointer;
+}
+
+.dp .isSelected {
+  background: #292d32;
+  color: white;
+}
+
+.dp .hiddenz {
+  visibility: hidden;
+}
+
+.dp .change-calendar {
+  width: 100%;
+  border-radius: 9px;
+  padding-inline: 7px;
+  background-color: rgb(8, 7, 7);
+  padding-block: 0.3rem;
+  cursor: pointer;
+  color: white;
+  font-size: 0.75rem;
+
+  border: 0;
+}
+
+.dp .cal_date {
+  font-size: 0.75rem;
+  height: 30px;
+}
+.dp .cal_date.disabled {
+  background: #f5f6f8;
+  color: #b7b7b7;
+}
+.dp .whole-wrapper {
+  border-bottom: 1px solid #bebebe;
+  padding-bottom: 11px;
+}
+
+.dp .actions {
+  padding-top: 0.75rem;
+  gap: 6px;
+  justify-content: end;
+}
+.dp .actions * {
+  border-radius: 9px;
+}
+
+.dp .delete {
+  background: #f8f8f8;
+  width: 3.6875rem;
+  height: 1.75rem;
+  color: #8a8a8a;
+  font-size: 0.75rem;
+}
+
+.dp .select {
+  background-color: black;
+  color: white;
+  width: 3.8125rem;
+  height: 1.75rem;
+  font-size: 0.75rem;
+}
+
+.dp .custom-select {
+  font-family: Yekan;
+}
+
+.dp .custom-select select {
+  display: none;
+}
+
+.dp .select-items {
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.08);
+  background-color: white;
+  border-radius: 16px;
+  margin-top: 0.25rem;
+  padding: 24px;
+  left: initial;
+  right: initial;
+  top: initial;
+  padding-bottom: 20px;
+  position: absolute;
+
+  z-index: 50;
+}
+
+/* Hide the items when the select box is closed: */
+.dp .select-hide {
+  display: none;
+}
+.dp .select-value {
+  font-weight: normal;
+}
+
+.dp .select-container.open .dropdown-ico {
+  rotate: 180deg;
+}
+
+.dp .dropdown-ico {
+  line-height: 0.1;
+}
+
+/* Scroll Month Picker */
+
+.dp .month-picker {
+  width: 116px;
+  height: 215px;
+  padding-inline: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    180deg,
+    rgba(248, 248, 248, 0.2) 17.91%,
+    #f8f8f8 49.88%,
+    rgba(248, 248, 248, 0.2) 81.86%
+  );
+
+  position: relative;
+}
+
+.dp .month-picker-header {
+  background-color: #f9f9f9;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.dp .month-selected {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dp .month-list-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.dp .month-list {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  overflow-y: auto;
+  height: 100%;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.dp .month-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.dp .month-list {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+
+.dp .month-list::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.dp .month-item {
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.dp .month-item.selected {
+  color: #2196f3;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.dp .selection-indicator {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Add padding to make items align perfectly with center */
+.dp .month-list::before,
+.dp .month-list::after {
+  content: "";
+  display: block;
+  height: 91px;
+}

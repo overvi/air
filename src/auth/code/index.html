@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code</title>
+    <link rel="stylesheet" href="@assets/css/main.css" />
+  </head>
+  <body class="px-6 pt-6 pb-6">
+    <main class="bg-gray-100 rounded-6xl min-h-[calc(100vh-3rem)]">
+      <div class="flex items-center py-6 mx-auto">
+        <div class="basis-[60%]">
+          <div class="relative flex justify-center">
+            <div
+              class="bg-contain w-[63vw] h-[58vw] bg-no-repeat bg-[url(../images/image.png)]"
+            ></div>
+          </div>
+        </div>
+        <div class="flex basis-[40%] flex-col justify-center items-center">
+          <img src="@assets/images/logo.svg" alt="" />
+          <h1 class="text-3xl text-center font-bold leading-normal">
+            لورم ایپسوم متن ساختگی با<br />
+            تولید سادگی نامفهوم!
+          </h1>
+
+          <div class="mt-[3.62rem] max-w-[22.75rem] w-full">
+            <form dir="ltr" class="w-full" id="form">
+              <p class="text-sm mb-4 text-nowrap">
+                کد 4 رقمی که به شماره موبایلتان ارسال شده است را وارد کنید.
+              </p>
+              <div
+                class="flex items-center flex-row-reverse *:font-bold *:flex *:items-center *:text-center *:justify-center *:rounded-xxl gap-3 *:w-[100%] *:aspect-square *:bg-white"
+              >
+                <input
+                  type="text"
+                  id="digit4"
+                  class="confirmation-box"
+                  maxlength="1"
+                  oninput="this.value = this.value.replace(/[^0-9.-]/g, '');moveToNext(this, '', 'digit3')"
+                />
+
+                <input
+                  type="text"
+                  id="digit3"
+                  class="confirmation-box"
+                  maxlength="1"
+                  oninput="this.value = this.value.replace(/[^0-9.-]/g, '');moveToNext(this, 'digit4', 'digit2')"
+                />
+
+                <input
+                  type="text"
+                  id="digit2"
+                  class="confirmation-box"
+                  maxlength="1"
+                  oninput="this.value = this.value.replace(/[^0-9.-]/g, '');moveToNext(this, 'digit3', 'digit1')"
+                />
+                <input
+                  type="text"
+                  id="digit1"
+                  class="confirmation-box"
+                  maxlength="1"
+                  oninput="this.value = this.value.replace(/[^0-9.-]/g, '');moveToNext(this, 'digit2', '')"
+                />
+              </div>
+              <button
+                type="submit"
+                class="bg-black text-sm font-bold mt-6 rounded-xxl py-3.5 text-white w-full"
+              >
+                تایید
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      function moveToNext(currentInput, nextInputId, prevInputId) {
+        if (currentInput.value.length === 1) {
+          if (nextInputId) {
+            document.getElementById(nextInputId).focus();
+          }
+        }
+        if (currentInput.value.length === 0) {
+          if (prevInputId) {
+            document.getElementById(prevInputId).focus();
+          }
+        }
+      }
+
+      // Function to handle form submission (or just logging the entered code)
+      function submitCode() {
+        const code =
+          document.getElementById("digit1").value +
+          document.getElementById("digit2").value +
+          document.getElementById("digit3").value +
+          document.getElementById("digit4").value;
+        console.log("Entered code:", code);
+        // You can use this code for further validation or submission
+      }
+
+      document.getElementById("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+        submitCode();
+        window.location = "/auth/password-reset";
+      });
+    </script>
+  </body>
+</html>
