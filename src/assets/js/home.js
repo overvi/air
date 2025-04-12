@@ -112,7 +112,7 @@ function updatePassengerText(prefix) {
 
   let text = parts.join(" , ");
 
-  passengerInput.value =text;
+  passengerInput.value = text;
 }
 
 const citySelectCallback = (value, index) => {
@@ -839,19 +839,28 @@ function drawFlightPath(fromCityId, toCityId, poses, highlight = false) {
   }
   const flightPos = getPointOnCurve(t);
   const flightAngle = getTangentAngle(t);
+  const isMovingLeft = toCenter.x < fromCenter.x;
 
   const flight = document.createElementNS("http://www.w3.org/2000/svg", "svg");
   flight.innerHTML = `
 <path style="transform-origin:center" fill-rule="evenodd" clip-rule="evenodd" d="M24.5857 14.6214L31.2548 13.6398C32.3548 13.4779 33.4498 12.8828 34.2989 11.9854C35.1481 11.088 35.6818 9.96176 35.7827 8.85453C35.8836 7.7473 35.5434 6.74974 34.837 6.08129C34.1306 5.41285 33.1157 5.12828 32.0158 5.29018L8.98595 8.67998C8.67796 8.72515 8.38396 8.68311 8.13688 8.55856C7.8898 8.43402 7.6994 8.23189 7.587 7.97481L6.97984 6.5913C6.86744 6.33422 6.67704 6.13209 6.42996 6.00755C6.18288 5.883 5.88888 5.84096 5.58089 5.88613L2.48691 6.34154C2.21226 6.38172 1.9356 6.48993 1.68174 6.65646C1.42789 6.82299 1.20479 7.04262 1.03246 7.29564C0.860135 7.54867 0.743978 7.82717 0.694415 8.10616C0.644853 8.38514 0.663435 8.65588 0.748493 8.89406L3.54268 16.7204C3.64329 17.0021 3.83282 17.2269 4.08775 17.3669C4.34267 17.5069 4.65178 17.5558 4.9767 17.5077L11.3853 16.5644C11.6562 16.5247 11.9169 16.5524 12.1446 16.6451C12.3722 16.7378 12.5599 16.8927 12.6912 17.0962C12.8225 17.2997 12.8934 17.5457 12.8978 17.8126C12.9021 18.0795 12.8398 18.3592 12.7162 18.6273L10.8776 22.6197C10.7544 22.8875 10.6924 23.1668 10.6968 23.4333C10.7013 23.6999 10.7722 23.9455 10.9033 24.1488C11.0343 24.352 11.2217 24.5068 11.4489 24.5996C11.6762 24.6924 11.9364 24.7204 12.207 24.6811L15.5946 24.1825C15.8434 24.1459 16.0941 24.0535 16.3283 23.9121C16.5624 23.7707 16.774 23.5839 16.9473 23.3655L23.2347 15.4381C23.4078 15.22 23.6191 15.0333 23.8529 14.892C24.0868 14.7506 24.3372 14.6582 24.5857 14.6214ZM13.9193 6.30631L21.7994 5.14642L18.9601 1.28079C18.8245 1.09613 18.6395 0.957292 18.4197 0.87526C18.1999 0.793228 17.9514 0.770256 17.6938 0.808165L14.5717 1.26772C14.289 1.30948 14.0044 1.42325 13.7449 1.59823C13.4854 1.77321 13.2596 2.0036 13.089 2.26753C12.9184 2.53147 12.8085 2.8202 12.7699 3.10632C12.7313 3.39244 12.7651 3.66647 12.8683 3.90241L13.9193 6.30631Z" fill="black"/>
 
 `;
+
   flight.setAttribute("x", flightPos.x - 10);
   flight.setAttribute("y", flightPos.y - 50);
   flight.setAttribute("width", "40");
   flight.setAttribute("height", "35");
+  const ROTATION_OFFSET = -15; // tweak this value until plane looks level
+
   flight
     .querySelector("path")
-    .setAttribute("transform", `rotate(${flightAngle})`);
+    .setAttribute(
+      "transform",
+      isMovingLeft
+        ? `rotate(${flightAngle + ROTATION_OFFSET}) scale(1 , -1)`
+        : `rotate(${flightAngle + ROTATION_OFFSET})`,
+    );
 
   svg.appendChild(flight);
 
@@ -868,7 +877,7 @@ function createCityLabel(cityId, endPos, poses) {
   const cityLabel = document.createElement("div");
   cityLabel.classList.add("city-label");
   cityLabel.innerHTML = `
-    <div class="label-box text-sm bg-[#DFDFDF]/40 py-1 border border-[#ABABAB] px-4 rounded-xl flex items-center gap-8.5">
+    <div class="label-box text-sm bg-[#DFDFDF]/40 py-1 border border-[#ABABAB] ps-1 pe-4 rounded-xl flex items-center gap-8.5">
       <img src=${myImage} alt="${cityId}" />
       <span>${el.getAttribute("data-name")}</span>
     </div>
@@ -1047,15 +1056,15 @@ const blog = new Splide(".splide", {
 
   arrows: false,
 
-  mediaQuery: 'min',
+  mediaQuery: "min",
   breakpoints: {
-		1440: {
-			perPage : 5
-		},
-    1660 : {
-      perPage : 6
-    }
-  }
+    1440: {
+      perPage: 5,
+    },
+    1660: {
+      perPage: 6,
+    },
+  },
 }).mount();
 
 document
@@ -1070,88 +1079,86 @@ document
     blog.go(">"); // Go to the next slide
   });
 
-  const wrapper = document.querySelector(".card-wrapper");
-  let cards = Array.from(wrapper.children);
-  let isAnimating = false;
-  const autoSlideInterval = 3000;
-  let autoSlideTimer;
-  
-  function layoutCards() {
-    const gap = 16;
-    let offset = 0;
-  
-    cards.forEach((card, index) => {
-      const isSelected = card.classList.contains("selected");
-      card.style.transform = `translateX(${offset}px)`;
-      card.dataset.index = index;
-      offset += card.offsetWidth + gap;
-    });
-  }
-  
-  function moveCardToEnd() {
-    if (isAnimating) return;
-    isAnimating = true;
-  
-    const randomIndex = Math.floor(Math.random() * (cards.length - 1));
-    const selectedCard = cards[randomIndex];
-  
-    selectedCard.classList.add("fading-out");
-  
-    // Wait for fade-out to complete
-    setTimeout(() => {
-      selectedCard.classList.remove("fading-out");
-  
-      cards.splice(randomIndex, 1);
-      cards.push(selectedCard);
-  
-      cards.forEach(c => c.classList.remove("selected"));
-      cards[cards.length - 1].classList.add("selected");
-  
-      layoutCards();
-  
-      // Fade-in handled by CSS as opacity resets to 1
-      setTimeout(() => {
-        isAnimating = false;
-      }, 500);
-  
-    }, 500); // Duration matches fade-out transition
-  }
-  
+const wrapper = document.querySelector(".card-wrapper");
+let cards = Array.from(wrapper.children);
+let isAnimating = false;
+const autoSlideInterval = 3000;
+let autoSlideTimer;
+
+function layoutCards() {
+  const gap = 16;
+  let offset = 0;
+
+  cards.forEach((card, index) => {
+    const isSelected = card.classList.contains("selected");
+    card.style.transform = `translateX(${offset}px)`;
+    card.dataset.index = index;
+    offset += card.offsetWidth + gap;
+  });
+}
+
+function moveCardToEnd() {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const randomIndex = Math.floor(Math.random() * (cards.length - 1));
+  const selectedCard = cards[randomIndex];
+
+  selectedCard.classList.add("fading-out");
+
+  // Wait for fade-out to complete
   setTimeout(() => {
+    selectedCard.classList.remove("fading-out");
+
+    cards.splice(randomIndex, 1);
+    cards.push(selectedCard);
+
+    cards.forEach((c) => c.classList.remove("selected"));
+    cards[cards.length - 1].classList.add("selected");
+
     layoutCards();
-    addCardHoverListeners();
-    startAutoSlide();
-  }, 300);
-  
-  function startAutoSlide() {
-    clearInterval(autoSlideTimer);
-    autoSlideTimer = setInterval(moveCardToEnd, autoSlideInterval);
-  }
-  
-  function stopAutoSlide() {
-    clearInterval(autoSlideTimer);
-  }
-  
-  function addCardHoverListeners() {
-    cards.forEach(card => {
-      card.addEventListener("mouseenter", () => {
-        cards.forEach(c => c.classList.remove("selected"));
-        card.classList.add("selected");
- 
-        layoutCards(); // no stopAutoSlide here
-      });
-  
-      card.addEventListener("mouseleave", () => {
-        cards.forEach(c => c.classList.remove("selected"));
-        cards[cards.length - 1].classList.add("selected");
-        layoutCards(); // no startAutoSlide here
-      });
+
+    // Fade-in handled by CSS as opacity resets to 1
+    setTimeout(() => {
+      isAnimating = false;
+    }, 500);
+  }, 500); // Duration matches fade-out transition
+}
+
+setTimeout(() => {
+  layoutCards();
+  addCardHoverListeners();
+  startAutoSlide();
+}, 300);
+
+function startAutoSlide() {
+  clearInterval(autoSlideTimer);
+  autoSlideTimer = setInterval(moveCardToEnd, autoSlideInterval);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideTimer);
+}
+
+function addCardHoverListeners() {
+  cards.forEach((card) => {
+    card.addEventListener("mouseenter", () => {
+      cards.forEach((c) => c.classList.remove("selected"));
+      card.classList.add("selected");
+
+      layoutCards(); // no stopAutoSlide here
     });
-  }
-  
-  wrapper.addEventListener("mouseenter", stopAutoSlide);
-  wrapper.addEventListener("mouseleave", startAutoSlide);
-  
+
+    card.addEventListener("mouseleave", () => {
+      cards.forEach((c) => c.classList.remove("selected"));
+      cards[cards.length - 1].classList.add("selected");
+      layoutCards(); // no startAutoSlide here
+    });
+  });
+}
+
+wrapper.addEventListener("mouseenter", stopAutoSlide);
+wrapper.addEventListener("mouseleave", startAutoSlide);
 
 const mobileNavToggle = document.getElementById("mobile-nav-toggle");
 const closeNav = document.getElementById("close-nav");
