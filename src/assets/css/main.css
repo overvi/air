@@ -181,10 +181,10 @@
   content: url('data:image/svg+xml,<svg width="183" height="21" viewBox="0 0 183 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 8L181 8C182.105 8 183 8.89543 183 10C183 11.1046 182.105 12 181 12L19 12L21 8Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M6.58336 12.25H3.06586C2.48569 12.25 1.92929 12.0195 1.51906 11.6093C1.10882 11.1991 0.878355 10.6427 0.878355 10.0625C0.878355 9.48234 1.10882 8.92594 1.51906 8.5157C1.92929 8.10547 2.48569 7.875 3.06586 7.875H15.2126C15.3751 7.87491 15.5343 7.8296 15.6724 7.74414C15.8106 7.65868 15.9222 7.53645 15.9949 7.39112L16.3869 6.60888C16.4595 6.46355 16.5711 6.34132 16.7093 6.25586C16.8474 6.1704 17.0067 6.12509 17.1691 6.125H18.801C18.9458 6.12487 19.0885 6.16071 19.2161 6.22931C19.3437 6.29791 19.4523 6.39712 19.5321 6.51803C19.6118 6.63894 19.6604 6.77777 19.6733 6.92206C19.6862 7.06636 19.6631 7.2116 19.606 7.34475L17.7309 11.7197C17.6633 11.8773 17.5511 12.0115 17.408 12.1057C17.2648 12.2 17.0972 12.2502 16.9259 12.25H13.5457C13.4028 12.2501 13.2621 12.2852 13.1359 12.3522C13.0097 12.4192 12.9018 12.5162 12.8217 12.6345C12.7416 12.7529 12.6917 12.889 12.6763 13.0311C12.661 13.1732 12.6807 13.3169 12.7337 13.4496L13.5221 15.4262C13.5749 15.5589 13.5945 15.7024 13.5791 15.8443C13.5637 15.9862 13.5139 16.1221 13.4339 16.2404C13.3539 16.3586 13.2462 16.4554 13.1202 16.5225C12.9942 16.5895 12.8537 16.6247 12.711 16.625H10.9242C10.793 16.625 10.6635 16.5956 10.5452 16.5388C10.4269 16.482 10.3229 16.3993 10.2409 16.2969L7.26586 12.5781C7.18393 12.4758 7.08007 12.3932 6.96194 12.3364C6.84381 12.2796 6.71443 12.2501 6.58336 12.25ZM12.6909 7H8.53461L10.2409 4.725C10.3224 4.61633 10.428 4.52813 10.5495 4.46738C10.671 4.40663 10.805 4.375 10.9409 4.375H12.5876C12.7367 4.37508 12.8833 4.41325 13.0135 4.4859C13.1437 4.55855 13.2532 4.66326 13.3315 4.7901C13.4099 4.91693 13.4545 5.06169 13.4613 5.21063C13.468 5.35957 13.4365 5.50776 13.3699 5.64112L12.6909 7Z" fill="black"/></svg>');
 }
 
-.active-tab {
+.active-tab.ticket-tab {
   @apply relative font-black;
 }
-.active-tab::before {
+.active-tab.ticket-tab::before {
   @apply absolute right-0 -bottom-4.5 left-0 mx-auto;
   content: url('data:image/svg+xml,<svg width="69" height="3" viewBox="0 0 69 3" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0.000488281H69V1.00049C69 2.10506 68.1046 3.00049 67 3.00049H2C0.89543 3.00049 0 2.10506 0 1.00049V0.000488281Z" fill="white"/></svg>');
 }
@@ -269,27 +269,6 @@
 
 .ticket-search-box {
   position: relative;
-}
-.ticket-search-overlay {
-  --r: 13px;
-  overflow: visible;
-  height: 50%;
-  width: 100%;
-
-  position: absolute;
-}
-
-.ticket-search-overlay--half {
-  mask: radial-gradient(var(--r) at var(--r) 65px, #0000 calc(100% - 1px), #000)
-    calc(-1 * var(--r));
-  @apply lg:h-full lg:rounded-b-4xl;
-}
-
-.ticket-search-overlay--full {
-  @apply lg:hidden;
-  bottom: 0;
-  mask: radial-gradient(var(--r) at var(--r) 145px, #0000 98%, #000)
-    calc(-1 * var(--r));
 }
 
 .checkbox {
@@ -383,7 +362,54 @@
 }
 
 .selected {
-  z-index : 999999
+  z-index: 999999;
+}
+
+.card-wrapper .card {
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+  opacity: 1;
+}
+
+.card-wrapper .card.fading-out {
+  opacity: 0.2;
+}
+
+.dash-border::before {
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  margin-right: 5px;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%239B9B9BFF' stroke-width='2' stroke-dasharray='6%2c 14' stroke-dashoffset='2' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.ticket-search-overlay {
+  --r: 13px;
+  overflow: visible;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+}
+
+.ticket-search-overlay--half {
+  mask: radial-gradient(var(--r) at var(--r) 65px, #0000 calc(100% - 1px), #000)
+    calc(-1 * var(--r));
+}
+
+.ticket-search-overlay--full {
+  bottom: 0;
+  mask: radial-gradient(var(--r) at var(--r) 70px, #0000 98%, #000)
+    calc(-1 * var(--r));
+}
+
+.adaptive-notch--half {
+  @apply lg:h-full lg:rounded-b-4xl;
+}
+.adaptive-notch--full {
+  @apply lg:hidden;
 }
 
 @media (min-width: 68.5625rem) {

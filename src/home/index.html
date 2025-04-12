@@ -445,7 +445,7 @@
                   class="dropdown-menu flex w-[36.625rem] flex-col rounded-2xl bg-white px-14 py-9 shadow-[0px_0px_20px_0px_rgba(0,0,0,0.08)] group-hover:!visible group-hover:!opacity-100"
                 >
                   <a
-                    class="flex font-semibold cursor-pointer items-center gap-2 border-b border-b-[#676767] pb-7"
+                    class="flex cursor-pointer items-center gap-2 border-b border-b-[#676767] pb-7 font-semibold"
                   >
                     <p>شرایط استرداد</p>
                     <svg
@@ -466,7 +466,9 @@
                       />
                     </svg>
                   </a>
-                  <a class="flex font-semibold cursor-pointer items-center gap-2 pt-7">
+                  <a
+                    class="flex cursor-pointer items-center gap-2 pt-7 font-semibold"
+                  >
                     <p>کلاس های پروازی</p>
                     <svg
                       width="24"
@@ -661,10 +663,10 @@
               <p class="text-sm text-red-700"></p>
             </div>
             <div
-              class="ticket-search-overlay ticket-search-overlay--half -z-[1] rounded-t-2xl bg-black lg:rounded-t-4xl"
+              class="ticket-search-overlay ticket-search-overlay--half adaptive-notch--half -z-[1] rounded-t-2xl bg-black lg:rounded-t-4xl"
             ></div>
             <div
-              class="ticket-search-overlay ticket-search-overlay--full -z-[1] rounded-b-2xl bg-black lg:rounded-b-4xl"
+              class="ticket-search-overlay ticket-search-overlay--full adaptive-notch--full -z-[1] rounded-b-2xl bg-black lg:rounded-b-4xl"
             ></div>
             <div class="ps-20.5">
               <ul
@@ -679,7 +681,7 @@
                     aria-controls="buy-ticket"
                     tabindex="0"
                     id="buy-ticket-btn"
-                    class="tab-btn active-tab px-1"
+                    class="tab-btn active-tab ticket-tab px-1"
                   >
                     خرید بلیط
                   </button>
@@ -691,7 +693,7 @@
                     aria-controls="reservation-managment"
                     tabindex="-1"
                     id="reservation-managment-btn"
-                    class="tab-btn px-1"
+                    class="tab-btn ticket-tab px-1"
                   >
                     مدیریت رزرو
                   </button>
@@ -703,7 +705,7 @@
                     aria-controls="fly-status"
                     tabindex="-1"
                     id="fly-status-btn"
-                    class="tab-btn px-1"
+                    class="tab-btn ticket-tab px-1"
                   >
                     وضعیت پرواز
                   </button>
@@ -2106,11 +2108,10 @@
                 >
                   <form
                     id="buy-ticket-roundTrip"
-
                     class="ticket-grid-cols grid w-full items-center gap-3 gap-y-6 max-[75rem]:*:w-full"
                   >
                     <div
-                      class="rounded-2xl swapable relative flex basis-full items-center justify-between gap-4 bg-white"
+                      class="swapable relative flex basis-full items-center justify-between gap-4 rounded-2xl bg-white"
                     >
                       <div
                         id="round-trip-from"
@@ -2542,7 +2543,7 @@
                       </div>
                     </div>
                     <div
-                      class="rounded-2xl relative flex h-full items-center gap-2 bg-white px-3.5 py-3.5 *:text-black"
+                      class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
                     >
                       <div>
                         <svg
@@ -2593,12 +2594,12 @@
                         id="round_trip_from_date_picker"
                         style="direction: rtl"
                       >
-                        <div class="date_picker_input peer min-w-0 ">
+                        <div class="date_picker_input peer min-w-0">
                           <input
                             readonly
                             type="text"
                             placeholder="تاریخ رفت:"
-                            class="date max-w-[8ch] xl:max-w-full overflow-hidden overflow-ellipsis outline-none"
+                            class="date max-w-[8ch] overflow-hidden overflow-ellipsis outline-none xl:max-w-full"
                           />
                         </div>
                         <div
@@ -2667,7 +2668,7 @@
                       </div>
 
                       <div
-                        class="dp peer border-r-gray-tag min-w-0 border-r ps-2 "
+                        class="dp peer border-r-gray-tag min-w-0 border-r ps-2"
                         id="round_trip_to_date_picker"
                         style="direction: rtl"
                       >
@@ -2676,7 +2677,7 @@
                             readonly
                             type="text"
                             placeholder="تاریخ برگشت:"
-                            class="date max-w-[10ch] xl:max-w-full overflow-hidden overflow-ellipsis outline-none"
+                            class="date max-w-[10ch] overflow-hidden overflow-ellipsis outline-none xl:max-w-full"
                           />
                         </div>
                         <div
@@ -2745,7 +2746,7 @@
                       </div>
                     </div>
                     <div
-                      class="rounded-2xl relative flex h-full items-center gap-2 bg-white px-3.5 py-3.5 *:text-black"
+                      class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
                     >
                       <div>
                         <svg
@@ -3051,7 +3052,7 @@
                     <div class="ticket-grid-cols grid gap-3 gap-y-6">
                       <div
                         style="grid-column: 1 / 2"
-                        class="rounded-2xl swapable relative flex basis-full items-center justify-between gap-4 bg-white"
+                        class="swapable relative flex basis-full items-center justify-between gap-4 rounded-2xl bg-white"
                       >
                         <div
                           id="multicity-from"
@@ -3502,7 +3503,7 @@
                         </div>
                       </div>
                       <div
-                        class="rounded-2xl relative flex h-full items-center gap-2 bg-white px-3.5 py-3.5 *:text-black"
+                        class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
                       >
                         <div>
                           <svg
@@ -3549,11 +3550,11 @@
                         </div>
 
                         <div
-                          class="dp peer min-w-0 "
+                          class="dp peer min-w-0"
                           id="multicity_from_date_picker"
                           style="direction: rtl"
                         >
-                          <div class="date_picker_input peer min-w-0 ">
+                          <div class="date_picker_input peer min-w-0">
                             <input
                               readonly
                               type="text"
@@ -3627,7 +3628,7 @@
                         </div>
 
                         <div
-                          class="dp peer border-r-gray-tag min-w-0 border-r ps-2 "
+                          class="dp peer border-r-gray-tag min-w-0 border-r ps-2"
                           id="multicity_to_date_picker"
                           style="direction: rtl"
                         >
@@ -3705,7 +3706,7 @@
                         </div>
                       </div>
                       <div
-                        class="rounded-2xl relative flex h-full items-center gap-2 bg-white px-3.5 py-3.5 *:text-black"
+                        class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
                       >
                         <div>
                           <svg
@@ -4088,7 +4089,7 @@
                   >
                     جستجو<svg
                       width="24"
-                              class="min-w-[1.5rem]"
+                      class="min-w-[1.5rem]"
                       height="24"
                       viewBox="0 0 24 24"
                       fill="none"
@@ -6334,20 +6335,20 @@
           >
             <div
               data-index="0"
-              class="card group   absolute -top-2 [.selected]:-top-10"
+              class="card group absolute -top-2 [.selected]:-top-10"
             >
               <div class="bg-gray-550 relative w-fit rounded-2xl p-3.5 pb-8">
                 <div
-                  class="absolute  right-0 bottom-0 left-0 h-[10.125rem] rounded-2xl bg-[linear-gradient(180deg,rgba(105,105,105,0.00)_0%,#696969_57.26%)] group-[.selected]:hidden"
+                  class="absolute right-0 bottom-0 left-0 h-[10.125rem] rounded-2xl bg-[linear-gradient(180deg,rgba(105,105,105,0.00)_0%,#696969_57.26%)] group-[.selected]:hidden"
                 ></div>
                 <div
-                  class="outer  relative mx-auto flex h-[176px] w-[200px] items-center justify-center rounded-2xl bg-white group-[.selected]:min-h-[14.5rem] group-[.selected]:w-[16.5rem]"
+                  class="outer relative mx-auto flex h-[176px] w-[200px] items-center justify-center rounded-2xl bg-white group-[.selected]:min-h-[14.5rem] group-[.selected]:w-[16.5rem]"
                 >
                   <div
-                    class="group-[.selected]:absolute group-[.selected]:z-[999999]  group-[.selected]:-right-24 group-[.selected]:h-[232px] group-[.selected]:w-[431px]"
+                    class="group-[.selected]:absolute group-[.selected]:-right-24 group-[.selected]:z-[999999] group-[.selected]:h-[232px] group-[.selected]:w-[431px]"
                   >
                     <img
-                      class="mx-auto   rounded-2xl group-[.selected]:absolute group-[.selected]:h-[232px] group-[.selected]:w-[431px]"
+                      class="mx-auto rounded-2xl group-[.selected]:absolute group-[.selected]:h-[232px] group-[.selected]:w-[431px]"
                       width="200"
                       height="176"
                       src="@assets/images/airplane-thing.png"
@@ -6366,7 +6367,7 @@
                 >
                   <li class="w-fit text-center">
                     <img
-                      class="mx-auto  group-[.selected]:size-10"
+                      class="mx-auto group-[.selected]:size-10"
                       width="33"
                       height="32"
                       src="@assets/images/features-1.svg"
@@ -6500,7 +6501,7 @@
             </div>
             <div
               data-index="1"
-              class="card group  absolute -top-2 [.selected]:-top-10"
+              class="card group absolute -top-2 [.selected]:-top-10"
             >
               <div class="bg-gray-550 relative w-fit rounded-2xl p-3.5 pb-8">
                 <div
@@ -6666,7 +6667,7 @@
             </div>
             <div
               data-index="2"
-              class="card selected group  absolute -top-2 [.selected]:-top-10"
+              class="card selected group absolute -top-2 [.selected]:-top-10"
             >
               <div class="bg-gray-550 relative w-fit rounded-2xl p-3.5 pb-8">
                 <div
@@ -6676,7 +6677,7 @@
                   class="outer relative mx-auto flex h-[176px] w-[200px] items-center justify-center rounded-2xl bg-white group-[.selected]:min-h-[14.5rem] group-[.selected]:w-[16.5rem]"
                 >
                   <div
-                    class="group-[.selected]:absolute  group-[.selected]:-right-24 group-[.selected]:h-[232px] group-[.selected]:w-[431px]"
+                    class="group-[.selected]:absolute group-[.selected]:-right-24 group-[.selected]:h-[232px] group-[.selected]:w-[431px]"
                   >
                     <img
                       class="mx-auto rounded-2xl group-[.selected]:absolute group-[.selected]:h-[232px] group-[.selected]:w-[431px]"

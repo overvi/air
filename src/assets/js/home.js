@@ -1095,15 +1095,26 @@ document
     const randomIndex = Math.floor(Math.random() * (cards.length - 1));
     const selectedCard = cards[randomIndex];
   
-    cards.splice(randomIndex, 1);
-    cards.push(selectedCard);
-    cards.forEach(c => c.classList.remove("selected"));
-    cards[cards.length - 1].classList.add("selected");
-    layoutCards();
+    selectedCard.classList.add("fading-out");
   
+    // Wait for fade-out to complete
     setTimeout(() => {
-      isAnimating = false;
-    }, 500);
+      selectedCard.classList.remove("fading-out");
+  
+      cards.splice(randomIndex, 1);
+      cards.push(selectedCard);
+  
+      cards.forEach(c => c.classList.remove("selected"));
+      cards[cards.length - 1].classList.add("selected");
+  
+      layoutCards();
+  
+      // Fade-in handled by CSS as opacity resets to 1
+      setTimeout(() => {
+        isAnimating = false;
+      }, 500);
+  
+    }, 500); // Duration matches fade-out transition
   }
   
   setTimeout(() => {

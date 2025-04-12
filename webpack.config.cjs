@@ -20,6 +20,7 @@ module.exports = {
         "auth/password-reset/index": "./src/auth/password-reset/index.html",
         "auth/code/index": "./src/auth/code/index.html",
         "home/index": "./src/home/index.html",
+        "dashboard/index" : "./src/dashboard/index.html"
      
       },
       js: {
