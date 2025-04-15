@@ -129,7 +129,7 @@
 .input:has(input:not(:placeholder-shown)) .input-icon path {
   fill: black;
 }
-.input:has(input:not(:placeholder-shown)) {
+.input:has(input:not(:placeholder-shown):not(:disabled)) {
   border-color: black;
 }
 

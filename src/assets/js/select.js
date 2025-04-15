@@ -6,7 +6,7 @@ class CustomSelect {
     this.selectedValueSpan = this.container.querySelector(".selected-value");
     this.options = this.container.querySelectorAll(".option");
     this.onSelect = onSelect;
-    this.selects = document.querySelectorAll(".slct")
+    this.selects = document.querySelectorAll(".slct");
     this.hiddenSelect = this.container.querySelector(".hidden-select");
     this.maxLetters = 20;
     this.init();
@@ -19,17 +19,16 @@ class CustomSelect {
 
   setupTriggerListener() {
     document.addEventListener("click", (event) => {
-   
       this.selects.forEach((select) => {
-          const optionsList = select.querySelector(".options-list");
-          const isClickInside = select.contains(event.target);
+        const optionsList = select.querySelector(".options-list");
+        const isClickInside = select.contains(event.target);
 
-          if (!isClickInside) {
-              optionsList.classList.add("hidden");
-              select.classList.remove("open");
-          }
+        if (!isClickInside) {
+          optionsList.classList.add("hidden");
+          select.classList.remove("open");
+        }
       });
-  });
+    });
 
     this.selectTrigger.addEventListener("click", (e) => {
       document.querySelectorAll(".options-list").forEach((list) => {
@@ -41,7 +40,6 @@ class CustomSelect {
       // Toggle current dropdown
       this.optionsList.classList.toggle("hidden");
       this.container.classList.toggle("open");
-   
     });
   }
 
@@ -55,10 +53,7 @@ class CustomSelect {
   setupOptionsListeners() {
     this.options.forEach((option) => {
       option.addEventListener("click", (event) => {
-       
-       
-        if ( event.target.closest("label")) {
-     
+        if (event.target.closest("label")) {
           // Remove previous selection in this select
 
           this.options.forEach((opt) => opt.classList.remove("selected"));
@@ -68,18 +63,20 @@ class CustomSelect {
           // Mark current option as selected
           option.classList.add("selected");
           const selectedValue = option.getAttribute("data-value");
-          
+
           this.hiddenSelect.value = selectedValue;
 
           const finalText = this.setTextContent(this.hiddenSelect.value);
-          
+
           // Update trigger text
           this.selectedValueSpan.textContent = finalText;
 
           // Close dropdown
           this.optionsList.classList.add("hidden");
 
-          this.hiddenSelect.dispatchEvent(new Event("change", { bubbles: true }));
+          this.hiddenSelect.dispatchEvent(
+            new Event("change", { bubbles: true }),
+          );
 
           this.onSelect(option);
         }
@@ -88,10 +85,11 @@ class CustomSelect {
   }
 
   // Static method to initialize all custom selects
-  static initializeAll() {
-
-    console.log(this.selects)
-    return Array.from(this.selects).map((select) => new CustomSelect(select));
+  static initializeAll(onSelectCallback) {
+    const allSelects = document.querySelectorAll(".slct");
+    return Array.from(allSelects).map(
+      (select) => new CustomSelect(select, onSelectCallback),
+    );
   }
 }
 

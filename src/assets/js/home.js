@@ -158,7 +158,7 @@ observeNewElements();
 const addRoute = document.getElementById("add-route");
 let routes = 1;
 addRoute.addEventListener("click", () => {
-  if (routes == 3) return;
+  if (routes == 6) return;
   routes++;
   multipleRoutes.insertAdjacentHTML(
     "beforeend",

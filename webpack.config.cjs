@@ -10,6 +10,7 @@ module.exports = {
     tab: "./src/assets/js/tab.js",
     auth: "./src/assets/js/auth.js",
     dropdown: "./src/assets/js/dropdown.js",
+    profile: "./src/assets/js/profile.js",
   },
 
   plugins: [
@@ -20,8 +21,8 @@ module.exports = {
         "auth/password-reset/index": "./src/auth/password-reset/index.html",
         "auth/code/index": "./src/auth/code/index.html",
         "home/index": "./src/home/index.html",
-        "dashboard/index" : "./src/dashboard/index.html"
-     
+        "user/dashboard/index": "./src/user/dashboard/index.html",
+        "user/profile/index": "./src/user/profile/index.html",
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag
@@ -42,13 +43,7 @@ module.exports = {
           filename: "fonts/[name][ext]", // Output directory for fonts
         },
       },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
-        type: "asset/resource",
-        generator: {
-          filename: "assets/img/[name].[hash:8][ext]",
-        },
-      },
+      
 
       {
         test: /\.css$/i,

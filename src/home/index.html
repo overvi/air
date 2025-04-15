@@ -577,7 +577,7 @@
           </button>
         </div>
       </nav>
-      <div class="relative hidden justify-end lg:flex">
+      <!-- <div class="relative hidden justify-end lg:flex">
         <div class="">
           <button
             class="relative flex size-[2.125rem] items-center justify-center rounded-xl border border-black bg-white text-sm font-bold lg:size-10"
@@ -606,7 +606,7 @@
             >
           </button>
         </div>
-      </div>
+      </div> -->
       <div>
         <div class="mx-auto mt-13.5 w-fit text-center">
           <h1
@@ -676,6 +676,7 @@
               >
                 <li>
                   <button
+                  data-tab-group="ticket-tabs"
                     role="tab"
                     aria-selected="true"
                     aria-controls="buy-ticket"
@@ -689,6 +690,7 @@
                 <li>
                   <button
                     role="tab"
+                    data-tab-group="ticket-tabs"
                     aria-selected="false"
                     aria-controls="reservation-managment"
                     tabindex="-1"
@@ -701,6 +703,7 @@
                 <li>
                   <button
                     role="tab"
+                    data-tab-group="ticket-tabs"
                     aria-selected="false"
                     aria-controls="fly-status"
                     tabindex="-1"
@@ -730,6 +733,7 @@
             <div class="mt-4 px-4.5 lg:mt-7 lg:ps-20.5 lg:pe-10">
               <div
                 id="buy-ticket"
+                data-tab-group="ticket-tabs"
                 role="tabpanel"
                 aria-labelledby="buy-ticket-btn"
                 class="tab-panel"
@@ -4031,6 +4035,7 @@
               <div
                 id="reservation-managment"
                 role="tabpanel"
+                data-tab-group="ticket-tabs"
                 aria-labelledby="reservation-managment-btn"
                 class="tab-panel hidden"
               >
@@ -4109,6 +4114,7 @@
                 </div>
               </div>
               <div
+              data-tab-group="ticket-tabs"
                 id="fly-status"
                 role="tabpanel"
                 aria-labelledby="fly-status-btn"
