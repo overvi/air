@@ -57,7 +57,11 @@
   --color-gray-550: oklch(0.52 0 0); /* #696969 */
   --color-gray-800: oklch(0.28 0 0); /* #292929 */
   --color-red-700: oklch(0.55 0.2265 29.23); /* #d70000 */
-  --color-pink-200: oklch(0.91 0.0357 17.82) /* #f8d8d8*/;
+  --color-pink-200: oklch(0.91 0.0357 17.82); /* #f8d8d8*/;
+
+  --color-indigo-600 : oklch(0.44 0.1625 268.31);
+  --color-golden-500 : oklch(0.76 0.154388 88.95);
+  --color-green-500 : oklch(0.66 0.1496 153.86);
 
   /* Borders */
 

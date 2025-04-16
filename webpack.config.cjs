@@ -23,6 +23,7 @@ module.exports = {
         "home/index": "./src/home/index.html",
         "user/dashboard/index": "./src/user/dashboard/index.html",
         "user/profile/index": "./src/user/profile/index.html",
+        "user/travel-history/index": "./src/user/travel-history/index.html",
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag
@@ -43,7 +44,6 @@ module.exports = {
           filename: "fonts/[name][ext]", // Output directory for fonts
         },
       },
-      
 
       {
         test: /\.css$/i,
