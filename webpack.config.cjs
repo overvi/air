@@ -11,6 +11,9 @@ module.exports = {
     auth: "./src/assets/js/auth.js",
     dropdown: "./src/assets/js/dropdown.js",
     profile: "./src/assets/js/profile.js",
+    "search-ticket": "./src/assets/js/search-ticket.js",
+    "slider-range": "./src/assets/js/slider-range.js",
+    booking: "./src/assets/js/booking.js",
   },
 
   plugins: [
@@ -24,6 +27,12 @@ module.exports = {
         "user/dashboard/index": "./src/user/dashboard/index.html",
         "user/profile/index": "./src/user/profile/index.html",
         "user/travel-history/index": "./src/user/travel-history/index.html",
+        "booking/one-way/index": "./src/booking/one-way/index.html",
+        "booking/one-way/confirmation/index":
+          "./src/booking/one-way/confirmation/index.html",
+        "booking/two-way/index": "./src/booking/two-way/index.html",
+        "booking/two-way/confirmation/index":
+          "./src/booking/two-way/confirmation/index.html",
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag

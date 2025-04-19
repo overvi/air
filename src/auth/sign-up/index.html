@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
   <head>
     <meta charset="UTF-8" />
@@ -7,28 +7,28 @@
     <link rel="stylesheet" href="@assets/css/main.css" />
   </head>
   <body class="px-6 pt-6 pb-6">
-    <main class="bg-gray-100 rounded-6xl min-h-[calc(100vh-3rem)]">
-      <div class="flex items-center py-6 jusc mx-auto">
+    <main class="rounded-6xl min-h-[calc(100vh-3rem)] bg-gray-100">
+      <div class="jusc mx-auto flex items-center py-6">
         <div class="basis-[60%]">
           <div class="relative flex justify-center">
             <div
-              class="bg-contain w-[63vw] h-[58vw] bg-no-repeat bg-[url(../images/image.png)]"
+              class="h-[58vw] w-[63vw] bg-[url(../images/image.webp)] bg-contain bg-no-repeat"
             ></div>
           </div>
         </div>
-        <div class="flex basis-[40%] flex-col justify-center items-center">
+        <div class="flex basis-[40%] flex-col items-center justify-center">
           <img src="@assets/images/logo.svg" alt="" />
-          <h1 class="text-3xl text-center font-bold leading-normal">
+          <h1 class="text-center text-3xl leading-normal font-bold">
             لورم ایپسوم متن ساختگی با<br />
             تولید سادگی نامفهوم!
           </h1>
-          <div class="mt-[2.3125rem] max-w-[22.75rem] w-full">
+          <div class="mt-[2.3125rem] w-full max-w-[22.75rem]">
             <form class="w-full space-y-4">
               <div tabindex="0" class="relative">
-                <div class="slct mt-5 *:text-tiny group">
+                <div class="slct *:text-tiny group mt-5">
                   <div class="select-trigger">
                     <div
-                      class="bg-white group-[.filled]:!border-black relative input focus:border-black border items-center border-gray-300 ps-5 pe-3.5 rounded-xxl flex justify-between p-2"
+                      class="input rounded-xxl relative flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
                     >
                       <div class="flex flex-col">
                         <p
@@ -62,7 +62,7 @@
                     </div>
                   </div>
                   <div
-                    class="options-list hidden space-y-1 *:cursor-pointer bg-white rounded-lg mt-[0.25rem] *:!text-sm !p-4 !pb-5 top-full absolute left-0 right-0 z-50"
+                    class="options-list absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
                   >
                     <label
                       for="woman"
@@ -106,10 +106,10 @@
                   </select>
                 </div>
               </div>
-              <div class="flex items-center mt-4 *:basis-full gap-4">
+              <div class="mt-4 flex items-center gap-4 *:basis-full">
                 <label
                   for="name"
-                  class="bg-white input has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+                  class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
                 >
                   <div>
                     <div class="relative pb-2.5">
@@ -121,7 +121,7 @@
                     </div>
                     <input
                       id="name"
-                      class="text-xs placeholder:text-tiny font-bold w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
+                      class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="text"
                       placeholder="نام شما..."
                     />
@@ -149,7 +149,7 @@
                 </label>
                 <label
                   for="last-name"
-                  class="bg-white input has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+                  class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
                 >
                   <div>
                     <div class="relative pb-2.5">
@@ -161,7 +161,7 @@
                     </div>
                     <input
                       id="last-name"
-                      class="text-xs placeholder:text-tiny font-bold w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
+                      class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="text"
                       placeholder="نام خانوادگی شما..."
                     />
@@ -190,7 +190,7 @@
               </div>
               <label
                 for="national-code"
-                class="bg-white input has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
               >
                 <div>
                   <div class="relative pb-2.5">
@@ -202,7 +202,7 @@
                   </div>
                   <input
                     id="national-code"
-                    class="text-xs placeholder:text-tiny font-bold w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
+                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                     type="number"
                     oninput="this.value = this.value.replace(/[^0-9.-]/g, '');"
                     placeholder="کد ملی خود را وارد کنید..."
@@ -231,7 +231,7 @@
               </label>
               <label
                 for="national-code"
-                class="bg-white input has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
               >
                 <div>
                   <div class="relative pb-2.5">
@@ -244,7 +244,7 @@
                   <div class="flex items-center">
                     <input
                       id="day"
-                      class="text-xs w-[3ch] placeholder:text-tiny font-bold outline-none leading-normal placeholder:font-light placeholder:text-black"
+                      class="placeholder:text-tiny w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="number"
                       placeholder="روز"
                       maxlength="2"
@@ -253,7 +253,7 @@
                     <span class="font-light">/</span>
                     <input
                       id="month"
-                      class="text-xs mr-1 w-[3ch] placeholder:text-tiny font-bold outline-none leading-normal placeholder:font-light placeholder:text-black"
+                      class="placeholder:text-tiny mr-1 w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="number"
                       placeholder="ماه"
                       maxlength="2"
@@ -263,7 +263,7 @@
 
                     <input
                       id="year"
-                      class="text-xs w-[5ch] mr-1 appearance-none placeholder:text-tiny font-bold outline-none leading-normal placeholder:font-light placeholder:text-black"
+                      class="placeholder:text-tiny mr-1 w-[5ch] appearance-none text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="number"
                       oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
                       placeholder="سال"
@@ -318,7 +318,7 @@
               </label>
               <label
                 for="phone-number"
-                class="bg-white input has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
               >
                 <div>
                   <div class="relative pb-2.5">
@@ -330,7 +330,7 @@
                   </div>
                   <input
                     id="phone-number"
-                    class="text-xs placeholder:text-tiny font-bold w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
+                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                     type="number"
                     oninput="this.value = this.value.replace(/[^0-9.-]/g, '');"
                     placeholder="شماره موبایل خود را وارد کنید..."
@@ -367,10 +367,10 @@
               </label>
               <label
                 for="email"
-                class="bg-white input has-[input:focus]:border-black border border-gray-300 ps-5 pe-3.5 rounded-xxl flex items-center justify-between p-2"
+                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
               >
                 <div class="w-full">
-                  <div class="relative pb-2.5 ">
+                  <div class="relative pb-2.5">
                     <p
                       class="text-tiny input-mimic-label absolute leading-normal font-bold"
                     >
@@ -379,8 +379,8 @@
                   </div>
                   <input
                     id="email"
-                    class="text-xs placeholder:text-tiny font-bold w-full outline-none leading-normal placeholder:font-light placeholder:text-black"
-             type="email"
+                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                    type="email"
                     placeholder="ایمیل خود را وارد کنید..."
                   />
                 </div>
@@ -406,12 +406,12 @@
               </label>
 
               <button
-                class="bg-black text-sm font-bold !mt-6 rounded-xxl py-3.5 text-white w-full"
+                class="rounded-xxl !mt-6 w-full bg-black py-3.5 text-sm font-bold text-white"
               >
                 ثبت و ادامه
               </button>
               <div
-                class="w-fit text-center mx-auto flex items-center gap-3 text-tiny mt-4"
+                class="text-tiny mx-auto mt-4 flex w-fit items-center gap-3 text-center"
               >
                 <p>قبلا ثبت نام کرده اید؟</p>
                 <a
