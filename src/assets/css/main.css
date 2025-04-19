@@ -416,10 +416,10 @@
 }
 
 .ticket-box::before {
-  @apply content-[''] absolute z-50 bg-white size-13.5 rounded-full left-[26vw] top-0 -translate-y-1/2
+  @apply absolute top-0 left-[26vw] z-50 size-13.5 -translate-y-1/2 rounded-full bg-white content-[''];
 }
 .ticket-box::after {
-  @apply content-[''] absolute z-50 bg-white size-13.5 rounded-full left-[26vw] bottom-0 translate-y-1/2
+  @apply absolute bottom-0 left-[26vw] z-50 size-13.5 translate-y-1/2 rounded-full bg-white content-[''];
 }
 
 .ticket-search-overlay--full {
@@ -491,15 +491,13 @@
   pointer-events: auto;
   z-index: 3333;
   position: relative;
-  
 }
-
 
 .range-input-moving::-webkit-slider-thumb {
-  box-shadow: 0px 0px 0px 5px #9c9c9c ;
+  box-shadow: 0px 0px 0px 5px #9c9c9c;
 }
 .range-input-moving::-moz-range-thumb {
-  box-shadow: 0px 0px 0px 5px #9c9c9c ;
+  box-shadow: 0px 0px 0px 5px #9c9c9c;
 }
 
 .range-input::-moz-range-thumb {
@@ -511,12 +509,11 @@
   pointer-events: auto;
   z-index: 2;
   position: relative;
-  border: none; 
+  border: none;
 }
 
-
 .slider-range {
-  z-index: 3; 
+  z-index: 3;
 }
 
 .range-input {
@@ -583,30 +580,36 @@
 /* Booking */
 
 .booking-day-wrapper:has(+ li .active-day) button {
-  @apply border-transparent
+  @apply border-transparent;
 }
 
 .active-day {
-  @apply bg-white   font-bold relative  rounded-lg border-transparent
+  @apply relative rounded-lg border-transparent bg-white font-bold;
 }
 
-.booking-day-wrapper:last-child button  {
-  @apply border-transparent
+.booking-day-wrapper:last-child button {
+  @apply border-transparent;
 }
 
 .active-day::before {
-@apply content-[''] rounded-t-lg top-0 bg-black absolute h-1.5 w-full
+  @apply absolute top-0 h-1.5 w-full rounded-t-lg bg-black content-[''];
 }
 
 .active-booking-filter {
-  @apply text-white relative font-bold;
+  @apply relative font-bold text-white;
 }
 .active-booking-filter::before {
-  @apply content-['']  right-0 left-0   mx-auto rounded-t-sm absolute bottom-0 bg-gray-200 w-[100%] h-2
+  @apply absolute right-0 bottom-0 left-0 mx-auto h-2 w-[100%] rounded-t-sm bg-gray-200 content-[''];
 }
 
 .scrolling-variant {
-  @apply !flex 
+  @apply !flex;
+}
+
+body:has(dialog[open]) {
+  max-height: 1200px;
+  height: 100%;
+  overflow: hidden;
 }
 
 @media (min-width: 68.5625rem) {

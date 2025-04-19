@@ -27,12 +27,14 @@ module.exports = {
         "user/dashboard/index": "./src/user/dashboard/index.html",
         "user/profile/index": "./src/user/profile/index.html",
         "user/travel-history/index": "./src/user/travel-history/index.html",
+        "user/travel-history/1/index": "./src/user/travel-history/1/index.html",
         "booking/one-way/index": "./src/booking/one-way/index.html",
         "booking/one-way/confirmation/index":
           "./src/booking/one-way/confirmation/index.html",
         "booking/two-way/index": "./src/booking/two-way/index.html",
         "booking/two-way/confirmation/index":
           "./src/booking/two-way/confirmation/index.html",
+        "user/passengers/index": "./src/user/passengers/index.html",
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag
