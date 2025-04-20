@@ -606,6 +606,10 @@
   @apply !flex;
 }
 
+dialog::backdrop {
+  @apply bg-black/45
+}
+
 @media (min-width: 68.5625rem) {
   .ticket-search-overlay {
     --r: 30px;

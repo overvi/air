@@ -76,7 +76,7 @@
           <form id="profile">
             <div class="mx-auto grid grid-cols-2 gap-4 pt-6">
               <label
-                for="latin-name"
+                for="passport-number"
                 class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
               >
                 <div>
@@ -252,7 +252,7 @@
                   </div>
                   <div class="flex items-center">
                     <input
-                      id="day"
+              
                       class="placeholder:text-tiny w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="number"
                       placeholder="روز"
@@ -263,7 +263,7 @@
                     />
                     <span class="font-light">/</span>
                     <input
-                      id="month"
+                
                       class="placeholder:text-tiny mr-1 w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="number"
                       placeholder="ماه"
@@ -275,7 +275,7 @@
                     <span class="font-light">/</span>
 
                     <input
-                      id="year"
+                
                       class="placeholder:text-tiny mr-1 w-[5ch] appearance-none text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                       type="number"
                       disabled
@@ -485,137 +485,351 @@
               اطلاعات پاسپورت برای مسافرین ایرانی که قصد سفر های خارجی را دارند و همچنین مسافرین غیرایرانی که قصد استفاده از هر نوع خدماتی را داشته باشند مورد نیاز است.
             </p>
           </div>
-            <div class="mx-auto grid grid-cols-2 gap-4 pt-6">
+            <div class="mx-auto items-center grid grid-cols-2 gap-4 pt-6">
               <label
-                for="current-password"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      کلمه عبور فعلی
-                    </p>
-                  </div>
+              for="passport-number"
+              class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
+            >
+              <div>
+                <div class="relative pb-2.5">
+                  <p
+                    class="text-tiny input-mimic-label absolute leading-normal font-bold"
+                  >
+                شماره پاسپورت
+                  </p>
+                </div>
+                <input
+                  id="passport-number"
+                  class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                  type="text"
+                  placeholder="شماره پاسپورت خود را وارد کنید..."
+                />
+              </div>
+              <div class="">
+                <svg
+                  class="input-icon"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
+                    fill="#6A6A6A"
+                  ></path>
+                  <path
+                    d="M17.08 14.1499C14.29 12.2899 9.73996 12.2899 6.92996 14.1499C5.65996 14.9999 4.95996 16.1499 4.95996 17.3799C4.95996 18.6099 5.65996 19.7499 6.91996 20.5899C8.31996 21.5299 10.16 21.9999 12 21.9999C13.84 21.9999 15.68 21.5299 17.08 20.5899C18.34 19.7399 19.04 18.5999 19.04 17.3599C19.03 16.1299 18.34 14.9899 17.08 14.1499Z"
+                    fill="#6A6A6A"
+                  ></path>
+                </svg>
+              </div>
+            </label>
+              <label
+              for="national-code"
+              class="input rounded-xxl h-[3rem] flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
+            >
+              <div>
+                <div class="relative pb-2.5">
+                  <p
+                    class="text-tiny input-mimic-label absolute leading-normal font-bold"
+                  >
+                  تاریخ انضقا پاسپورت
+                  </p>
+                </div>
+                <div class="flex items-center mt-0.5">
                   <input
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="password"
-                    id="current-password"
-                    placeholder="کلمه عبور فعلی خود را وارد کنید..."
+                    id="day"
+                    class="placeholder:text-tiny w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                    type="number"
+                    placeholder="روز"
+                    maxlength="2"
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
+                  />
+                  <span class="font-light text-tiny">/</span>
+                  <input
+                    id="month"
+                    class="placeholder:text-tiny mr-1 w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                    type="number"
+                    placeholder="ماه"
+                    maxlength="2"
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
+                  />
+                  <span class="font-light text-tiny">/</span>
+
+                  <input
+                    id="year"
+                    class="placeholder:text-tiny mr-1 w-[5ch] appearance-none text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                    type="number"
+                    oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
+                    placeholder="سال"
+                    maxlength="4"
                   />
                 </div>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    />
-                    <path
-                      d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
-                      fill="#6A6A6A"
-                    />
-                  </svg>
-                </button>
-              </label>
-              <label
-                for="new-password"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      کلمه عبور جدید
-                    </p>
-                  </div>
-                  <input
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="password"
-                    id="new-password"
-                    placeholder="کلمه عبور جدید خود را وارد کنید..."
+              </div>
+              <div class="">
+                <svg
+                  class="input-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M16.75 3.56V2C16.75 1.59 16.41 1.25 16 1.25C15.59 1.25 15.25 1.59 15.25 2V3.5H8.75V2C8.75 1.59 8.41 1.25 8 1.25C7.59 1.25 7.25 1.59 7.25 2V3.56C4.55 3.81 3.24 5.42 3.04 7.81C3.02 8.1 3.26 8.34 3.54 8.34H20.46C20.75 8.34 20.99 8.09 20.96 7.81C20.76 5.42 19.45 3.81 16.75 3.56Z"
+                    fill="#6A6A6A"
                   />
-                </div>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    />
-                    <path
-                      d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
-                      fill="#6A6A6A"
-                    />
-                  </svg>
-                </button>
-              </label>
-              <label
-                for="password-reenter"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      تکرار کلمه عبور جدید
-                    </p>
-                  </div>
-                  <input
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="password"
-                    id="password-reenter"
-                    placeholder="کلمه عبور جدید خود را تکرار کنید..."
+                  <path
+                    opacity="0.4"
+                    d="M20 9.83997C20.55 9.83997 21 10.29 21 10.84V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V10.84C3 10.29 3.45 9.83997 4 9.83997H20Z"
+                    fill="#6A6A6A"
                   />
-                </div>
-                <button>
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <path
+                    d="M8.5 15C8.24 15 7.98 14.89 7.79 14.71C7.61 14.52 7.5 14.26 7.5 14C7.5 13.74 7.61 13.48 7.79 13.29C8.07 13.01 8.51 12.92 8.88 13.08C9.01 13.13 9.12 13.2 9.21 13.29C9.39 13.48 9.5 13.74 9.5 14C9.5 14.26 9.39 14.52 9.21 14.71C9.02 14.89 8.76 15 8.5 15Z"
+                    fill="#6A6A6A"
+                  />
+                  <path
+                    d="M12 15C11.74 15 11.48 14.89 11.29 14.71C11.11 14.52 11 14.26 11 14C11 13.74 11.11 13.48 11.29 13.29C11.38 13.2 11.49 13.13 11.62 13.08C11.99 12.92 12.43 13.01 12.71 13.29C12.89 13.48 13 13.74 13 14C13 14.26 12.89 14.52 12.71 14.71C12.66 14.75 12.61 14.79 12.56 14.83C12.5 14.87 12.44 14.9 12.38 14.92C12.32 14.95 12.26 14.97 12.2 14.98C12.13 14.99 12.07 15 12 15Z"
+                    fill="#6A6A6A"
+                  />
+                  <path
+                    d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
+                    fill="#6A6A6A"
+                  />
+                  <path
+                    d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
+                    fill="#6A6A6A"
+                  />
+                  <path
+                    d="M12 18.5C11.74 18.5 11.48 18.39 11.29 18.21C11.11 18.02 11 17.76 11 17.5C11 17.24 11.11 16.98 11.29 16.79C11.66 16.42 12.34 16.42 12.71 16.79C12.89 16.98 13 17.24 13 17.5C13 17.76 12.89 18.02 12.71 18.21C12.52 18.39 12.26 18.5 12 18.5Z"
+                    fill="#6A6A6A"
+                  />
+                  <path
+                    d="M15.5 18.5C15.24 18.5 14.98 18.39 14.79 18.21C14.61 18.02 14.5 17.76 14.5 17.5C14.5 17.24 14.61 16.98 14.79 16.79C15.16 16.42 15.84 16.42 16.21 16.79C16.39 16.98 16.5 17.24 16.5 17.5C16.5 17.76 16.39 18.02 16.21 18.21C16.02 18.39 15.76 18.5 15.5 18.5Z"
+                    fill="#6A6A6A"
+                  />
+                </svg>
+              </div>
+            </label>
+              <div tabindex="0" class="relative">
+                <div class="slct *:text-tiny group ">
+                  <div class="select-trigger">
+                    <div
+                      class="input min-h-[3rem] rounded-xxl relative flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
+                    >
+                      <div class="flex flex-col">
+                        <p
+                          class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                        >
+                          کشور صادر کننده پاسپورت
+                        </p>
+                        <span class="selected-value group-[.filled]:font-bold"
+                          ></span
+                        >
+                      </div>
+
+                      <div class="group-[.open]:rotate-180">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                            stroke="#292D32"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="options-list *:border-b *:border-b-[#e9e9e9] space-y-2 absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden  rounded-2xl bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
                   >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    />
-                    <path
-                      d="M17.08 14.1509C14.29 12.2909 9.73996 12.2909 6.92996 14.1509C5.65996 15.0009 4.95996 16.1509 4.95996 17.3809C4.95996 18.6109 5.65996 19.7509 6.91996 20.5909C8.31996 21.5309 10.16 22.0009 12 22.0009C13.84 22.0009 15.68 21.5309 17.08 20.5909C18.34 19.7409 19.04 18.6009 19.04 17.3609C19.03 16.1309 18.34 14.9909 17.08 14.1509Z"
-                      fill="#6A6A6A"
-                    />
-                  </svg>
-                </button>
-              </label>
-              <div></div>
-              <div></div>
-              <div class="ms-auto w-fit flex items-center gap-3">
+                   
+                    <label
+                    tabindex="0"
+                    for="iran"
+                    data-value="ایران"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between">
+                     
+                      <div class="flex gap-1 w-full justify-between">
+                        <p class="text-tiny font-semibold">ایران</p>
+                        <input
+                          type="radio"
+                          id="iran"
+                          name="passport-exporter"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="iran"
+                          class="radio outline-[#838383] radio--black mt-0.5 aspect-square"
+                        ></label>
+                      </div>
+                    </div>
+                  </label>
+                    <label
+                    tabindex="0"
+                    for="arak"
+                    data-value="اراک"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between ">
+                     
+                      <div class="flex gap-1 w-full justify-between">
+                        <p class="text-tiny font-semibold">اراک</p>
+                        <input
+                          type="radio"
+                          id="arak"
+                          name="passport-exporter"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="arak"
+                          class="radio outline-[#838383] radio--black mt-0.5 aspect-square"
+                        ></label>
+                      </div>
+                    </div>
+                  </label>
+                  </div>
+
+                  <!-- Hidden select for form submission -->
+                  <select
+                    name="customSelectValue"
+                    class="hidden-select hidden"
+                    required
+                  >
+                    <option value="">کشور صادر کننده پاسپورت</option>
+                    <option value="ایران">ایران</option>
+                    <option value="اراک">اراک</option>
+                  </select>
+                </div>
+              </div>
+           
+              <div tabindex="0" class="relative">
+                <div class="slct *:text-tiny group ">
+                  <div class="select-trigger">
+                    <div
+                      class="input min-h-[3rem] rounded-xxl relative flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
+                    >
+                      <div class="flex flex-col">
+                        <p
+                          class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                        >
+                   کشور محل تولد
+                        </p>
+                        <span class="selected-value group-[.filled]:font-bold"
+                          ></span
+                        >
+                      </div>
+
+                      <div class="group-[.open]:rotate-180">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 18 18"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                            stroke="#292D32"
+                            stroke-width="1.5"
+                            stroke-miterlimit="10"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="options-list *:border-b *:border-b-[#e9e9e9] space-y-2 absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden  rounded-2xl bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
+                  >
+                   
+                    <label
+                    tabindex="0"
+                    for="iran-birth"
+                    data-value="ایران"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between">
+                     
+                      <div class="flex gap-1 w-full justify-between">
+                        <p class="text-tiny font-semibold">ایران</p>
+                        <input
+                          type="radio"
+                          id="iran-birth"
+                          name="birth-place"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="iran-birth"
+                          class="radio outline-[#838383] radio--black mt-0.5 aspect-square"
+                        ></label>
+                      </div>
+                    </div>
+                  </label>
+                    <label
+                    tabindex="0"
+                    for="arak-birth"
+                    data-value="اراک"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between ">
+                     
+                      <div class="flex gap-1 w-full justify-between">
+                        <p class="text-tiny font-semibold">اراک</p>
+                        <input
+                          type="radio"
+                          id="arak-birth"
+                          name="birth-place"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="arak-birth"
+                          class="radio outline-[#838383] radio--black mt-0.5 aspect-square"
+                        ></label>
+                      </div>
+                    </div>
+                  </label>
+                  </div>
+
+           
+                  <select
+                   
+                    class="hidden-select hidden"
+                    required
+                  >
+                    <option value="">کشور محل تولد</option>
+                    <option value="ایران">ایران</option>
+                    <option value="اراک">اراک</option>
+                  </select>
+                </div>
+              </div>
+           
+          
+          
+              <div style="grid-column: 1/3;" class=" flex mt-9 justify-end items-center gap-3">
                 <button
                   type="button"
-                  id="close-add-passenger"
-                  class="rounded-xxl mt-10 bg-white border border-black px-15 py-2 font-bold text-black"
+          
+                  class="rounded-xxl  close-add-passenger  bg-white border border-black px-15 py-2 font-bold text-black"
                 >
                   انصراف
                 </button>
                 <button
                   type="submit"
-                  class="rounded-xxl mt-10 bg-black px-15 py-2.5 font-bold text-white"
+                  class="rounded-xxl  close-add-passenger  bg-black px-15 py-2.5 font-bold text-white"
                 >
             تایید
                 </button>
@@ -1126,29 +1340,12 @@
                   <td>
                     <div class="flex items-center gap-4">
                       <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#D7A900"/>
+<path opacity="0.4" d="M12.0002 14.5C6.99018 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z" fill="#D7A900"/>
+<path d="M21.4291 14.7393C20.5291 13.8393 19.8191 14.1293 19.2091 14.7393L15.669 18.2794C15.529 18.4194 15.3991 18.6794 15.3691 18.8694L15.1791 20.2193C15.1091 20.7093 15.4491 21.0493 15.9391 20.9793L17.289 20.7893C17.479 20.7593 17.7491 20.6293 17.8791 20.4893L21.419 16.9494C22.039 16.3494 22.3291 15.6393 21.4291 14.7393Z" fill="#D7A900"/>
+</svg>
+
                       </button>
                       <button aria-label="Delete">
                         <svg
@@ -1200,29 +1397,12 @@
                   <td class="rounded-e-xxl">
                     <div class="flex items-center gap-4">
                       <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#D7A900"/>
+<path opacity="0.4" d="M12.0002 14.5C6.99018 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z" fill="#D7A900"/>
+<path d="M21.4291 14.7393C20.5291 13.8393 19.8191 14.1293 19.2091 14.7393L15.669 18.2794C15.529 18.4194 15.3991 18.6794 15.3691 18.8694L15.1791 20.2193C15.1091 20.7093 15.4491 21.0493 15.9391 20.9793L17.289 20.7893C17.479 20.7593 17.7491 20.6293 17.8791 20.4893L21.419 16.9494C22.039 16.3494 22.3291 15.6393 21.4291 14.7393Z" fill="#D7A900"/>
+</svg>
+
                       </button>
                       <button aria-label="Delete">
                         <svg
@@ -1275,29 +1455,12 @@
                   <td>
                     <div class="flex items-center gap-4">
                       <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#D7A900"/>
+<path opacity="0.4" d="M12.0002 14.5C6.99018 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z" fill="#D7A900"/>
+<path d="M21.4291 14.7393C20.5291 13.8393 19.8191 14.1293 19.2091 14.7393L15.669 18.2794C15.529 18.4194 15.3991 18.6794 15.3691 18.8694L15.1791 20.2193C15.1091 20.7093 15.4491 21.0493 15.9391 20.9793L17.289 20.7893C17.479 20.7593 17.7491 20.6293 17.8791 20.4893L21.419 16.9494C22.039 16.3494 22.3291 15.6393 21.4291 14.7393Z" fill="#D7A900"/>
+</svg>
+
                       </button>
                       <button aria-label="Delete">
                         <svg
@@ -1350,29 +1513,12 @@
                   <td class="rounded-e-xxl">
                     <div class="flex items-center gap-4">
                       <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
+                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" fill="#D7A900"/>
+<path opacity="0.4" d="M12.0002 14.5C6.99018 14.5 2.91016 17.86 2.91016 22C2.91016 22.28 3.13016 22.5 3.41016 22.5H20.5902C20.8702 22.5 21.0902 22.28 21.0902 22C21.0902 17.86 17.0102 14.5 12.0002 14.5Z" fill="#D7A900"/>
+<path d="M21.4291 14.7393C20.5291 13.8393 19.8191 14.1293 19.2091 14.7393L15.669 18.2794C15.529 18.4194 15.3991 18.6794 15.3691 18.8694L15.1791 20.2193C15.1091 20.7093 15.4491 21.0493 15.9391 20.9793L17.289 20.7893C17.479 20.7593 17.7491 20.6293 17.8791 20.4893L21.419 16.9494C22.039 16.3494 22.3291 15.6393 21.4291 14.7393Z" fill="#D7A900"/>
+</svg>
+
                       </button>
                       <button aria-label="Delete">
                         <svg
@@ -1798,15 +1944,29 @@
   <script>
     const dialog = document.getElementById("add-new-passenger");
     const openBtn = document.getElementById("open-add-passenger");
-    const closeBtn = document.getElementById("close-add-passenger");
+    const closeBtn = document.querySelectorAll(".close-add-passenger");
 
-    dialog.showModal();
+    openBtn.addEventListener("click" , ( ) => {
 
-    closeBtn.addEventListener("click", () => {
-      dialog.close();
-    });
+      dialog.showModal();
+    })
+
+    closeBtn.forEach(btn => {
+
+      btn.addEventListener("click", () => {
+        dialog.close();
+      });
+    })
+
+    document.addEventListener("click" , (event) => {
+      if (!event.target.contains(dialog)) return;
+  dialog.close();
+    })
+
   </script>
 
   <script src="@assets/js/tab.js"></script>
   <script src="@assets/js/dropdown.js"></script>
+  <script src="@assets/js/passengers.js"></script>
+  <script  defer src="@assets/js/inlineDatepicker.js"></script>
 </html>

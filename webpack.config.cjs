@@ -14,6 +14,8 @@ module.exports = {
     "search-ticket": "./src/assets/js/search-ticket.js",
     "slider-range": "./src/assets/js/slider-range.js",
     booking: "./src/assets/js/booking.js",
+    passengers : "./src/assets/js/passengers.js",
+    inlineDatepicker : "./src/assets/js/inlineDatepicker.js"
   },
 
   plugins: [
