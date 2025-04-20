@@ -1,15 +1,19 @@
 import "@splidejs/splide/css/core";
+import Splide from "@splidejs/splide";
 
 const bookingDaysContainer = document.querySelector(".booking-days");
 
-bookingDaysContainer.addEventListener("click", function (event) {
-  if (event.target && event.target.classList.contains("booking-day")) {
-    const allBookingDays =
-      bookingDaysContainer.querySelectorAll(".booking-day");
-    allBookingDays.forEach((button) => button.classList.remove("active-day"));
-    event.target.classList.add("active-day");
-  }
-});
+if (bookingDaysContainer) {
+
+  bookingDaysContainer.addEventListener("click", function (event) {
+    if (event.target && event.target.classList.contains("booking-day")) {
+      const allBookingDays =
+        bookingDaysContainer.querySelectorAll(".booking-day");
+      allBookingDays.forEach((button) => button.classList.remove("active-day"));
+      event.target.classList.add("active-day");
+    }
+  });
+}
 
 const bookingFilters = document.querySelector(".booking-filters");
 
@@ -23,52 +27,67 @@ bookingFilters.addEventListener("click", function (event) {
   }
 });
 
-import Splide from "@splidejs/splide";
 
-const bookingDays = new Splide(".splide", {
-  direction: "rtl",
+if (document.querySelector(".splie")) {
 
-  autoWidth: true,
-  arrows: false,
-  perPage: 4,
-}).mount();
+  const bookingDays = new Splide(".splide", {
+    direction: "rtl",
+  
+    autoWidth: true,
+    arrows: false,
+    perPage: 4,
+  }).mount();
+  
+  document
+    .querySelector(".external__splide__arrows .prev")
+    .addEventListener("click", function () {
+      bookingDays.go("<"); // Go to the previous slide
+    });
+  
+  document
+    .querySelector(".external__splide__arrows .next")
+    .addEventListener("click", function () {
+      bookingDays.go(">"); // Go to the next slide
+    });
+}
 
-document
-  .querySelector(".external__splide__arrows .prev")
-  .addEventListener("click", function () {
-    bookingDays.go("<"); // Go to the previous slide
-  });
+  const ticketBoxes = document.querySelectorAll(".ticket-box");
 
-document
-  .querySelector(".external__splide__arrows .next")
-  .addEventListener("click", function () {
-    bookingDays.go(">"); // Go to the next slide
-  });
-
-const ticketBoxes = document.querySelectorAll(".ticket-box");
-
-ticketBoxes.forEach((tb) => {
-  tb.addEventListener("click", (event) => {
-    if (event.target && event.target.classList.contains("plan-toggle")) {
-      const id = event.target.getAttribute("aria-controls");
-      const group = event.target.getAttribute("data-group");
-      const target = document.getElementById(id);
-
-      const groupEls = tb.querySelectorAll(`[data-group='${group}']`);
-
-      groupEls.forEach((el) => {
-        if (el !== event.target) {
-          el.classList.remove("plan-opened");
-          const target = el.getAttribute("aria-controls");
-          document.getElementById(target).classList.add("!hidden");
+  ticketBoxes.forEach((tb) => {
+    tb.addEventListener("click", (event) => {
+      if (event.target && event.target.classList.contains("plan-toggle")) {
+        const id = event.target.getAttribute("aria-controls");
+        const group = event.target.getAttribute("data-group");
+        const target = document.getElementById(id);
+        const groupEls = tb.querySelectorAll(`[data-group='${group}']`);
+  
+        groupEls.forEach((el) => {
+          if (el !== event.target) {
+            el.classList.remove("plan-opened");
+            const elTarget = el.getAttribute("aria-controls");
+            document.getElementById(elTarget).parentElement.classList.add("hidden");
+          }
+        });
+  
+        event.target.classList.toggle("plan-opened");
+        target.parentElement.classList.toggle("hidden");
+  
+        const anyOpen = tb.querySelectorAll(".plan-toggle").length > 0 &&
+          Array.from(tb.querySelectorAll(".plan-toggle")).some((btn) => {
+            const btnTargetId = btn.getAttribute("aria-controls");
+            const btnTargetEl = document.getElementById(btnTargetId);
+            return btnTargetEl && !btnTargetEl.parentElement.classList.contains("hidden");
+          });
+  
+        if (anyOpen) {
+          tb.classList.add("has-open");
+        } else {
+          tb.classList.remove("has-open");
         }
-      });
-
-      event.target.classList.toggle("plan-opened");
-      target.classList.toggle("!hidden");
-    }
+      }
+    });
   });
-});
+  
 const target = document.getElementById('outbound-variant');
 const scrollingContainer = document.getElementById('scrolling-variant-container');
 const buyTicket = document.getElementById("buy-ticket");

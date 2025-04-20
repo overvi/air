@@ -606,12 +606,6 @@
   @apply !flex;
 }
 
-body:has(dialog[open]) {
-  max-height: 1200px;
-  height: 100%;
-  overflow: hidden;
-}
-
 @media (min-width: 68.5625rem) {
   .ticket-search-overlay {
     --r: 30px;

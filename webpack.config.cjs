@@ -35,6 +35,7 @@ module.exports = {
         "booking/two-way/confirmation/index":
           "./src/booking/two-way/confirmation/index.html",
         "user/passengers/index": "./src/user/passengers/index.html",
+        "user/payment-list/index" : "./src/user/payment-list/index.html"
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag
