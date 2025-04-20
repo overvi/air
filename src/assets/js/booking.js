@@ -28,7 +28,7 @@ bookingFilters.addEventListener("click", function (event) {
 });
 
 
-if (document.querySelector(".splie")) {
+if (document.querySelector(".splide")) {
 
   const bookingDays = new Splide(".splide", {
     direction: "rtl",
