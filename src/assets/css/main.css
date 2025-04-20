@@ -338,8 +338,17 @@
   width: 0.5rem;
 }
 
+.table-scroll::-webkit-scrollbar-thumb {
+  @apply !bg-black rounded-r-[0.25rem];
+}
+.table-scroll::-webkit-scrollbar-track {
+  @apply bg-[#DEDEDE]  rounded-e-[0.40625rem]
+}
+.table-scroll::-webkit-scrollbar {
+  width: 0.5rem;
+}
 @-moz-document url-prefix() {
-  .options-list {
+  .options-list , .table-scroll {
     scrollbar-width: thin; /* Makes scrollbar thin */
     scrollbar-color: black #eaeaea; /* Thumb color | Track color */
   }

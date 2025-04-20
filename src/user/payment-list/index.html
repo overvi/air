@@ -6,511 +6,16 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="@assets/css/main.css" />
   </head>
-
+  <style>
+    td,
+    th {
+      width: 20%;
+    }
+    .th-large {
+      width: 40% !important;
+    }
+  </style>
   <body>
-    <dialog
-      id="add-new-passenger"
-      class="absolute top-29 m-auto overflow-visible bg-transparent"
-    >
-      <div
-        class="m-auto w-[52rem] overflow-visible rounded-[2.5rem] bg-white p-6"
-      >
-        <div class="rounded-[2.5rem] bg-[#f8f8f8] ps-6 pe-6 pt-11 pb-6">
-          <div
-            class="border-b-gray-tag flex items-center gap-4 border-b pb-2 before:absolute before:right-0 before:h-[1.875rem] before:w-[0.875rem] before:-translate-x-[130%] before:rounded-[0.25rem] before:bg-black before:content-['']"
-          >
-            <div>
-              <svg
-                width="44"
-                height="44"
-                viewBox="0 0 44 44"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <rect width="44" height="44" rx="10" fill="white" />
-                <path
-                  opacity="0.4"
-                  d="M31.0901 31.5C31.0901 31.78 30.8701 32 30.5901 32H13.4102C13.1302 32 12.9102 31.78 12.9102 31.5C12.9102 27.36 16.9902 24 22.0002 24C23.0302 24 24.0302 24.14 24.9502 24.41C24.3602 25.11 24.0002 26.02 24.0002 27C24.0002 27.75 24.2101 28.46 24.5801 29.06C24.7801 29.4 25.0401 29.71 25.3401 29.97C26.0401 30.61 26.9702 31 28.0002 31C29.1202 31 30.1302 30.54 30.8502 29.8C31.0102 30.34 31.0901 30.91 31.0901 31.5Z"
-                  fill="black"
-                />
-                <path
-                  d="M30.97 24.33C30.25 23.51 29.18 23 28 23C26.88 23 25.86 23.46 25.13 24.21C24.43 24.93 24 25.92 24 27C24 27.75 24.21 28.46 24.58 29.06C24.78 29.4 25.04 29.71 25.34 29.97C26.04 30.61 26.97 31 28 31C29.46 31 30.73 30.22 31.42 29.06C31.63 28.72 31.79 28.33 31.88 27.93C31.96 27.63 32 27.32 32 27C32 25.98 31.61 25.04 30.97 24.33ZM29.5 27.73H28.75V28.51C28.75 28.92 28.41 29.26 28 29.26C27.59 29.26 27.25 28.92 27.25 28.51V27.73H26.5C26.09 27.73 25.75 27.39 25.75 26.98C25.75 26.57 26.09 26.23 26.5 26.23H27.25V25.52C27.25 25.11 27.59 24.77 28 24.77C28.41 24.77 28.75 25.11 28.75 25.52V26.23H29.5C29.91 26.23 30.25 26.57 30.25 26.98C30.25 27.39 29.91 27.73 29.5 27.73Z"
-                  fill="black"
-                />
-                <path
-                  d="M22 22C24.7614 22 27 19.7614 27 17C27 14.2386 24.7614 12 22 12C19.2386 12 17 14.2386 17 17C17 19.7614 19.2386 22 22 22Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-            <p class="text-xl font-bold">افزودن مسافر جدید</p>
-          </div>
-          <div class="mt-4 flex items-center gap-2.5">
-            <div>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  opacity="0.4"
-                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                  fill="#D7A900"
-                />
-                <path
-                  d="M12 13.75C12.41 13.75 12.75 13.41 12.75 13V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V13C11.25 13.41 11.59 13.75 12 13.75Z"
-                  fill="#D7A900"
-                />
-                <path
-                  d="M12.92 15.6209C12.87 15.5009 12.8 15.3909 12.71 15.2909C12.61 15.2009 12.5 15.1309 12.38 15.0809C12.14 14.9809 11.86 14.9809 11.62 15.0809C11.5 15.1309 11.39 15.2009 11.29 15.2909C11.2 15.3909 11.13 15.5009 11.08 15.6209C11.03 15.7409 11 15.8709 11 16.0009C11 16.1309 11.03 16.2609 11.08 16.3809C11.13 16.5109 11.2 16.6109 11.29 16.7109C11.39 16.8009 11.5 16.8709 11.62 16.9209C11.74 16.9709 11.87 17.0009 12 17.0009C12.13 17.0009 12.26 16.9709 12.38 16.9209C12.5 16.8709 12.61 16.8009 12.71 16.7109C12.8 16.6109 12.87 16.5109 12.92 16.3809C12.97 16.2609 13 16.1309 13 16.0009C13 15.8709 12.97 15.7409 12.92 15.6209Z"
-                  fill="#D7A900"
-                />
-              </svg>
-            </div>
-            <p class="text-sm">
-              اطلاعات مسافران باید کاملا منطبق با مدارک شناسایی‌ باشد.
-            </p>
-          </div>
-          <form id="profile">
-            <div class="mx-auto grid grid-cols-2 gap-4 pt-6">
-              <label
-                for="latin-name"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      نام لاتین
-                    </p>
-                  </div>
-                  <input
-                    id="latin-name"
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="text"
-                    placeholder="نام لاتین خود را وارد کنید..."
-                  />
-                </div>
-                <div class="">
-                  <svg
-                    class="input-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M17.08 14.1499C14.29 12.2899 9.73996 12.2899 6.92996 14.1499C5.65996 14.9999 4.95996 16.1499 4.95996 17.3799C4.95996 18.6099 5.65996 19.7499 6.91996 20.5899C8.31996 21.5299 10.16 21.9999 12 21.9999C13.84 21.9999 15.68 21.5299 17.08 20.5899C18.34 19.7399 19.04 18.5999 19.04 17.3599C19.03 16.1299 18.34 14.9899 17.08 14.1499Z"
-                      fill="#6A6A6A"
-                    ></path>
-                  </svg>
-                </div>
-              </label>
-              <label
-                for="last-latin-name"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      نام و نام خانوادگی لاتین
-                    </p>
-                  </div>
-                  <input
-                    id="last-latin-name"
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="text"
-                    placeholder="نام خانوادگی لاتین خود را وارد کنید..."
-                  />
-                </div>
-                <div class="">
-                  <svg
-                    class="input-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M17.08 14.1499C14.29 12.2899 9.73996 12.2899 6.92996 14.1499C5.65996 14.9999 4.95996 16.1499 4.95996 17.3799C4.95996 18.6099 5.65996 19.7499 6.91996 20.5899C8.31996 21.5299 10.16 21.9999 12 21.9999C13.84 21.9999 15.68 21.5299 17.08 20.5899C18.34 19.7399 19.04 18.5999 19.04 17.3599C19.03 16.1299 18.34 14.9899 17.08 14.1499Z"
-                      fill="#6A6A6A"
-                    ></path>
-                  </svg>
-                </div>
-              </label>
-              <label
-                for="name"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[:disabled]:opacity-60 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      نام
-                    </p>
-                  </div>
-                  <input
-                    id="name"
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="text"
-                    disabled
-                    value="ali"
-                    placeholder="نام شما..."
-                  />
-                </div>
-                <div class="">
-                  <svg
-                    class="input-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M17.08 14.1499C14.29 12.2899 9.73996 12.2899 6.92996 14.1499C5.65996 14.9999 4.95996 16.1499 4.95996 17.3799C4.95996 18.6099 5.65996 19.7499 6.91996 20.5899C8.31996 21.5299 10.16 21.9999 12 21.9999C13.84 21.9999 15.68 21.5299 17.08 20.5899C18.34 19.7399 19.04 18.5999 19.04 17.3599C19.03 16.1299 18.34 14.9899 17.08 14.1499Z"
-                      fill="#6A6A6A"
-                    ></path>
-                  </svg>
-                </div>
-              </label>
-              <label
-                for="last-name"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[:disabled]:opacity-60 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      نام و نام خانوادگی
-                    </p>
-                  </div>
-                  <input
-                    id="last-name"
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="text"
-                    disabled
-                    value="aabasd"
-                    placeholder="نام خانوادگی شما..."
-                  />
-                </div>
-                <div class="">
-                  <svg
-                    class="input-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.4"
-                      d="M12 2C9.38 2 7.25 4.13 7.25 6.75C7.25 9.32 9.26 11.4 11.88 11.49C11.96 11.48 12.04 11.48 12.1 11.49C12.12 11.49 12.13 11.49 12.15 11.49C12.16 11.49 12.16 11.49 12.17 11.49C14.73 11.4 16.74 9.32 16.75 6.75C16.75 4.13 14.62 2 12 2Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M17.08 14.1499C14.29 12.2899 9.73996 12.2899 6.92996 14.1499C5.65996 14.9999 4.95996 16.1499 4.95996 17.3799C4.95996 18.6099 5.65996 19.7499 6.91996 20.5899C8.31996 21.5299 10.16 21.9999 12 21.9999C13.84 21.9999 15.68 21.5299 17.08 20.5899C18.34 19.7399 19.04 18.5999 19.04 17.3599C19.03 16.1299 18.34 14.9899 17.08 14.1499Z"
-                      fill="#6A6A6A"
-                    ></path>
-                  </svg>
-                </div>
-              </label>
-              <label
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[:disabled]:opacity-60 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      تاریخ تولد
-                    </p>
-                  </div>
-                  <div class="flex items-center">
-                    <input
-                      id="day"
-                      class="placeholder:text-tiny w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                      type="number"
-                      placeholder="روز"
-                      maxlength="2"
-                      value="3"
-                      disabled
-                      oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
-                    />
-                    <span class="font-light">/</span>
-                    <input
-                      id="month"
-                      class="placeholder:text-tiny mr-1 w-[3ch] text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                      type="number"
-                      placeholder="ماه"
-                      maxlength="2"
-                      value="8"
-                      disabled
-                      oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
-                    />
-                    <span class="font-light">/</span>
-
-                    <input
-                      id="year"
-                      class="placeholder:text-tiny mr-1 w-[5ch] appearance-none text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                      type="number"
-                      disabled
-                      value="1313"
-                      oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);  this.value = this.value.replace(/[^0-9.-]/g, '');"
-                      placeholder="سال"
-                      maxlength="4"
-                    />
-                  </div>
-                </div>
-                <div class="">
-                  <svg
-                    class="input-icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
-                    <path
-                      d="M16.75 3.56V2C16.75 1.59 16.41 1.25 16 1.25C15.59 1.25 15.25 1.59 15.25 2V3.5H8.75V2C8.75 1.59 8.41 1.25 8 1.25C7.59 1.25 7.25 1.59 7.25 2V3.56C4.55 3.81 3.24 5.42 3.04 7.81C3.02 8.1 3.26 8.34 3.54 8.34H20.46C20.75 8.34 20.99 8.09 20.96 7.81C20.76 5.42 19.45 3.81 16.75 3.56Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      opacity="0.4"
-                      d="M20 9.83997C20.55 9.83997 21 10.29 21 10.84V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V10.84C3 10.29 3.45 9.83997 4 9.83997H20Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M8.5 15C8.24 15 7.98 14.89 7.79 14.71C7.61 14.52 7.5 14.26 7.5 14C7.5 13.74 7.61 13.48 7.79 13.29C8.07 13.01 8.51 12.92 8.88 13.08C9.01 13.13 9.12 13.2 9.21 13.29C9.39 13.48 9.5 13.74 9.5 14C9.5 14.26 9.39 14.52 9.21 14.71C9.02 14.89 8.76 15 8.5 15Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M12 15C11.74 15 11.48 14.89 11.29 14.71C11.11 14.52 11 14.26 11 14C11 13.74 11.11 13.48 11.29 13.29C11.38 13.2 11.49 13.13 11.62 13.08C11.99 12.92 12.43 13.01 12.71 13.29C12.89 13.48 13 13.74 13 14C13 14.26 12.89 14.52 12.71 14.71C12.66 14.75 12.61 14.79 12.56 14.83C12.5 14.87 12.44 14.9 12.38 14.92C12.32 14.95 12.26 14.97 12.2 14.98C12.13 14.99 12.07 15 12 15Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M12 18.5C11.74 18.5 11.48 18.39 11.29 18.21C11.11 18.02 11 17.76 11 17.5C11 17.24 11.11 16.98 11.29 16.79C11.66 16.42 12.34 16.42 12.71 16.79C12.89 16.98 13 17.24 13 17.5C13 17.76 12.89 18.02 12.71 18.21C12.52 18.39 12.26 18.5 12 18.5Z"
-                      fill="#6A6A6A"
-                    ></path>
-                    <path
-                      d="M15.5 18.5C15.24 18.5 14.98 18.39 14.79 18.21C14.61 18.02 14.5 17.76 14.5 17.5C14.5 17.24 14.61 16.98 14.79 16.79C15.16 16.42 15.84 16.42 16.21 16.79C16.39 16.98 16.5 17.24 16.5 17.5C16.5 17.76 16.39 18.02 16.21 18.21C16.02 18.39 15.76 18.5 15.5 18.5Z"
-                      fill="#6A6A6A"
-                    ></path>
-                  </svg>
-                </div>
-              </label>
-
-              <label
-                for="national-code"
-                class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[:disabled]:opacity-60 has-[input:focus]:border-black"
-              >
-                <div>
-                  <div class="relative pb-2.5">
-                    <p
-                      class="text-tiny input-mimic-label absolute leading-normal font-bold"
-                    >
-                      کدملی
-                    </p>
-                  </div>
-                  <input
-                    id="national-code"
-                    disabled
-                    value="4312354321"
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
-                    type="number"
-                    oninput="this.value = this.value.replace(/[^0-9.-]/g, '');"
-                    placeholder="کد ملی خود را وارد کنید..."
-                  />
-                </div>
-                <div class="">
-                  <svg
-                    class="input-icon"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      opacity="0.5"
-                      d="M14 4H10C6.229 4 4.343 4 3.172 5.172C2.001 6.344 2 8.229 2 12C2 15.771 2 17.657 3.172 18.828C4.344 19.999 6.229 20 10 20H14C17.771 20 19.657 20 20.828 18.828C21.999 17.656 22 15.771 22 12C22 8.229 22 6.343 20.828 5.172C19.656 4.001 17.771 4 14 4Z"
-                      fill="#6A6A6A"
-                    />
-                    <path
-                      d="M13.25 9C13.25 8.80109 13.329 8.61032 13.4697 8.46967C13.6103 8.32902 13.8011 8.25 14 8.25H19C19.1989 8.25 19.3897 8.32902 19.5303 8.46967C19.671 8.61032 19.75 8.80109 19.75 9C19.75 9.19891 19.671 9.38968 19.5303 9.53033C19.3897 9.67098 19.1989 9.75 19 9.75H14C13.8011 9.75 13.6103 9.67098 13.4697 9.53033C13.329 9.38968 13.25 9.19891 13.25 9ZM14.25 12C14.25 11.8011 14.329 11.6103 14.4697 11.4697C14.6103 11.329 14.8011 11.25 15 11.25H19C19.1989 11.25 19.3897 11.329 19.5303 11.4697C19.671 11.6103 19.75 11.8011 19.75 12C19.75 12.1989 19.671 12.3897 19.5303 12.5303C19.3897 12.671 19.1989 12.75 19 12.75H15C14.8011 12.75 14.6103 12.671 14.4697 12.5303C14.329 12.3897 14.25 12.1989 14.25 12ZM15.25 15C15.25 14.8011 15.329 14.6103 15.4697 14.4697C15.6103 14.329 15.8011 14.25 16 14.25H19C19.1989 14.25 19.3897 14.329 19.5303 14.4697C19.671 14.6103 19.75 14.8011 19.75 15C19.75 15.1989 19.671 15.3897 19.5303 15.5303C19.3897 15.671 19.1989 15.75 19 15.75H16C15.8011 15.75 15.6103 15.671 15.4697 15.5303C15.329 15.3897 15.25 15.1989 15.25 15ZM9 11C9.53043 11 10.0391 10.7893 10.4142 10.4142C10.7893 10.0391 11 9.53043 11 9C11 8.46957 10.7893 7.96086 10.4142 7.58579C10.0391 7.21071 9.53043 7 9 7C8.46957 7 7.96086 7.21071 7.58579 7.58579C7.21071 7.96086 7 8.46957 7 9C7 9.53043 7.21071 10.0391 7.58579 10.4142C7.96086 10.7893 8.46957 11 9 11ZM9 17C13 17 13 16.105 13 15C13 13.895 11.21 13 9 13C6.79 13 5 13.895 5 15C5 16.105 5 17 9 17Z"
-                      fill="#6A6A6A"
-                    />
-                  </svg>
-                </div>
-              </label>
-
-              <div tabindex="0" class="relative has-[:disabled]:opacity-60">
-                <div class="slct *:text-tiny group">
-                  <div class="select-trigger w-1/2">
-                    <div
-                      class="input rounded-xxl relative flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
-                    >
-                      <div class="flex flex-col">
-                        <p
-                          class="text-tiny input-mimic-label top-2 leading-normal font-bold"
-                        >
-                          جنسیت
-                        </p>
-                        <span class="selected-value font-bold">مرد</span>
-                      </div>
-
-                      <div>
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
-                            stroke="#292D32"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          ></path>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="options-list absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
-                  ></div>
-
-                  <select
-                    name="customSelectValue"
-                    class="hidden-select hidden"
-                    required=""
-                    disabled
-                  >
-                    <option value="">جنسیت...</option>
-                    <option value="زن">زن</option>
-                    <option selected value="مرد">مرد</option>
-                  </select>
-                </div>
-              </div>
-            </div>
-            <div
-              class="border-b-gray-tag mt-6 flex items-center gap-4 border-b pb-2 before:absolute before:right-0 before:h-[1.875rem] before:w-[0.875rem] before:-translate-x-[130%] before:rounded-[0.25rem] before:bg-black before:content-['']"
-            >
-              <div>
-                <svg
-                  width="44"
-                  height="44"
-                  viewBox="0 0 44 44"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <rect width="44" height="44" rx="10" fill="white" />
-                  <path
-                    opacity="0.4"
-                    d="M31.0901 31.5C31.0901 31.78 30.8701 32 30.5901 32H13.4102C13.1302 32 12.9102 31.78 12.9102 31.5C12.9102 27.36 16.9902 24 22.0002 24C23.0302 24 24.0302 24.14 24.9502 24.41C24.3602 25.11 24.0002 26.02 24.0002 27C24.0002 27.75 24.2101 28.46 24.5801 29.06C24.7801 29.4 25.0401 29.71 25.3401 29.97C26.0401 30.61 26.9702 31 28.0002 31C29.1202 31 30.1302 30.54 30.8502 29.8C31.0102 30.34 31.0901 30.91 31.0901 31.5Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M30.97 24.33C30.25 23.51 29.18 23 28 23C26.88 23 25.86 23.46 25.13 24.21C24.43 24.93 24 25.92 24 27C24 27.75 24.21 28.46 24.58 29.06C24.78 29.4 25.04 29.71 25.34 29.97C26.04 30.61 26.97 31 28 31C29.46 31 30.73 30.22 31.42 29.06C31.63 28.72 31.79 28.33 31.88 27.93C31.96 27.63 32 27.32 32 27C32 25.98 31.61 25.04 30.97 24.33ZM29.5 27.73H28.75V28.51C28.75 28.92 28.41 29.26 28 29.26C27.59 29.26 27.25 28.92 27.25 28.51V27.73H26.5C26.09 27.73 25.75 27.39 25.75 26.98C25.75 26.57 26.09 26.23 26.5 26.23H27.25V25.52C27.25 25.11 27.59 24.77 28 24.77C28.41 24.77 28.75 25.11 28.75 25.52V26.23H29.5C29.91 26.23 30.25 26.57 30.25 26.98C30.25 27.39 29.91 27.73 29.5 27.73Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M22 22C24.7614 22 27 19.7614 27 17C27 14.2386 24.7614 12 22 12C19.2386 12 17 14.2386 17 17C17 19.7614 19.2386 22 22 22Z"
-                    fill="black"
-                  />
-                </svg>
-              </div>
-              <p class="text-xl font-bold">اطلاعات پاسپورت</p>
-            </div>
-            <div class="mt-4 flex items-center gap-2.5">
-              <div>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.4"
-                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                    fill="#D7A900"
-                  />
-                  <path
-                    d="M12 13.75C12.41 13.75 12.75 13.41 12.75 13V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V13C11.25 13.41 11.59 13.75 12 13.75Z"
-                    fill="#D7A900"
-                  />
-                  <path
-                    d="M12.92 15.6209C12.87 15.5009 12.8 15.3909 12.71 15.2909C12.61 15.2009 12.5 15.1309 12.38 15.0809C12.14 14.9809 11.86 14.9809 11.62 15.0809C11.5 15.1309 11.39 15.2009 11.29 15.2909C11.2 15.3909 11.13 15.5009 11.08 15.6209C11.03 15.7409 11 15.8709 11 16.0009C11 16.1309 11.03 16.2609 11.08 16.3809C11.13 16.5109 11.2 16.6109 11.29 16.7109C11.39 16.8009 11.5 16.8709 11.62 16.9209C11.74 16.9709 11.87 17.0009 12 17.0009C12.13 17.0009 12.26 16.9709 12.38 16.9209C12.5 16.8709 12.61 16.8009 12.71 16.7109C12.8 16.6109 12.87 16.5109 12.92 16.3809C12.97 16.2609 13 16.1309 13 16.0009C13 15.8709 12.97 15.7409 12.92 15.6209Z"
-                    fill="#D7A900"
-                  />
-                </svg>
-              </div>
-              <p class="text-sm">
-                اطلاعات پاسپورت برای مسافرین ایرانی که قصد سفر های خارجی را
-                دارند و همچنین مسافرین غیرایرانی که قصد استفاده از هر نوع خدماتی
-                را داشته باشند مورد نیاز است.
-              </p>
-            </div>
-            <div class="mx-auto grid grid-cols-2 gap-4 pt-6">
-              <div></div>
-              <div></div>
-              <div class="ms-auto flex w-fit items-center gap-3">
-                <button
-                  type="button"
-                  id="close-add-passenger"
-                  class="rounded-xxl mt-10 border border-black bg-white px-15 py-2 font-bold text-black"
-                >
-                  انصراف
-                </button>
-                <button
-                  type="submit"
-                  class="rounded-xxl mt-10 bg-black px-15 py-2.5 font-bold text-white"
-                >
-                  تایید
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </dialog>
-
     <header class="page-content pt-10 lg:pt-12">
       <nav class="flex items-center justify-between">
         <div class="block lg:hidden">
@@ -818,7 +323,7 @@
               </a>
             </li>
             <li
-              class="group rounded-xl border-b-white bg-black p-[0.875rem] text-white"
+              class="group rounded-xl border-b border-b-white p-[0.875rem] "
             >
               <a
                 href="/user/guest-list"
@@ -828,7 +333,7 @@
                   width="24"
                   height="25"
                   viewBox="0 0 24 25"
-                  class="*:fill-white"
+                 
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -855,43 +360,54 @@
                 لیست مسافران
               </a>
             </li>
-            <li class="group">
-              <a
-                href="/user/wallet"
-                class="group relative flex w-full items-center gap-2 rounded-xl rounded-br-none p-[0.875rem]"
+            <li class="group ">
+                <button
+                aria-expanded="false"
+                aria-controls="dropdown-wallet"
+                autocomplete="off"
+                id="wallet"
+                data-dropdown="dropdown-wallet"
+                class="group dropdown-input *:pointer-events-none z-[5000] close-restrict relative flex w-full items-center gap-2 rounded-xl rounded-br-none p-[0.875rem] bg-black text-white"
               >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <div
+                  class="absolute top-6 -right-3 hidden group-[.dropdown-opened]:block"
                 >
-                  <path
-                    d="M15 6.14966H6C3.79 6.14966 2 7.93966 2 10.1497V6.53961C2 4.49961 3.65 2.84961 5.69 2.84961H11.31C13.35 2.84961 15 4.10966 15 6.14966Z"
-                    fill="black"
-                  />
-                  <path
-                    opacity="0.4"
-                    d="M17.48 12.2004C16.98 12.6904 16.74 13.4304 16.94 14.1804C17.19 15.1104 18.11 15.7004 19.07 15.7004H20V17.1504C20 19.3604 18.21 21.1504 16 21.1504H6C3.79 21.1504 2 19.3604 2 17.1504V10.1504C2 7.94039 3.79 6.15039 6 6.15039H16C18.2 6.15039 20 7.95039 20 10.1504V11.6003H18.92C18.36 11.6003 17.85 11.8204 17.48 12.2004Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M22.0002 12.6196V14.6796C22.0002 15.2396 21.5402 15.6996 20.9702 15.6996H19.0402C17.9602 15.6996 16.9702 14.9097 16.8802 13.8297C16.8202 13.1997 17.0602 12.6096 17.4802 12.1996C17.8502 11.8196 18.3602 11.5996 18.9202 11.5996H20.9702C21.5402 11.5996 22.0002 12.0596 22.0002 12.6196Z"
-                    fill="black"
-                  />
-                  <path
-                    d="M13 11.9004H7C6.59 11.9004 6.25 11.5604 6.25 11.1504C6.25 10.7404 6.59 10.4004 7 10.4004H13C13.41 10.4004 13.75 10.7404 13.75 11.1504C13.75 11.5604 13.41 11.9004 13 11.9004Z"
-                    fill="#292D32"
-                  />
-                </svg>
+                  <svg
+                    width="275"
+                    height="185"
+                    viewBox="0 0 275 185"
+                    fill="none"
+                   
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0.333333 182C0.333333 183.473 1.52724 184.667 3 184.667C4.47276 184.667 5.66667 183.473 5.66667 182C5.66667 180.527 4.47276 179.333 3 179.333C1.52724 179.333 0.333333 180.527 0.333333 182ZM3 182.5H4.96774V181.5H3V182.5ZM8.90323 182.5H12.8387V181.5H8.90323V182.5ZM16.7742 182.5H20.7097V181.5H16.7742V182.5ZM24.6452 182.5H28.5806V181.5H24.6452V182.5ZM32.5161 182.5H36.4516V181.5H32.5161V182.5ZM40.3871 182.5H44.3226V181.5H40.3871V182.5ZM48.2581 182.5H52.1936V181.5H48.2581V182.5ZM56.129 182.5H60.0645V181.5H56.129V182.5ZM64 182.5H67.9355V181.5H64V182.5ZM71.871 182.5H75.8065V181.5H71.871V182.5ZM79.742 182.5H83.6774V181.5H79.742V182.5ZM87.6129 182.5H91.5484V181.5H87.6129V182.5ZM95.4839 182.5H99.4194V181.5H95.4839V182.5ZM103.355 182.5H107.29V181.5H103.355V182.5ZM111.226 182.5H115.161V181.5H111.226V182.5ZM119.097 182.5H123.032V181.5H119.097V182.5ZM126.968 182.5H130.903V181.5H126.968V182.5ZM134.839 182.5H138.774V181.5H134.839V182.5ZM142.71 182.5H146.645V181.5H142.71V182.5ZM150.581 182.5H154.516V181.5H150.581V182.5ZM158.452 182.5H162.387V181.5H158.452V182.5ZM166.323 182.5H170.258V181.5H166.323V182.5ZM174.194 182.5H178.129V181.5H174.194V182.5ZM182.065 182.5H186V181.5H182.065V182.5ZM189.936 182.5H193.871V181.5H189.936V182.5ZM197.807 182.5H201.742V181.5H197.807V182.5ZM205.678 182.5H209.613V181.5H205.678V182.5ZM213.548 182.5H217.484V181.5H213.548V182.5ZM221.419 182.5H225.355V181.5H221.419V182.5ZM229.29 182.5H233.226V181.5H229.29V182.5ZM237.161 182.5H241.097V181.5H237.161V182.5ZM245.032 182.5H247V181.5H245.032V182.5ZM247 182.5C247.641 182.5 248.273 182.458 248.893 182.377L248.764 181.386C248.187 181.461 247.598 181.5 247 181.5V182.5ZM252.551 181.4C253.73 180.911 254.83 180.271 255.828 179.504L255.218 178.711C254.289 179.425 253.265 180.021 252.168 180.476L252.551 181.4ZM258.504 176.828C259.271 175.83 259.911 174.73 260.4 173.551L259.476 173.167C259.021 174.265 258.425 175.289 257.711 176.218L258.504 176.828ZM261.377 169.893C261.458 169.273 261.5 168.641 261.5 168H260.5C260.5 168.598 260.461 169.187 260.386 169.764L261.377 169.893ZM261.5 168V166H260.5V168H261.5ZM261.5 162V158H260.5V162H261.5ZM261.5 154V150H260.5V154H261.5ZM261.5 146V142H260.5V146H261.5ZM261.5 138V134H260.5V138H261.5ZM261.5 130V126H260.5V130H261.5ZM261.5 122V118H260.5V122H261.5ZM261.5 114V110H260.5V114H261.5ZM261.5 106V102H260.5V106H261.5ZM261.5 98V94H260.5V98H261.5ZM261.5 90V86H260.5V90H261.5ZM261.5 82V78H260.5V82H261.5ZM261.5 74V70H260.5V74H261.5ZM261.5 66V62H260.5V66H261.5ZM261.5 58V54H260.5V58H261.5ZM261.5 50V46H260.5V50H261.5ZM261.5 42V38H260.5V42H261.5ZM261.5 34V30H260.5V34H261.5ZM261.5 26V22H260.5V26H261.5ZM261.5 18V14H260.5V18H261.5ZM261.5 10V6H260.5V10H261.5ZM261.5 2V0H260.5V2H261.5ZM0.333333 182C0.333333 183.473 1.52724 184.667 3 184.667C4.47276 184.667 5.66667 183.473 5.66667 182C5.66667 180.527 4.47276 179.333 3 179.333C1.52724 179.333 0.333333 180.527 0.333333 182ZM3 182.5H4.96774V181.5H3V182.5ZM8.90323 182.5H12.8387V181.5H8.90323V182.5ZM16.7742 182.5H20.7097V181.5H16.7742V182.5ZM24.6452 182.5H28.5806V181.5H24.6452V182.5ZM32.5161 182.5H36.4516V181.5H32.5161V182.5ZM40.3871 182.5H44.3226V181.5H40.3871V182.5ZM48.2581 182.5H52.1936V181.5H48.2581V182.5ZM56.129 182.5H60.0645V181.5H56.129V182.5ZM64 182.5H67.9355V181.5H64V182.5ZM71.871 182.5H75.8065V181.5H71.871V182.5ZM79.742 182.5H83.6774V181.5H79.742V182.5ZM87.6129 182.5H91.5484V181.5H87.6129V182.5ZM95.4839 182.5H99.4194V181.5H95.4839V182.5ZM103.355 182.5H107.29V181.5H103.355V182.5ZM111.226 182.5H115.161V181.5H111.226V182.5ZM119.097 182.5H123.032V181.5H119.097V182.5ZM126.968 182.5H130.903V181.5H126.968V182.5ZM134.839 182.5H138.774V181.5H134.839V182.5ZM142.71 182.5H146.645V181.5H142.71V182.5ZM150.581 182.5H154.516V181.5H150.581V182.5ZM158.452 182.5H162.387V181.5H158.452V182.5ZM166.323 182.5H170.258V181.5H166.323V182.5ZM174.194 182.5H178.129V181.5H174.194V182.5ZM182.065 182.5H186V181.5H182.065V182.5ZM189.936 182.5H193.871V181.5H189.936V182.5ZM197.807 182.5H201.742V181.5H197.807V182.5ZM205.678 182.5H209.613V181.5H205.678V182.5ZM213.548 182.5H217.484V181.5H213.548V182.5ZM221.419 182.5H225.355V181.5H221.419V182.5ZM229.29 182.5H233.226V181.5H229.29V182.5ZM237.161 182.5H241.097V181.5H237.161V182.5ZM245.032 182.5H247V181.5H245.032V182.5ZM247 182.5C247.641 182.5 248.273 182.458 248.893 182.377L248.764 181.386C248.187 181.461 247.598 181.5 247 181.5V182.5ZM252.551 181.4C253.73 180.911 254.83 180.271 255.828 179.504L255.218 178.711C254.289 179.425 253.265 180.021 252.168 180.476L252.551 181.4ZM258.504 176.828C259.271 175.83 259.911 174.73 260.4 173.551L259.476 173.167C259.021 174.265 258.425 175.289 257.711 176.218L258.504 176.828ZM261.377 169.893C261.458 169.273 261.5 168.641 261.5 168H260.5C260.5 168.598 260.461 169.187 260.386 169.764L261.377 169.893ZM261.5 168V166H260.5V168H261.5ZM261.5 162V158H260.5V162H261.5ZM261.5 154V150H260.5V154H261.5ZM261.5 146V142H260.5V146H261.5ZM261.5 138V134H260.5V138H261.5ZM261.5 130V126H260.5V130H261.5ZM261.5 122V118H260.5V122H261.5ZM261.5 114V110H260.5V114H261.5ZM261.5 106V102H260.5V106H261.5ZM261.5 98V94H260.5V98H261.5ZM261.5 90V86H260.5V90H261.5ZM261.5 82V78H260.5V82H261.5ZM261.5 74V70H260.5V74H261.5ZM261.5 66V62H260.5V66H261.5ZM261.5 58V54H260.5V58H261.5ZM261.5 50V46H260.5V50H261.5ZM261.5 42V38H260.5V42H261.5ZM261.5 34V30H260.5V34H261.5ZM261.5 26V22H260.5V26H261.5ZM261.5 18V14H260.5V18H261.5ZM261.5 10V6H260.5V10H261.5ZM261.5 2V0H260.5V2H261.5Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M258.621 56.6203V57.9153C258.621 58.417 258.248 58.662 257.793 58.4637L251.948 55.9437C251.026 55.547 250.279 56.037 250.279 57.0287V58.5687C250.279 59.362 250.874 60.2837 251.609 60.587L258.259 63.4453C258.446 63.5387 258.609 63.7837 258.609 63.9937V67.5637C258.609 68.6837 259.438 70.0253 260.429 70.5387C260.779 70.7137 261.199 70.7137 261.549 70.5387C262.553 70.0253 263.381 68.6953 263.381 67.5753V64.0053C263.381 63.7953 263.544 63.5503 263.731 63.457L264.944 62.9437L258.621 56.6203Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M271.721 58.5684V57.0284C271.721 56.0367 270.974 55.5467 270.052 55.9434L264.207 58.4634C263.741 58.65 263.379 58.4167 263.379 57.915V54.52C263.379 54.2517 263.531 53.8667 263.729 53.68L266.436 50.9617C266.716 50.6817 266.844 50.1217 266.716 49.7367L266.191 48.15C265.957 47.4617 265.176 47.1467 264.534 47.4617L261.757 49.795C261.337 50.1567 260.649 50.1567 260.229 49.795L257.452 47.4617C256.811 47.135 256.029 47.4617 255.819 48.15L255.294 49.7367C255.166 50.1334 255.294 50.6817 255.574 50.9617L258.281 53.68C258.467 53.8667 258.619 54.2517 258.619 54.52V56.62L264.942 62.9434L270.391 60.5984C271.126 60.2834 271.721 59.3617 271.721 58.5684Z"
+                      fill="black"
+                    />
+                  </svg>
+                </div>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 6.14966H6C3.79 6.14966 2 7.93966 2 10.1497V6.53961C2 4.49961 3.65 2.84961 5.69 2.84961H11.31C13.35 2.84961 15 4.10966 15 6.14966Z" fill="white"/>
+                    <path opacity="0.4" d="M17.48 12.2004C16.98 12.6904 16.74 13.4304 16.94 14.1804C17.19 15.1104 18.11 15.7004 19.07 15.7004H20V17.1504C20 19.3604 18.21 21.1504 16 21.1504H6C3.79 21.1504 2 19.3604 2 17.1504V10.1504C2 7.94039 3.79 6.15039 6 6.15039H16C18.2 6.15039 20 7.95039 20 10.1504V11.6003H18.92C18.36 11.6003 17.85 11.8204 17.48 12.2004Z" fill="white"/>
+                    <path d="M22.0002 12.6196V14.6796C22.0002 15.2396 21.5402 15.6996 20.9702 15.6996H19.0402C17.9602 15.6996 16.9702 14.9097 16.8802 13.8297C16.8202 13.1997 17.0602 12.6096 17.4802 12.1996C17.8502 11.8196 18.3602 11.5996 18.9202 11.5996H20.9702C21.5402 11.5996 22.0002 12.0596 22.0002 12.6196Z" fill="white"/>
+                    <path d="M13 11.9004H7C6.59 11.9004 6.25 11.5604 6.25 11.1504C6.25 10.7404 6.59 10.4004 7 10.4004H13C13.41 10.4004 13.75 10.7404 13.75 11.1504C13.75 11.5604 13.41 11.9004 13 11.9004Z" fill="#292D32"/>
+                    </svg>
+                    
 
                 <div class="flex w-full items-center justify-between">
                   <p>کیف پول</p>
 
                   <svg
                     width="18"
-                    class="rotate-180 *:stroke-black group-[.dropdown-opened]:rotate-0"
+                    class="rotate-180  group-[.dropdown-opened]:rotate-0 *:stroke-white"
                     height="18"
                     viewBox="0 0 18 18"
                     fill="none"
@@ -907,13 +423,21 @@
                     />
                   </svg>
                 </div>
-              </a>
+              </button>
               <div
                 role="listbox"
                 id="dropdown-wallet"
-                class="dropdown-list relative z-40 mt-5 hidden space-y-6 pr-12 text-sm *:block"
+                class="dropdown-list relative z-40 mt-5  space-y-6 pr-12 text-sm *:block"
               >
-                <a href="/user/transactions">لیست تراکنش ها</a>
+              <div class="absolute -right-3 -top-12">
+                <svg width="275" height="185" viewBox="0 0 275 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.333333 182C0.333333 183.473 1.52724 184.667 3 184.667C4.47276 184.667 5.66667 183.473 5.66667 182C5.66667 180.527 4.47276 179.333 3 179.333C1.52724 179.333 0.333333 180.527 0.333333 182ZM3 182.5H4.96774V181.5H3V182.5ZM8.90323 182.5H12.8387V181.5H8.90323V182.5ZM16.7742 182.5H20.7097V181.5H16.7742V182.5ZM24.6452 182.5H28.5806V181.5H24.6452V182.5ZM32.5161 182.5H36.4516V181.5H32.5161V182.5ZM40.3871 182.5H44.3226V181.5H40.3871V182.5ZM48.2581 182.5H52.1936V181.5H48.2581V182.5ZM56.129 182.5H60.0645V181.5H56.129V182.5ZM64 182.5H67.9355V181.5H64V182.5ZM71.871 182.5H75.8065V181.5H71.871V182.5ZM79.742 182.5H83.6774V181.5H79.742V182.5ZM87.6129 182.5H91.5484V181.5H87.6129V182.5ZM95.4839 182.5H99.4194V181.5H95.4839V182.5ZM103.355 182.5H107.29V181.5H103.355V182.5ZM111.226 182.5H115.161V181.5H111.226V182.5ZM119.097 182.5H123.032V181.5H119.097V182.5ZM126.968 182.5H130.903V181.5H126.968V182.5ZM134.839 182.5H138.774V181.5H134.839V182.5ZM142.71 182.5H146.645V181.5H142.71V182.5ZM150.581 182.5H154.516V181.5H150.581V182.5ZM158.452 182.5H162.387V181.5H158.452V182.5ZM166.323 182.5H170.258V181.5H166.323V182.5ZM174.194 182.5H178.129V181.5H174.194V182.5ZM182.065 182.5H186V181.5H182.065V182.5ZM189.936 182.5H193.871V181.5H189.936V182.5ZM197.807 182.5H201.742V181.5H197.807V182.5ZM205.678 182.5H209.613V181.5H205.678V182.5ZM213.548 182.5H217.484V181.5H213.548V182.5ZM221.419 182.5H225.355V181.5H221.419V182.5ZM229.29 182.5H233.226V181.5H229.29V182.5ZM237.161 182.5H241.097V181.5H237.161V182.5ZM245.032 182.5H247V181.5H245.032V182.5ZM247 182.5C247.641 182.5 248.273 182.458 248.893 182.377L248.764 181.386C248.187 181.461 247.598 181.5 247 181.5V182.5ZM252.551 181.4C253.73 180.911 254.83 180.271 255.828 179.504L255.218 178.711C254.289 179.425 253.265 180.021 252.168 180.476L252.551 181.4ZM258.504 176.828C259.271 175.83 259.911 174.73 260.4 173.551L259.476 173.167C259.021 174.265 258.425 175.289 257.711 176.218L258.504 176.828ZM261.377 169.893C261.458 169.273 261.5 168.641 261.5 168H260.5C260.5 168.598 260.461 169.187 260.386 169.764L261.377 169.893ZM261.5 168V166H260.5V168H261.5ZM261.5 162V158H260.5V162H261.5ZM261.5 154V150H260.5V154H261.5ZM261.5 146V142H260.5V146H261.5ZM261.5 138V134H260.5V138H261.5ZM261.5 130V126H260.5V130H261.5ZM261.5 122V118H260.5V122H261.5ZM261.5 114V110H260.5V114H261.5ZM261.5 106V102H260.5V106H261.5ZM261.5 98V94H260.5V98H261.5ZM261.5 90V86H260.5V90H261.5ZM261.5 82V78H260.5V82H261.5ZM261.5 74V70H260.5V74H261.5ZM261.5 66V62H260.5V66H261.5ZM261.5 58V54H260.5V58H261.5ZM261.5 50V46H260.5V50H261.5ZM261.5 42V38H260.5V42H261.5ZM261.5 34V30H260.5V34H261.5ZM261.5 26V22H260.5V26H261.5ZM261.5 18V14H260.5V18H261.5ZM261.5 10V6H260.5V10H261.5ZM261.5 2V0H260.5V2H261.5ZM0.333333 182C0.333333 183.473 1.52724 184.667 3 184.667C4.47276 184.667 5.66667 183.473 5.66667 182C5.66667 180.527 4.47276 179.333 3 179.333C1.52724 179.333 0.333333 180.527 0.333333 182ZM3 182.5H4.96774V181.5H3V182.5ZM8.90323 182.5H12.8387V181.5H8.90323V182.5ZM16.7742 182.5H20.7097V181.5H16.7742V182.5ZM24.6452 182.5H28.5806V181.5H24.6452V182.5ZM32.5161 182.5H36.4516V181.5H32.5161V182.5ZM40.3871 182.5H44.3226V181.5H40.3871V182.5ZM48.2581 182.5H52.1936V181.5H48.2581V182.5ZM56.129 182.5H60.0645V181.5H56.129V182.5ZM64 182.5H67.9355V181.5H64V182.5ZM71.871 182.5H75.8065V181.5H71.871V182.5ZM79.742 182.5H83.6774V181.5H79.742V182.5ZM87.6129 182.5H91.5484V181.5H87.6129V182.5ZM95.4839 182.5H99.4194V181.5H95.4839V182.5ZM103.355 182.5H107.29V181.5H103.355V182.5ZM111.226 182.5H115.161V181.5H111.226V182.5ZM119.097 182.5H123.032V181.5H119.097V182.5ZM126.968 182.5H130.903V181.5H126.968V182.5ZM134.839 182.5H138.774V181.5H134.839V182.5ZM142.71 182.5H146.645V181.5H142.71V182.5ZM150.581 182.5H154.516V181.5H150.581V182.5ZM158.452 182.5H162.387V181.5H158.452V182.5ZM166.323 182.5H170.258V181.5H166.323V182.5ZM174.194 182.5H178.129V181.5H174.194V182.5ZM182.065 182.5H186V181.5H182.065V182.5ZM189.936 182.5H193.871V181.5H189.936V182.5ZM197.807 182.5H201.742V181.5H197.807V182.5ZM205.678 182.5H209.613V181.5H205.678V182.5ZM213.548 182.5H217.484V181.5H213.548V182.5ZM221.419 182.5H225.355V181.5H221.419V182.5ZM229.29 182.5H233.226V181.5H229.29V182.5ZM237.161 182.5H241.097V181.5H237.161V182.5ZM245.032 182.5H247V181.5H245.032V182.5ZM247 182.5C247.641 182.5 248.273 182.458 248.893 182.377L248.764 181.386C248.187 181.461 247.598 181.5 247 181.5V182.5ZM252.551 181.4C253.73 180.911 254.83 180.271 255.828 179.504L255.218 178.711C254.289 179.425 253.265 180.021 252.168 180.476L252.551 181.4ZM258.504 176.828C259.271 175.83 259.911 174.73 260.4 173.551L259.476 173.167C259.021 174.265 258.425 175.289 257.711 176.218L258.504 176.828ZM261.377 169.893C261.458 169.273 261.5 168.641 261.5 168H260.5C260.5 168.598 260.461 169.187 260.386 169.764L261.377 169.893ZM261.5 168V166H260.5V168H261.5ZM261.5 162V158H260.5V162H261.5ZM261.5 154V150H260.5V154H261.5ZM261.5 146V142H260.5V146H261.5ZM261.5 138V134H260.5V138H261.5ZM261.5 130V126H260.5V130H261.5ZM261.5 122V118H260.5V122H261.5ZM261.5 114V110H260.5V114H261.5ZM261.5 106V102H260.5V106H261.5ZM261.5 98V94H260.5V98H261.5ZM261.5 90V86H260.5V90H261.5ZM261.5 82V78H260.5V82H261.5ZM261.5 74V70H260.5V74H261.5ZM261.5 66V62H260.5V66H261.5ZM261.5 58V54H260.5V58H261.5ZM261.5 50V46H260.5V50H261.5ZM261.5 42V38H260.5V42H261.5ZM261.5 34V30H260.5V34H261.5ZM261.5 26V22H260.5V26H261.5ZM261.5 18V14H260.5V18H261.5ZM261.5 10V6H260.5V10H261.5ZM261.5 2V0H260.5V2H261.5Z" fill="black"/>
+                    <path d="M258.621 56.6203V57.9153C258.621 58.417 258.248 58.662 257.793 58.4637L251.948 55.9437C251.026 55.547 250.279 56.037 250.279 57.0287V58.5687C250.279 59.362 250.874 60.2837 251.609 60.587L258.259 63.4453C258.446 63.5387 258.609 63.7837 258.609 63.9937V67.5637C258.609 68.6837 259.438 70.0253 260.429 70.5387C260.779 70.7137 261.199 70.7137 261.549 70.5387C262.553 70.0253 263.381 68.6953 263.381 67.5753V64.0053C263.381 63.7953 263.544 63.5503 263.731 63.457L264.944 62.9437L258.621 56.6203Z" fill="black"/>
+                    <path d="M271.721 58.5684V57.0284C271.721 56.0367 270.974 55.5467 270.052 55.9434L264.207 58.4634C263.741 58.65 263.379 58.4167 263.379 57.915V54.52C263.379 54.2517 263.531 53.8667 263.729 53.68L266.436 50.9617C266.716 50.6817 266.844 50.1217 266.716 49.7367L266.191 48.15C265.957 47.4617 265.176 47.1467 264.534 47.4617L261.757 49.795C261.337 50.1567 260.649 50.1567 260.229 49.795L257.452 47.4617C256.811 47.135 256.029 47.4617 255.819 48.15L255.294 49.7367C255.166 50.1334 255.294 50.6817 255.574 50.9617L258.281 53.68C258.467 53.8667 258.619 54.2517 258.619 54.52V56.62L264.942 62.9434L270.391 60.5984C271.126 60.2834 271.721 59.3617 271.721 58.5684Z" fill="black"/>
+                    </svg>
+                    
+              </div>
+                <a class="font-bold" href="/user/transactions">لیست تراکنش ها</a>
                 <a href="/user/balance"> افزایش / برداشت موجودی </a>
                 <a href="/user/withdraw-list"> لیست درخواست‌های برداشت </a>
               </div>
@@ -939,363 +463,319 @@
                 >
                   <path
                     opacity="0.4"
-                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
-                    fill="#292D32"
+                    d="M20 8.25V18C20 21 18.21 22 16 22H8C5.79 22 4 21 4 18V8.25C4 5 5.79 4.25 8 4.25C8 4.87 8.24997 5.43 8.65997 5.84C9.06997 6.25 9.63 6.5 10.25 6.5H13.75C14.99 6.5 16 5.49 16 4.25C18.21 4.25 20 5 20 8.25Z"
+                    fill="black"
                   />
                   <path
-                    d="M9.85953 19.0002L11.5395 17.5802C11.7895 17.3702 12.2095 17.3702 12.4695 17.5802L14.1395 19.0002C14.5295 19.2002 15.0095 19.0002 15.1495 18.5802L15.4695 17.6202C15.5495 17.3902 15.4695 17.0502 15.2995 16.8802L13.6595 15.2302C13.5395 15.1102 13.4495 14.8802 13.4495 14.7202V12.8702C13.4495 12.4502 13.7595 12.2502 14.1495 12.4102L17.4995 13.8502C18.0495 14.0902 18.5095 13.7902 18.5095 13.1902V12.2602C18.5095 11.7802 18.1495 11.2202 17.6995 11.0302L13.7595 9.33023C13.5895 9.26023 13.4595 9.05023 13.4595 8.87023V6.80023C13.4595 6.12023 12.9595 5.32023 12.3595 5.01023C12.1395 4.90023 11.8895 4.90023 11.6695 5.01023C11.0595 5.31023 10.5695 6.12023 10.5695 6.80023V8.87023C10.5695 9.05023 10.4295 9.26023 10.2695 9.33023L6.32953 11.0302C5.88953 11.2202 5.51953 11.7802 5.51953 12.2602V13.1902C5.51953 13.7902 5.96953 14.0902 6.52953 13.8502L9.87953 12.4102C10.2595 12.2402 10.5795 12.4502 10.5795 12.8702V14.7202C10.5795 14.8902 10.4795 15.1202 10.3695 15.2302L8.69953 16.8702C8.52953 17.0402 8.44953 17.3802 8.52953 17.6102L8.84953 18.5702C8.98953 19.0002 9.45953 19.2002 9.85953 19.0002Z"
+                    d="M16 4.25C16 5.49 14.99 6.5 13.75 6.5H10.25C9.63 6.5 9.06997 6.25 8.65997 5.84C8.24997 5.43 8 4.87 8 4.25C8 3.01 9.01 2 10.25 2H13.75C14.37 2 14.93 2.25 15.34 2.66C15.75 3.07 16 3.63 16 4.25Z"
                     fill="black"
+                  />
+                  <path
+                    d="M12 13.75H8C7.59 13.75 7.25 13.41 7.25 13C7.25 12.59 7.59 12.25 8 12.25H12C12.41 12.25 12.75 12.59 12.75 13C12.75 13.41 12.41 13.75 12 13.75Z"
+                    fill="black"
+                  />
+                  <path
+                    d="M16 17.75H8C7.59 17.75 7.25 17.41 7.25 17C7.25 16.59 7.59 16.25 8 16.25H16C16.41 16.25 16.75 16.59 16.75 17C16.75 17.41 16.41 17.75 16 17.75Z"
+                    fill="#292D32"
                   />
                 </svg>
               </div>
-              <p class="font-bold">لیست مسافران</p>
+              <p class="text-base font-bold">لیست تراکنش ها</p>
             </div>
-            <button
-              id="open-add-passenger"
-              class="flex items-center gap-2 rounded-lg border border-black px-2 py-1.5"
-            >
-              <div>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    opacity="0.4"
-                    d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
-                    fill="#292D32"
-                  />
-                  <path
-                    d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
-                    fill="black"
-                  />
-                </svg>
-              </div>
-              <p class="text-sm">افزودن مسافر جدید</p>
-            </button>
           </div>
-          <div class="relative mt-11">
+          <div class="mt-6 flex items-center gap-6">
             <div
-              class="absolute top-0 right-0 left-0 mx-auto h-5 w-[95%] -translate-y-1/2 rounded-[0.4375rem] bg-black"
-            ></div>
-            <table class="w-full">
-              <thead>
-                <tr
-                  class="*:bg-gray-150 *:pt-7.5 *:pb-4 *:text-right *:font-normal"
-                >
-                  <th class="rounded-s-xxl ps-11">نام و نام خانوادگی</th>
-                  <th>کد ملی</th>
-                  <th>تاریخ تولد</th>
-                  <th>جنسیت</th>
-                  <th>شماره پاسپورت</th>
+              class="rounded-xxl flex basis-[70%] items-center justify-between bg-gray-100 pe-1"
+            >
+              <label
+                for="search"
+                class="flex w-full items-center gap-2 py-3 ps-3.5"
+              >
+                <div>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M11.0002 20.0102C15.9763 20.0102 20.0102 15.9763 20.0102 11.0002C20.0102 6.02415 15.9763 1.99023 11.0002 1.99023C6.02415 1.99023 1.99023 6.02415 1.99023 11.0002C1.99023 15.9763 6.02415 20.0102 11.0002 20.0102Z"
+                      fill="#616161"
+                    />
+                    <path
+                      d="M14 10.25H8C7.59 10.25 7.25 9.91 7.25 9.5C7.25 9.09 7.59 8.75 8 8.75H14C14.41 8.75 14.75 9.09 14.75 9.5C14.75 9.91 14.41 10.25 14 10.25Z"
+                      fill="#616161"
+                    />
+                    <path
+                      d="M11 13.25H8C7.59 13.25 7.25 12.91 7.25 12.5C7.25 12.09 7.59 11.75 8 11.75H11C11.41 11.75 11.75 12.09 11.75 12.5C11.75 12.91 11.41 13.25 11 13.25Z"
+                      fill="#616161"
+                    />
+                    <path
+                      d="M21.9901 18.95C21.6601 18.34 20.9601 18 20.0201 18C19.3101 18 18.7001 18.29 18.3401 18.79C17.9801 19.29 17.9001 19.96 18.1201 20.63C18.5501 21.93 19.3001 22.22 19.7101 22.27C19.7701 22.28 19.8301 22.28 19.9001 22.28C20.3401 22.28 21.0201 22.09 21.6801 21.1C22.2101 20.33 22.3101 19.56 21.9901 18.95Z"
+                      fill="#616161"
+                    />
+                  </svg>
+                </div>
+                <input
+                  id="search"
+                  type="text"
+                  class="outline-none placeholder:text-sm placeholder:text-[#616161]"
+                  placeholder="جستجو در تراکنش ها..."
+                />
+              </label>
+              <button
+                class="rounded-lg bg-black px-6 py-2 text-sm font-bold text-white"
+              >
+                جستجو
+              </button>
+            </div>
+            <div tabindex="0" class="relative basis-[30%]">
+              <div class="slct *:text-tiny group">
+                <div class="select-trigger">
+                  <div
+                    class="input rounded-xxl relative flex min-h-[3rem] items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
+                  >
+                    <div class="flex flex-col">
+                      <p
+                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                      >
+                        نمایش براساس
+                      </p>
+                      <span class="selected-value group-[.filled]:font-bold"
+                        >انتخاب کنید...</span
+                      >
+                    </div>
 
-                  <th class="rounded-e-xxl">عملیات</th>
+                    <div class="group-[.open]:rotate-180">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="options-list absolute top-full right-0 left-0 z-[500] mt-[0.25rem] hidden space-y-2 rounded-2xl bg-white !p-4 !pb-5 shadow-[0_0_20px_0_rgba(0,0,0,.06)] *:cursor-pointer *:border-b *:border-b-[#e9e9e9] *:!text-sm"
+                >
+                  <label
+                    tabindex="0"
+                    for="iran"
+                    data-value="ایران"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex w-full justify-between gap-1">
+                        <p class="text-tiny font-semibold">ایران</p>
+                        <input
+                          type="radio"
+                          id="iran"
+                          name="passport-exporter"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="iran"
+                          class="radio radio--black mt-0.5 aspect-square outline-[#838383]"
+                        ></label>
+                      </div>
+                    </div>
+                  </label>
+                  <label
+                    tabindex="0"
+                    for="arak"
+                    data-value="اراک"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex w-full justify-between gap-1">
+                        <p class="text-tiny font-semibold">اراک</p>
+                        <input
+                          type="radio"
+                          id="arak"
+                          name="passport-exporter"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="arak"
+                          class="radio radio--black mt-0.5 aspect-square outline-[#838383]"
+                        ></label>
+                      </div>
+                    </div>
+                  </label>
+                </div>
+
+                <!-- Hidden select for form submission -->
+                <select
+                  name="customSelectValue"
+                  class="hidden-select hidden"
+                  required
+                >
+                  <option value="">کشور صادر کننده پاسپورت</option>
+                  <option value="ایران">ایران</option>
+                  <option value="اراک">اراک</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div dir="ltr" class="relative mt-11">
+            <div
+              class="absolute z-[50] top-0 right-0 left-0 mx-auto h-5 w-[95%] -translate-y-1/2 rounded-[0.4375rem] bg-black"
+            ></div>
+            <table class="w-full table-fixed">
+              <thead class="sticky top-0 z-10">
+                <tr
+                  class="*:bg-gray-150 *:pt-7.5 *:pb-3.5 *:text-right *:font-normal"
+                >
+                  <th class="rounded-s-xxl th-large ps-3.5">
+                    <div class="flex items-center justify-between">
+                      <button
+                        class="rounded-xxl flex items-center gap-2 bg-white px-5 py-2 text-sm"
+                      >
+                        <div>
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              opacity="0.4"
+                              d="M20.5 10.19H17.61C15.24 10.19 13.31 8.26 13.31 5.89V3C13.31 2.45 12.86 2 12.31 2H8.07C4.99 2 2.5 4 2.5 7.57V16.43C2.5 20 4.99 22 8.07 22H15.93C19.01 22 21.5 20 21.5 16.43V11.19C21.5 10.64 21.05 10.19 20.5 10.19Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M15.7997 2.21048C15.3897 1.80048 14.6797 2.08048 14.6797 2.65048V6.14048C14.6797 7.60048 15.9197 8.81048 17.4297 8.81048C18.3797 8.82048 19.6997 8.82048 20.8297 8.82048C21.3997 8.82048 21.6997 8.15048 21.2997 7.75048C19.8597 6.30048 17.2797 3.69048 15.7997 2.21048Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M12.2795 14.72C11.9895 14.43 11.5095 14.43 11.2195 14.72L10.4995 15.44V11.25C10.4995 10.84 10.1595 10.5 9.74945 10.5C9.33945 10.5 8.99945 10.84 8.99945 11.25V15.44L8.27945 14.72C7.98945 14.43 7.50945 14.43 7.21945 14.72C6.92945 15.01 6.92945 15.49 7.21945 15.78L9.21945 17.78C9.22945 17.79 9.23945 17.79 9.23945 17.8C9.29945 17.86 9.37945 17.91 9.45945 17.95C9.55945 17.98 9.64945 18 9.74945 18C9.84945 18 9.93945 17.98 10.0295 17.94C10.1195 17.9 10.1995 17.85 10.2795 17.78L12.2795 15.78C12.5695 15.49 12.5695 15.01 12.2795 14.72Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                        <p>خروجی کل (اکسل)</p>
+                      </button>
+                      <p>نوضیحات</p>
+                    </div>
+                  </th>
+                  <th class="">تاریخ و ساعت</th>
+                  <th class="">مبلغ (تومان)</th>
+                  <th class="rounded-e-xxl pe-10.5">نوع تراکنش</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr class="*:py-5.5">
-                  <td class="ps-11.5 leading-5">
-                    Farhad Mirzaei <br /><span class="text-sm"
-                      >فرهادمیرزایی</span
-                    >
-                  </td>
-                  <td>تهران</td>
-                  <td>1360/10/12</td>
-
-                  <td><p>مرد</p></td>
-                  <td>
-                    <p>3.560.000 تومان</p>
-                  </td>
-                  <td>
-                    <div class="flex items-center gap-4">
-                      <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
-                      </button>
-                      <button aria-label="Delete">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21.0697 5.23C19.4597 5.07 17.8497 4.95 16.2297 4.86V4.85L16.0097 3.55C15.8597 2.63 15.6397 1.25 13.2997 1.25H10.6797C8.34967 1.25 8.12967 2.57 7.96967 3.54L7.75967 4.82C6.82967 4.88 5.89967 4.94 4.96967 5.03L2.92967 5.23C2.50967 5.27 2.20967 5.64 2.24967 6.05C2.28967 6.46 2.64967 6.76 3.06967 6.72L5.10967 6.52C10.3497 6 15.6297 6.2 20.9297 6.73C20.9597 6.73 20.9797 6.73 21.0097 6.73C21.3897 6.73 21.7197 6.44 21.7597 6.05C21.7897 5.64 21.4897 5.27 21.0697 5.23Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            opacity="0.3991"
-                            d="M19.2297 8.14C18.9897 7.89 18.6597 7.75 18.3197 7.75H5.67975C5.33975 7.75 4.99975 7.89 4.76975 8.14C4.53975 8.39 4.40975 8.73 4.42975 9.08L5.04975 19.34C5.15975 20.86 5.29975 22.76 8.78975 22.76H15.2097C18.6997 22.76 18.8398 20.87 18.9497 19.34L19.5697 9.09C19.5897 8.73 19.4597 8.39 19.2297 8.14Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M9.58008 17C9.58008 16.5858 9.91586 16.25 10.3301 16.25H13.6601C14.0743 16.25 14.4101 16.5858 14.4101 17C14.4101 17.4142 14.0743 17.75 13.6601 17.75H10.3301C9.91586 17.75 9.58008 17.4142 9.58008 17Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8.75 13C8.75 12.5858 9.08579 12.25 9.5 12.25H14.5C14.9142 12.25 15.25 12.5858 15.25 13C15.25 13.4142 14.9142 13.75 14.5 13.75H9.5C9.08579 13.75 8.75 13.4142 8.75 13Z"
-                            fill="#D70000"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="*:bg-[#F9F9F9] *:py-5.5">
-                  <td class="ps-11.5 leading-5">
-                    Farhad Mirzaei <br /><span class="text-sm"
-                      >فرهادمیرزایی</span
-                    >
-                  </td>
-                  <td>تهران</td>
-                  <td>1360/10/12</td>
-                  <td><p>مرد</p></td>
-                  <td>
-                    <p>3.560.000 تومان</p>
-                  </td>
-                  <td class="rounded-e-xxl">
-                    <div class="flex items-center gap-4">
-                      <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
-                      </button>
-                      <button aria-label="Delete">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21.0697 5.23C19.4597 5.07 17.8497 4.95 16.2297 4.86V4.85L16.0097 3.55C15.8597 2.63 15.6397 1.25 13.2997 1.25H10.6797C8.34967 1.25 8.12967 2.57 7.96967 3.54L7.75967 4.82C6.82967 4.88 5.89967 4.94 4.96967 5.03L2.92967 5.23C2.50967 5.27 2.20967 5.64 2.24967 6.05C2.28967 6.46 2.64967 6.76 3.06967 6.72L5.10967 6.52C10.3497 6 15.6297 6.2 20.9297 6.73C20.9597 6.73 20.9797 6.73 21.0097 6.73C21.3897 6.73 21.7197 6.44 21.7597 6.05C21.7897 5.64 21.4897 5.27 21.0697 5.23Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            opacity="0.3991"
-                            d="M19.2297 8.14C18.9897 7.89 18.6597 7.75 18.3197 7.75H5.67975C5.33975 7.75 4.99975 7.89 4.76975 8.14C4.53975 8.39 4.40975 8.73 4.42975 9.08L5.04975 19.34C5.15975 20.86 5.29975 22.76 8.78975 22.76H15.2097C18.6997 22.76 18.8398 20.87 18.9497 19.34L19.5697 9.09C19.5897 8.73 19.4597 8.39 19.2297 8.14Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M9.58008 17C9.58008 16.5858 9.91586 16.25 10.3301 16.25H13.6601C14.0743 16.25 14.4101 16.5858 14.4101 17C14.4101 17.4142 14.0743 17.75 13.6601 17.75H10.3301C9.91586 17.75 9.58008 17.4142 9.58008 17Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8.75 13C8.75 12.5858 9.08579 12.25 9.5 12.25H14.5C14.9142 12.25 15.25 12.5858 15.25 13C15.25 13.4142 14.9142 13.75 14.5 13.75H9.5C9.08579 13.75 8.75 13.4142 8.75 13Z"
-                            fill="#D70000"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="*:py-5.5">
-                  <td class="ps-11.5 leading-5">
-                    Farhad Mirzaei <br /><span class="text-sm"
-                      >فرهادمیرزایی</span
-                    >
-                  </td>
-                  <td>تهران</td>
-                  <td>1360/10/12</td>
-
-                  <td><p>مرد</p></td>
-                  <td>
-                    <p>3.560.000 تومان</p>
-                  </td>
-                  <td>
-                    <div class="flex items-center gap-4">
-                      <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
-                      </button>
-                      <button aria-label="Delete">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21.0697 5.23C19.4597 5.07 17.8497 4.95 16.2297 4.86V4.85L16.0097 3.55C15.8597 2.63 15.6397 1.25 13.2997 1.25H10.6797C8.34967 1.25 8.12967 2.57 7.96967 3.54L7.75967 4.82C6.82967 4.88 5.89967 4.94 4.96967 5.03L2.92967 5.23C2.50967 5.27 2.20967 5.64 2.24967 6.05C2.28967 6.46 2.64967 6.76 3.06967 6.72L5.10967 6.52C10.3497 6 15.6297 6.2 20.9297 6.73C20.9597 6.73 20.9797 6.73 21.0097 6.73C21.3897 6.73 21.7197 6.44 21.7597 6.05C21.7897 5.64 21.4897 5.27 21.0697 5.23Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            opacity="0.3991"
-                            d="M19.2297 8.14C18.9897 7.89 18.6597 7.75 18.3197 7.75H5.67975C5.33975 7.75 4.99975 7.89 4.76975 8.14C4.53975 8.39 4.40975 8.73 4.42975 9.08L5.04975 19.34C5.15975 20.86 5.29975 22.76 8.78975 22.76H15.2097C18.6997 22.76 18.8398 20.87 18.9497 19.34L19.5697 9.09C19.5897 8.73 19.4597 8.39 19.2297 8.14Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M9.58008 17C9.58008 16.5858 9.91586 16.25 10.3301 16.25H13.6601C14.0743 16.25 14.4101 16.5858 14.4101 17C14.4101 17.4142 14.0743 17.75 13.6601 17.75H10.3301C9.91586 17.75 9.58008 17.4142 9.58008 17Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8.75 13C8.75 12.5858 9.08579 12.25 9.5 12.25H14.5C14.9142 12.25 15.25 12.5858 15.25 13C15.25 13.4142 14.9142 13.75 14.5 13.75H9.5C9.08579 13.75 8.75 13.4142 8.75 13Z"
-                            fill="#D70000"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr class="*:bg-[#f9f9f9] *:py-5.5">
-                  <td class="ps-11.5 leading-5">
-                    Farhad Mirzaei <br /><span class="text-sm"
-                      >فرهادمیرزایی</span
-                    >
-                  </td>
-                  <td>تهران</td>
-                  <td>1360/10/12</td>
-
-                  <td><p>مرد</p></td>
-                  <td>
-                    <p>3.560.000 تومان</p>
-                  </td>
-                  <td class="rounded-e-xxl">
-                    <div class="flex items-center gap-4">
-                      <button aria-label="Edit">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            opacity="0.4"
-                            d="M21 22H3C2.59 22 2.25 21.66 2.25 21.25C2.25 20.84 2.59 20.5 3 20.5H21C21.41 20.5 21.75 20.84 21.75 21.25C21.75 21.66 21.41 22 21 22Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            opacity="0.4"
-                            d="M19.0196 3.47967C17.0796 1.53967 15.1796 1.48967 13.1896 3.47967L11.9796 4.68967C11.8796 4.78967 11.8396 4.94967 11.8796 5.08967C12.6396 7.73967 14.7596 9.85967 17.4096 10.6197C17.4496 10.6297 17.4896 10.6397 17.5296 10.6397C17.6396 10.6397 17.7396 10.5997 17.8196 10.5197L19.0196 9.30967C20.0096 8.32967 20.4896 7.37967 20.4896 6.41967C20.4996 5.42967 20.0196 4.46967 19.0196 3.47967Z"
-                            fill="#D7A900"
-                          />
-                          <path
-                            d="M15.6103 11.5308C15.3203 11.3908 15.0403 11.2508 14.7703 11.0908C14.5503 10.9608 14.3403 10.8208 14.1303 10.6708C13.9603 10.5608 13.7603 10.4008 13.5703 10.2408C13.5503 10.2308 13.4803 10.1708 13.4003 10.0908C13.0703 9.81078 12.7003 9.45078 12.3703 9.05078C12.3403 9.03078 12.2903 8.96078 12.2203 8.87078C12.1203 8.75078 11.9503 8.55078 11.8003 8.32078C11.6803 8.17078 11.5403 7.95078 11.4103 7.73078C11.2503 7.46078 11.1103 7.19078 10.9703 6.91078C10.8303 6.61078 10.7203 6.32078 10.6203 6.05078L4.34032 12.3308C4.21032 12.4608 4.09032 12.7108 4.06032 12.8808L3.52032 16.7108C3.42032 17.3908 3.61032 18.0308 4.03032 18.4608C4.39032 18.8108 4.89032 19.0008 5.43032 19.0008C5.55032 19.0008 5.67032 18.9908 5.79032 18.9708L9.63032 18.4308C9.81032 18.4008 10.0603 18.2808 10.1803 18.1508L16.4603 11.8708C16.1803 11.7708 15.9103 11.6608 15.6103 11.5308Z"
-                            fill="#D7A900"
-                          />
-                        </svg>
-                      </button>
-                      <button aria-label="Delete">
-                        <svg
-                          aria-hidden="false"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M21.0697 5.23C19.4597 5.07 17.8497 4.95 16.2297 4.86V4.85L16.0097 3.55C15.8597 2.63 15.6397 1.25 13.2997 1.25H10.6797C8.34967 1.25 8.12967 2.57 7.96967 3.54L7.75967 4.82C6.82967 4.88 5.89967 4.94 4.96967 5.03L2.92967 5.23C2.50967 5.27 2.20967 5.64 2.24967 6.05C2.28967 6.46 2.64967 6.76 3.06967 6.72L5.10967 6.52C10.3497 6 15.6297 6.2 20.9297 6.73C20.9597 6.73 20.9797 6.73 21.0097 6.73C21.3897 6.73 21.7197 6.44 21.7597 6.05C21.7897 5.64 21.4897 5.27 21.0697 5.23Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            opacity="0.3991"
-                            d="M19.2297 8.14C18.9897 7.89 18.6597 7.75 18.3197 7.75H5.67975C5.33975 7.75 4.99975 7.89 4.76975 8.14C4.53975 8.39 4.40975 8.73 4.42975 9.08L5.04975 19.34C5.15975 20.86 5.29975 22.76 8.78975 22.76H15.2097C18.6997 22.76 18.8398 20.87 18.9497 19.34L19.5697 9.09C19.5897 8.73 19.4597 8.39 19.2297 8.14Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M9.58008 17C9.58008 16.5858 9.91586 16.25 10.3301 16.25H13.6601C14.0743 16.25 14.4101 16.5858 14.4101 17C14.4101 17.4142 14.0743 17.75 13.6601 17.75H10.3301C9.91586 17.75 9.58008 17.4142 9.58008 17Z"
-                            fill="#D70000"
-                          />
-                          <path
-                            fill-rule="evenodd"
-                            clip-rule="evenodd"
-                            d="M8.75 13C8.75 12.5858 9.08579 12.25 9.5 12.25H14.5C14.9142 12.25 15.25 12.5858 15.25 13C15.25 13.4142 14.9142 13.75 14.5 13.75H9.5C9.08579 13.75 8.75 13.4142 8.75 13Z"
-                            fill="#D70000"
-                          />
-                        </svg>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
             </table>
+            <div class="max-h-[31rem] table-scroll overflow-y-scroll">
+              <table class="w-full">
+                <tbody class="w-full overflow-hidden overflow-y-scroll">
+                  <tr class="*:py-5.5 *:text-right">
+                    <td class="th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
+
+                    <td class="pe-6">
+                      <p class="text-green-500">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+                  <tr class=" *:bg-[#F9F9F9] *:text-right *:py-5.5">
+                    <td class="rounded-s-xxl th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td >تهران</td>
+                    <td >1360/10/12</td>
+
+                    <td class="rounded-e-xxl pe-6">
+                      <p class="text-red-700">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+                  <tr class="*:py-5.5 *:text-right">
+                    <td class="th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
+
+                    <td class="pe-6">
+                      <p class="text-red-700">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+                  <tr class=" *:bg-[#F9F9F9] *:text-right *:py-5.5">
+                    <td class="rounded-s-xxl th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td >تهران</td>
+                    <td >1360/10/12</td>
+
+                    <td class="rounded-e-xxl pe-6">
+                      <p class="text-red-700">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+                  <tr class="*:py-5.5 *:text-right">
+                    <td class="th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
+
+                    <td class="pe-6">
+                      <p class="text-red-700">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+
+                  <tr class=" *:bg-[#F9F9F9] *:text-right *:py-5.5">
+                    <td class="rounded-s-xxl th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td >تهران</td>
+                    <td >1360/10/12</td>
+
+                    <td class="rounded-e-xxl pe-6">
+                      <p class="text-red-700">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+                  <tr class="*:py-5.5 *:text-right">
+                    <td class="th-large leading-5">
+                      Farhad Mirzaei <br /><span class="text-sm"
+                        >فرهادمیرزایی</span
+                      >
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
+
+                    <td class="pe-6">
+                      <p class="text-red-700">3.560.000 تومان</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -1680,18 +1160,8 @@
       </div>
     </div>
   </footer>
-  <script>
-    const dialog = document.getElementById("add-new-passenger");
-    const openBtn = document.getElementById("open-add-passenger");
-    const closeBtn = document.getElementById("close-add-passenger");
-
-    dialog.showModal();
-
-    closeBtn.addEventListener("click", () => {
-      dialog.close();
-    });
-  </script>
 
   <script src="@assets/js/tab.js"></script>
   <script src="@assets/js/dropdown.js"></script>
+  <script defer src="@assets/js/paymentlist.js"></script>
 </html>
