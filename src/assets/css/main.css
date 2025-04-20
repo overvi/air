@@ -342,10 +342,10 @@
   @apply !bg-black rounded-r-[0.25rem];
 }
 .table-scroll::-webkit-scrollbar-track {
-  @apply bg-[#DEDEDE]  rounded-e-[0.40625rem]
+  @apply bg-[#DEDEDE] mt-1.5  rounded-e-[0.40625rem]
 }
 .table-scroll::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.8125rem;
 }
 @-moz-document url-prefix() {
   .options-list , .table-scroll {
