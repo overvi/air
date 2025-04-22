@@ -235,7 +235,7 @@
                 id="dropdown-wallet"
                 class="dropdown-list relative z-40 mt-5 hidden space-y-6 pr-12 text-sm *:block"
               >
-                <button id="airplane-first">درخواست مرخصی روزانه</button>
+                <button id="airplane-first" class="font-bold">درخواست مرخصی روزانه</button>
                 <button id="airplane-second">درخواست مرخصی ساعتی</button>
               </div>
             </li>
@@ -440,14 +440,18 @@
 
   <script>
     const airplae = document.getElementById("airplane");
-    const airplaeFirst = document.getElementById("airplane-first");
-    const airplaeSecond = document.getElementById("airplane-second");
+    const airplanFirst = document.getElementById("airplane-first");
+    const airplanSecond = document.getElementById("airplane-second");
 
-    airplaeSecond.addEventListener("click", () => {
+    airplanSecond.addEventListener("click", () => {
       airplae.classList.replace("top-12", "top-22");
+      airplanSecond.classList.add("font-bold")
+      airplanFirst.classList.remove("font-bold")
     });
-    airplaeFirst.addEventListener("click", () => {
+    airplanFirst.addEventListener("click", () => {
       airplae.classList.replace("top-22", "top-12");
+      airplanSecond.classList.remove("font-bold")
+      airplanFirst.classList.add("font-bold")
     });
   </script>
   <script src="@assets/js/tab.js"></script>

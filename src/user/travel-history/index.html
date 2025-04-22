@@ -7,6 +7,54 @@
     <link rel="stylesheet" href="@assets/css/main.css" />
   </head>
   <body>
+    <dialog
+      id="delete"
+      class=" m-auto  bg-transparent outline-none"
+    >
+      <div
+        class="m-auto flex w-[38.1875rem] min-h-[26.25rem] flex-col items-center pt-15  rounded-[2.5rem] bg-white p-6"
+      >
+        <div>
+          <svg
+            width="115"
+            height="115"
+            viewBox="0 0 115 115"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.4"
+              d="M57.4997 105.417C83.9633 105.417 105.416 83.9643 105.416 57.5007C105.416 31.037 83.9633 9.58398 57.4997 9.58398C31.036 9.58398 9.58301 31.037 9.58301 57.5007C9.58301 83.9643 31.036 105.417 57.4997 105.417Z"
+              fill="#D70000"
+            />
+            <path
+              d="M57.5 65.8861C59.4646 65.8861 61.0938 64.2569 61.0938 62.2923V38.334C61.0938 36.3694 59.4646 34.7402 57.5 34.7402C55.5354 34.7402 53.9062 36.3694 53.9062 38.334V62.2923C53.9062 64.2569 55.5354 65.8861 57.5 65.8861Z"
+              fill="#D70000"
+            />
+            <path
+              d="M61.908 74.8453C61.6684 74.2703 61.333 73.7432 60.9018 73.2641C60.4226 72.8328 59.8955 72.4974 59.3205 72.2578C58.1705 71.7786 56.8288 71.7786 55.6788 72.2578C55.1038 72.4974 54.5768 72.8328 54.0976 73.2641C53.6663 73.7432 53.3309 74.2703 53.0913 74.8453C52.8518 75.4203 52.708 76.0432 52.708 76.6661C52.708 77.2891 52.8518 77.912 53.0913 78.487C53.3309 79.1099 53.6663 79.5891 54.0976 80.0682C54.5768 80.4995 55.1038 80.8349 55.6788 81.0745C56.2538 81.3141 56.8768 81.4578 57.4997 81.4578C58.1226 81.4578 58.7455 81.3141 59.3205 81.0745C59.8955 80.8349 60.4226 80.4995 60.9018 80.0682C61.333 79.5891 61.6684 79.1099 61.908 78.487C62.1476 77.912 62.2913 77.2891 62.2913 76.6661C62.2913 76.0432 62.1476 75.4203 61.908 74.8453Z"
+              fill="#D70000"
+            />
+          </svg>
+        </div>
+        <p class="mt-6 mb-6.5 text-[2rem] font-bold">
+          آیا از حذف این آیتم اطمینان دارید؟
+        </p>
+        <div class="flex items-center  *:font-bold gap-8">
+          <button
+          
+            class="bg-golden-500/5 close-delete text-golden-500 border-golden-500 rounded-lg border px-14.5 py-2.5 text-xs outline-none"
+          >
+            لغو
+          </button>
+          <button
+            class="bg-red-700/5 close-delete text-red-700 border-red-700 rounded-lg border px-14.5 py-2.5 text-xs outline-none"
+          >
+            حذف
+          </button>
+        </div>
+      </div>
+    </dialog>
     <header class="page-content pt-10 lg:pt-12">
       <nav class="flex items-center justify-between">
         <div class="block lg:hidden">
@@ -157,11 +205,94 @@
           </ul>
         </div>
         <div class="flex gap-1.5 lg:gap-4">
-          <button
-            class="rounded-xxl hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
-          >
-            FA
-          </button>
+          <div>
+
+           
+            <div tabindex="0" class="relative">
+              <div class="slct *:text-tiny group">
+                <div class="select-trigger">
+                  <div
+                    class="input"
+                  >
+                    <div class=" hidden">
+                      <p
+                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                      >
+                      </p>
+                    </div>
+                    <button
+                    class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
+                  >
+                    FA
+                  </button>
+
+                    <div class="group-[.open]:rotate-180 hidden">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                class="options-list shadow-[0_0_20px_0_rgba(0,0,0,0.08)] min-w-[6.3125rem] absolute top-full  left-0 z-50 mt-2 hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
+              >
+                <label
+                  for="en"
+                  class="option border-b border-b-[#E9E9E9] pb-1.5 flex items-center gap-1.5"
+                  data-value="en"
+                >
+                  <input
+                    id="en"
+                    name="gender"
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">EN</p>
+                </label>
+                <label
+                  for="fa"
+                  class="option flex items-center gap-1.5"
+                  data-value="fa"
+                >
+                  <input
+                    id="fa"
+                    name="gender"
+                    checked
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">FA</p>
+                </label>
+              </div>
+
+                <!-- Hidden select for form submission -->
+                <select
+                  name="customSelectValue"
+                  class="hidden-select hidden"
+                  required
+                >
+                  <option value="">جنسیت...</option>
+                  <option value="fa">FA</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </div>
+        </div>
 
           <button
             aria-label="Profile"
@@ -290,8 +421,7 @@
               class="group rounded-xl border-b-white bg-black p-[0.875rem] text-white"
             >
               <a
-              href="/user/travel-history"
-
+                href="/user/travel-history"
                 class="tab-btn group panel-tab flex w-full items-center gap-2 px-1"
               >
                 <svg
@@ -318,8 +448,7 @@
             </li>
             <li class="group border-b border-b-white p-[0.875rem]">
               <a
-              href="/user/passengers"
-
+                href="/user/passengers"
                 class="flex w-full items-center gap-2 px-1"
               >
                 <svg
@@ -511,7 +640,7 @@
                           />
                         </svg>
                       </button>
-                      <button aria-label="Delete">
+                      <button aria-label="Delete" class="open-delete">
                         <svg
                           aria-hidden="false"
                           width="24"
@@ -592,7 +721,7 @@
                           />
                         </svg>
                       </button>
-                      <button aria-label="Delete">
+                      <button aria-label="Delete" class="open-delete">
                         <svg
                           aria-hidden="false"
                           width="24"
@@ -673,7 +802,7 @@
                           />
                         </svg>
                       </button>
-                      <button aria-label="Delete">
+                      <button aria-label="Delete" class="open-delete">
                         <svg
                           aria-hidden="false"
                           width="24"
@@ -754,7 +883,7 @@
                           />
                         </svg>
                       </button>
-                      <button aria-label="Delete">
+                      <button aria-label="Delete" class="open-delete">
                         <svg
                           aria-hidden="false"
                           width="24"
@@ -1175,7 +1304,29 @@
       </div>
     </div>
   </footer>
+  <script>
+    const dialog = document.getElementById("delete");
+    const openBtn = document.querySelectorAll(".open-delete");
+    const closeBtn = document.querySelectorAll(".close-delete");
 
+     openBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        dialog.showModal();
+      });
+    });
+
+    closeBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        dialog.close();
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!event.target.contains(dialog)) return;
+      dialog.close();
+    });
+  </script>
   <script src="@assets/js/tab.js"></script>
   <script src="@assets/js/dropdown.js"></script>
+  <script src="@assets/js/initSelect.js"></script>
 </html>

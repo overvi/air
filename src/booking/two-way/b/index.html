@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking - One Way</title>
     <link rel="stylesheet" href="@assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..700;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
   </head>
   <body data-page="differ-ticket">
     <div
@@ -167,11 +174,94 @@
           >
             پذیرش آنلاین
           </button>
-          <button
-            class="rounded-xxl hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
-          >
-            FA
-          </button>
+          <div>
+
+           
+            <div tabindex="0" class="relative">
+              <div class="slct *:text-tiny group">
+                <div class="select-trigger">
+                  <div
+                    class="input"
+                  >
+                    <div class=" hidden">
+                      <p
+                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                      >
+                      </p>
+                    </div>
+                    <button
+                    class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
+                  >
+                    FA
+                  </button>
+
+                    <div class="group-[.open]:rotate-180 hidden">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                class="options-list shadow-[0_0_20px_0_rgba(0,0,0,0.08)] min-w-[6.3125rem] absolute top-full  left-0 z-50 mt-2 hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
+              >
+                <label
+                  for="en"
+                  class="option border-b border-b-[#E9E9E9] pb-1.5 flex items-center gap-1.5"
+                  data-value="en"
+                >
+                  <input
+                    id="en"
+                    name="gender"
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">EN</p>
+                </label>
+                <label
+                  for="fa"
+                  class="option flex items-center gap-1.5"
+                  data-value="fa"
+                >
+                  <input
+                    id="fa"
+                    name="gender"
+                    checked
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">FA</p>
+                </label>
+              </div>
+
+                <!-- Hidden select for form submission -->
+                <select
+                  name="customSelectValue"
+                  class="hidden-select hidden"
+                  required
+                >
+                  <option value="">جنسیت...</option>
+                  <option value="fa">FA</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </div>
+        </div>
           <button
             class="rounded-xxl hidden min-h-10 border border-black bg-white px-5.5 text-sm font-bold transition-colors hover:bg-gray-400 lg:block"
           >
@@ -1636,7 +1726,7 @@
                         </div>
                       </div>
                     </div>
-                    <div class="peer-has-[div.hidden]:rotate-180">
+                    <div class="peer-has-[div.hidden]:rotate-180 pointer-events-none">
                       <svg
                         width="18"
                         class="rotate-180"
@@ -7574,7 +7664,7 @@
         </div>
       </div>
     </main>
-    <footer class="page-content mt-77 text-white">
+    <footer class="page-content mt-35 pb-20 text-white">
       <div class="bg-gray-750 rounded-[1.25rem] p-12.5">
         <div class="flex items-start">
           <div>
@@ -7955,6 +8045,7 @@
     </footer>
     <script defer src="@assets/js/slider-range.js"></script>
     <script defer src="@assets/js/booking.js"></script>
+    <script defer src="@assets/js/initSelect.js"></script>
     <script defer src="@assets/js/search-ticket.js"></script>
   </body>
 </html>

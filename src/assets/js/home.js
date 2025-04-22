@@ -1,6 +1,9 @@
 import myImage from "@assets/images/city.webp";
 import Splide from "@splidejs/splide";
+import CustomSelect from "./select"
 
+
+CustomSelect.initializeAll()
 const svgElements = document.querySelectorAll("object");
 
 svgElements.forEach((svgElement) => {

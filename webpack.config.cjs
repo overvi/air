@@ -16,7 +16,9 @@ module.exports = {
     booking: "./src/assets/js/booking.js",
     passengers : "./src/assets/js/passengers.js",
     inlineDatepicker : "./src/assets/js/inlineDatepicker.js",
-    paymentlist : "./src/assets/js/paymentlist.js"
+    paymentlist : "./src/assets/js/paymentlist.js",
+    passengerDetails : "./src/assets/js/passengerDetails.js",
+    initSelect : "./src/assets/js/initSelect.js"
   },
 
   plugins: [
@@ -31,10 +33,15 @@ module.exports = {
         "user/profile/index": "./src/user/profile/index.html",
         "user/travel-history/index": "./src/user/travel-history/index.html",
         "user/travel-history/1/index": "./src/user/travel-history/1/index.html",
-        "booking/one-way/index": "./src/booking/one-way/index.html",
+        "booking/one-way/a/index": "./src/booking/one-way/a/index.html",
+        "booking/one-way/b/index": "./src/booking/one-way/b/index.html",
         "booking/one-way/confirmation/index":
           "./src/booking/one-way/confirmation/index.html",
-        "booking/two-way/index": "./src/booking/two-way/index.html",
+        "booking/two-way/a/index": "./src/booking/two-way/a/index.html",
+        "booking/two-way/b/index": "./src/booking/two-way/b/index.html",
+        "booking/two-way/passenger-details/index" : "./src/booking/two-way/passenger-details/index.html",
+        "booking/one-way/passenger-details/index" : "./src/booking/one-way/passenger-details/index.html",
+
         "booking/two-way/confirmation/index":
           "./src/booking/two-way/confirmation/index.html",
         "user/passengers/index": "./src/user/passengers/index.html",

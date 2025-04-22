@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box with Semicircle Notch</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5;
+      font-family: sans-serif;
+    }
+    
+    .box-container {
+      position: relative;
+      width: 600px;
+      height: 200px;
+    }
+    
+    .box-with-notch {
+      width: 600px;
+      height: 100%;
+      position: relative;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    }
+    
+    .actual-box {
+      width: 600px;
+      height: 100%;
+      background-color: white;
+      border-radius: 10px;
+      position: relative;
+      /* Perfect semicircle notch using clip-path */
+      clip-path: path('M0,10 C0,4.5 4.5,0 10,0 H120 V0 A30,30 0 0,0 180,0 V0 H290 C295.5,0 300,4.5 300,10 V190 C300,195.5 295.5,200 290,200 H10 C4.5,200 0,195.5 0,190 V10');
+    }
+  </style>
+</head>
+<body>
+  <div class="box-container">
+    <div class="box-with-notch">
+      <div class="actual-box"></div>
+    </div>
+  </div>
+</body>
+</html>

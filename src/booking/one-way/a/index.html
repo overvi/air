@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Booking - One Way</title>
     <link rel="stylesheet" href="@assets/css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..700;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
   </head>
-  <body data-page="differ-ticket">
+  <body data-page="differ-ticket ">
     <div
       id="scrolling-variant-container"
       class="fixed right-2 left-2 z-[999999] hidden rounded-b-[2.5rem] bg-black/40 py-3"
     ></div>
     <h1 class="sr-only">Booking One Way</h1>
-    <header class="page-content relative z-[5000] pt-10 lg:pt-12">
+<header class="page-content relative z-[5000] pt-10 lg:pt-12">
       <nav class="flex items-center justify-between">
         <div class="block lg:hidden">
           <button aria-label="Mobile Nav Toggle" id="mobile-nav-toggle">
@@ -167,11 +174,94 @@
           >
             پذیرش آنلاین
           </button>
-          <button
-            class="rounded-xxl hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
-          >
-            FA
-          </button>
+          <div>
+
+           
+            <div tabindex="0" class="relative">
+              <div class="slct *:text-tiny group">
+                <div class="select-trigger">
+                  <div
+                    class="input"
+                  >
+                    <div class=" hidden">
+                      <p
+                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                      >
+                      </p>
+                    </div>
+                    <button
+                    class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
+                  >
+                    FA
+                  </button>
+
+                    <div class="group-[.open]:rotate-180 hidden">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                class="options-list shadow-[0_0_20px_0_rgba(0,0,0,0.08)] min-w-[6.3125rem] absolute top-full  left-0 z-50 mt-2 hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
+              >
+                <label
+                  for="en"
+                  class="option border-b border-b-[#E9E9E9] pb-1.5 flex items-center gap-1.5"
+                  data-value="en"
+                >
+                  <input
+                    id="en"
+                    name="gender"
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">EN</p>
+                </label>
+                <label
+                  for="fa"
+                  class="option flex items-center gap-1.5"
+                  data-value="fa"
+                >
+                  <input
+                    id="fa"
+                    name="gender"
+                    checked
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">FA</p>
+                </label>
+              </div>
+
+                <!-- Hidden select for form submission -->
+                <select
+                  name="customSelectValue"
+                  class="hidden-select hidden"
+                  required
+                >
+                  <option value="">جنسیت...</option>
+                  <option value="fa">FA</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </div>
+        </div>
           <button
             class="rounded-xxl hidden min-h-10 border border-black bg-white px-5.5 text-sm font-bold transition-colors hover:bg-gray-400 lg:block"
           >
@@ -5244,9 +5334,9 @@
       </div>
     </header>
 
-    <main class="page-content -mt-8 pb-7">
+    <main class="page-content  -mt-8 pb-7">
       <div class="flex w-full gap-6">
-        <div class="basis-[22%] space-y-3.5 rounded-[1.25rem] bg-[#f8f8f8] p-6">
+        <div class="basis-[22%] h-fit space-y-3.5 rounded-[1.25rem] bg-[#f8f8f8] p-6">
           <div
             class="border-b-gray-tag flex items-center justify-between border-b pb-4"
           >
@@ -5542,9 +5632,191 @@
                 />
               </svg>
             </div>
-         
+            <div class="rounded-t-[1.25rem] bg-[#f8f8f8] px-5 pt-3">
+              <div class="external__splide__arrows flex items-center gap-6">
+                <button
+                  class="prev absolute top-0 right-0 bottom-0 translate-x-1/2"
+                  aria-label="Prev Day"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M10.7401 16.2802C10.9301 16.2802 11.1201 16.2102 11.2701 16.0602L14.8001 12.5302C15.0901 12.2402 15.0901 11.7602 14.8001 11.4702L11.2701 7.94016C10.9801 7.65016 10.5001 7.65016 10.2101 7.94016C9.92008 8.23016 9.92008 8.71016 10.2101 9.00016L13.2101 12.0002L10.2101 15.0002C9.92008 15.2902 9.92008 15.7702 10.2101 16.0602C10.3501 16.2102 10.5401 16.2802 10.7401 16.2802Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+                <button
+                  class="next absolute top-0 bottom-0 left-0 -translate-x-1/2"
+                  aria-label="Next Day"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.4"
+                      d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M13.2599 16.2802C13.0699 16.2802 12.8799 16.2102 12.7299 16.0602L9.19992 12.5302C8.90992 12.2402 8.90992 11.7602 9.19992 11.4702L12.7299 7.94016C13.0199 7.65016 13.4999 7.65016 13.7899 7.94016C14.0799 8.23016 14.0799 8.71016 13.7899 9.00016L10.7899 12.0002L13.7899 15.0002C14.0799 15.2902 14.0799 15.7702 13.7899 16.0602C13.6499 16.2102 13.4599 16.2802 13.2599 16.2802Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="splide"
+                role="group"
+                aria-label="Splide Basic HTML Example"
+              >
+                <div class="splide__track">
+                  <ul
+                    class="splide__list booking-days *:*:*:pointer-events-none *:*:border-e *:*:border-e-[#dedede]"
+                  >
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        disabled
+                        class="booking-day z-50 flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-red-700 bg-red-700/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-red-700">
+                          </span>
+                          <p class="text-xs font-semibold">تکمیل ضرفیت</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        class="booking-day active-day z-50 flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-green-500 bg-green-500/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-green-500">
+                          </span>
+                          <p class="text-xs font-semibold">3.250.000 تومان</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        disabled
+                        class="booking-day z-50 flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-red-700 bg-red-700/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-red-700">
+                          </span>
+                          <p class="text-xs font-semibold">تکمیل ضرفیت</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        class="booking-day flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-green-500 bg-green-500/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-green-500">
+                          </span>
+                          <p class="text-xs font-semibold">3.250.000 تومان</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        class="booking-day flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-green-500 bg-green-500/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-green-500">
+                          </span>
+                          <p class="text-xs font-semibold">3.250.000 تومان</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        class="booking-day flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-green-500 bg-green-500/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-green-500">
+                          </span>
+                          <p class="text-xs font-semibold">3.250.000 تومان</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="splide__slide booking-day-wrapper">
+                      <button
+                        class="booking-day flex flex-col items-center justify-center gap-1 px-1.5 pt-1.5 pb-3"
+                      >
+                        <div class="mt-1.5 flex flex-col">
+                          <span>شنبه </span>
+                          <span> 15 دی</span>
+                        </div>
+                        <div
+                          class="flex items-center gap-2 rounded-xl border border-green-500 bg-green-500/5 px-3.5 py-2"
+                        >
+                          <span class="size-2.5 rounded-full bg-green-500">
+                          </span>
+                          <p class="text-xs font-semibold text-nowrap">
+                            3.250.000 تومان
+                          </p>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             <div
-              class="flex w-full items-center justify-between rounded-[1.25rem] bg-black text-white"
+              class="flex w-full items-center justify-between rounded-b-[1.25rem] bg-black text-white"
             >
               <div class="flex items-center gap-14.5">
                 <div class="ms-6 flex items-center gap-2">
@@ -5591,9 +5863,9 @@
           </div>
           <section aria-label="Tickets">
             <ul class="flex flex-col gap-4">
-                <li>
+              <li class="rounded-[1.25rem]">
                 <div
-                  class="ticket-box [.has-open]:rounded-b-none relative rounded-[1.25rem] bg-gray-100 p-3.5 pb-4"
+                  class="ticket-box relative rounded-[1.25rem] bg-gray-100 [.has-open]:rounded-b-none"
                 >
                   <div class="absolute top-0 bottom-0 left-[27.711vw] mt-8.5">
                     <svg
@@ -5611,306 +5883,295 @@
                     </svg>
                   </div>
 
-                  <div class="flex items-center justify-between ps-10">
-
-                    <div class="flex items-center justify-between basis-[100%]">
-                      <div class="flex flex-col items-center gap-2.5">
-                        <div class="flex items-center gap-2.5">
-                          <p class="text-sm">شنبه 15 دی ماه</p>
-                          <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.25C8.41421 1.25 8.75 1.58579 8.75 2V5C8.75 5.41421 8.41421 5.75 8 5.75C7.58579 5.75 7.25 5.41421 7.25 5L7.25 2C7.25 1.58579 7.58579 1.25 8 1.25Z" fill="black"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.25C16.4142 1.25 16.75 1.58579 16.75 2V5C16.75 5.41421 16.4142 5.75 16 5.75C15.5858 5.75 15.25 5.41421 15.25 5V2C15.25 1.58579 15.5858 1.25 16 1.25Z" fill="black"/>
-                            <path opacity="0.4" d="M21.5 8.37L21.5 17.13C21.5 17.29 21.49 17.45 21.48 17.6H2.52C2.51 17.45 2.5 17.29 2.5 17.13L2.5 8.37C2.5 5.68 4.68 3.5 7.37 3.5L16.63 3.5C19.32 3.5 21.5 5.68 21.5 8.37Z" fill="black"/>
-                            <path d="M21.4795 17.5996C21.2395 20.0696 19.1595 21.9996 16.6295 21.9996H7.36953C4.83953 21.9996 2.75953 20.0696 2.51953 17.5996L21.4795 17.5996Z" fill="black"/>
-                            <path d="M13.53 11.6198C13.98 11.3098 14.26 10.8498 14.26 10.2298C14.26 8.92976 13.22 8.25977 12 8.25977C10.78 8.25977 9.73 8.92976 9.73 10.2298C9.73 10.8498 10.02 11.3198 10.46 11.6198C9.85 11.9798 9.5 12.5598 9.5 13.2398C9.5 14.4798 10.45 15.2498 12 15.2498C13.54 15.2498 14.5 14.4798 14.5 13.2398C14.5 12.5598 14.15 11.9698 13.53 11.6198ZM12 9.49977C12.52 9.49977 12.9 9.78977 12.9 10.2898C12.9 10.7798 12.52 11.0898 12 11.0898C11.48 11.0898 11.1 10.7798 11.1 10.2898C11.1 9.78977 11.48 9.49977 12 9.49977ZM12 13.9998C11.34 13.9998 10.86 13.6698 10.86 13.0698C10.86 12.4698 11.34 12.1498 12 12.1498C12.66 12.1498 13.14 12.4798 13.14 13.0698C13.14 13.6698 12.66 13.9998 12 13.9998Z" fill="black"/>
-                            </svg>
-                            </div>
+                  <div class="flex items-center justify-between ps-14.5">
+                    <div class="flex flex-col items-center gap-2.5">
+                      <button
+                        class="text-tiny mt-5 w-fit rounded-full bg-black px-10 py-1.5 text-white"
+                      >
+                        یک ساعت و ده دقیقه
+                      </button>
+                      <div class="flex items-center gap-6">
+                        <div class="flex flex-col items-center">
+                          <p>09:10</p>
+                          <p class="text-xl font-bold">SYZ</p>
+                          <p>شیراز</p>
                         </div>
-                        <div class="flex items-center gap-2">
-                          <div class="flex flex-col items-center">
-                            <p>09:10</p>
-                            <p class="text-xl font-bold">SYZ</p>
-                            <p>شیراز</p>
-                          </div>
-                          <div>
-                            <svg width="131" height="40" viewBox="0 0 131 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16 20H116" stroke="black" stroke-dasharray="4 4"/>
-                              <path d="M131 21C131 25.4183 127.418 29 123 29C118.582 29 115 25.4183 115 21C115 16.5817 118.582 13 123 13C127.418 13 131 16.5817 131 21ZM119.8 21C119.8 22.7673 121.233 24.2 123 24.2C124.767 24.2 126.2 22.7673 126.2 21C126.2 19.2327 124.767 17.8 123 17.8C121.233 17.8 119.8 19.2327 119.8 21Z" fill="black"/>
-                              <circle cx="8" cy="21" r="8" fill="black"/>
-                              <path d="M66.6001 16.6003L68.4501 16.6003C69.1667 16.6003 69.5167 16.0669 69.2334 15.4169L65.6334 7.06693C65.0667 5.75026 65.7667 4.68359 67.1834 4.68359L69.3834 4.68359C70.5167 4.68359 71.8334 5.53359 72.2667 6.58359L76.3501 16.0836C76.4834 16.3503 76.8334 16.5836 77.1334 16.5836L82.2334 16.5836C83.8334 16.5836 85.7501 17.7669 86.4834 19.1836C86.7334 19.6836 86.7334 20.2836 86.4834 20.7836C85.7501 22.2169 83.8501 23.4003 82.2501 23.4003L77.1501 23.4003C76.8501 23.4003 76.5001 23.6336 76.3667 23.9003L75.6334 25.6336L66.6001 16.6003Z" fill="black"/>
-                              <path d="M69.3838 35.3173L67.1838 35.3173C65.7671 35.3173 65.0671 34.2506 65.6338 32.9339L69.2338 24.5839C69.5005 23.9173 69.1671 23.4006 68.4505 23.4006L63.6005 23.4006C63.2171 23.4006 62.6671 23.6173 62.4005 23.9006L58.5171 27.7673C58.1171 28.1673 57.3171 28.3506 56.7671 28.1673L54.5005 27.4173C53.5171 27.0839 53.0671 25.9673 53.5171 25.0506L56.8505 21.0839C57.3671 20.4839 57.3671 19.5006 56.8505 18.9006L53.5171 14.9339C53.0505 14.0173 53.5171 12.9006 54.5005 12.6006L56.7671 11.8506C57.3338 11.6673 58.1171 11.8506 58.5171 12.2506L62.4005 16.1173C62.6671 16.3839 63.2171 16.6006 63.6005 16.6006L66.6005 16.6006L75.6338 25.6339L72.2838 33.4173C71.8338 34.4673 70.5171 35.3173 69.3838 35.3173Z" fill="#B1B1B1"/>
-                              </svg>
-                              
-                          </div>
-                          <div class="flex flex-col items-center">
-                            <p>09:10</p>
-                            <p class="text-xl font-bold">SYZ</p>
-                            <p>شیراز</p>
-                          </div>
+                        <div>
+                          <svg
+                            width="332"
+                            height="40"
+                            viewBox="0 0 332 40"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M4 20L321 20"
+                              stroke="black"
+                              stroke-dasharray="4 4"
+                            />
+                            <path
+                              d="M155.6 16.6003L157.45 16.6003C158.167 16.6003 158.517 16.0669 158.233 15.4169L154.633 7.06693C154.067 5.75026 154.767 4.68359 156.183 4.68359L158.383 4.68359C159.517 4.68359 160.833 5.53359 161.267 6.58359L165.35 16.0836C165.483 16.3503 165.833 16.5836 166.133 16.5836L171.233 16.5836C172.833 16.5836 174.75 17.7669 175.483 19.1836C175.733 19.6836 175.733 20.2836 175.483 20.7836C174.75 22.2169 172.85 23.4003 171.25 23.4003L166.15 23.4003C165.85 23.4003 165.5 23.6336 165.367 23.9003L164.633 25.6336L155.6 16.6003Z"
+                              fill="black"
+                            />
+                            <path
+                              d="M158.384 35.3173L156.184 35.3173C154.767 35.3173 154.067 34.2506 154.634 32.9339L158.234 24.5839C158.5 23.9173 158.167 23.4006 157.45 23.4006L152.6 23.4006C152.217 23.4006 151.667 23.6173 151.4 23.9006L147.517 27.7673C147.117 28.1673 146.317 28.3506 145.767 28.1673L143.5 27.4173C142.517 27.0839 142.067 25.9673 142.517 25.0506L145.85 21.0839C146.367 20.4839 146.367 19.5006 145.85 18.9006L142.517 14.9339C142.05 14.0173 142.517 12.9006 143.5 12.6006L145.767 11.8506C146.334 11.6673 147.117 11.8506 147.517 12.2506L151.4 16.1173C151.667 16.3839 152.217 16.6006 152.6 16.6006L155.6 16.6006L164.634 25.6339L161.284 33.4173C160.834 34.4673 159.517 35.3173 158.384 35.3173Z"
+                              fill="#B1B1B1"
+                            />
+                            <path
+                              d="M332 20C332 24.4183 328.418 28 324 28C319.582 28 316 24.4183 316 20C316 15.5817 319.582 12 324 12C328.418 12 332 15.5817 332 20ZM320.8 20C320.8 21.7673 322.233 23.2 324 23.2C325.767 23.2 327.2 21.7673 327.2 20C327.2 18.2327 325.767 16.8 324 16.8C322.233 16.8 320.8 18.2327 320.8 20Z"
+                              fill="black"
+                            />
+                            <circle cx="8" cy="20" r="8" fill="black" />
+                          </svg>
                         </div>
-                     
+                        <div class="flex flex-col items-center">
+                          <p>09:10</p>
+                          <p class="text-xl font-bold">SYZ</p>
+                          <p>شیراز</p>
+                        </div>
                       </div>
-                      <div class="flex flex-col items-center gap-2.5">
-                        <div class="flex items-center gap-2.5">
-                          <p class="text-sm">شنبه 15 دی ماه</p>
-                          <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 1.25C8.41421 1.25 8.75 1.58579 8.75 2V5C8.75 5.41421 8.41421 5.75 8 5.75C7.58579 5.75 7.25 5.41421 7.25 5L7.25 2C7.25 1.58579 7.58579 1.25 8 1.25Z" fill="black"/>
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M16 1.25C16.4142 1.25 16.75 1.58579 16.75 2V5C16.75 5.41421 16.4142 5.75 16 5.75C15.5858 5.75 15.25 5.41421 15.25 5V2C15.25 1.58579 15.5858 1.25 16 1.25Z" fill="black"/>
-                            <path opacity="0.4" d="M21.5 8.37L21.5 17.13C21.5 17.29 21.49 17.45 21.48 17.6H2.52C2.51 17.45 2.5 17.29 2.5 17.13L2.5 8.37C2.5 5.68 4.68 3.5 7.37 3.5L16.63 3.5C19.32 3.5 21.5 5.68 21.5 8.37Z" fill="black"/>
-                            <path d="M21.4795 17.5996C21.2395 20.0696 19.1595 21.9996 16.6295 21.9996H7.36953C4.83953 21.9996 2.75953 20.0696 2.51953 17.5996L21.4795 17.5996Z" fill="black"/>
-                            <path d="M13.53 11.6198C13.98 11.3098 14.26 10.8498 14.26 10.2298C14.26 8.92976 13.22 8.25977 12 8.25977C10.78 8.25977 9.73 8.92976 9.73 10.2298C9.73 10.8498 10.02 11.3198 10.46 11.6198C9.85 11.9798 9.5 12.5598 9.5 13.2398C9.5 14.4798 10.45 15.2498 12 15.2498C13.54 15.2498 14.5 14.4798 14.5 13.2398C14.5 12.5598 14.15 11.9698 13.53 11.6198ZM12 9.49977C12.52 9.49977 12.9 9.78977 12.9 10.2898C12.9 10.7798 12.52 11.0898 12 11.0898C11.48 11.0898 11.1 10.7798 11.1 10.2898C11.1 9.78977 11.48 9.49977 12 9.49977ZM12 13.9998C11.34 13.9998 10.86 13.6698 10.86 13.0698C10.86 12.4698 11.34 12.1498 12 12.1498C12.66 12.1498 13.14 12.4798 13.14 13.0698C13.14 13.6698 12.66 13.9998 12 13.9998Z" fill="black"/>
-                            </svg>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                          <div class="flex flex-col items-center">
-                            <p>09:10</p>
-                            <p class="text-xl font-bold">SYZ</p>
-                            <p>شیراز</p>
-                          </div>
-                          <div>
-                            <svg width="131" height="40" viewBox="0 0 131 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M16 20H116" stroke="black" stroke-dasharray="4 4"/>
-                              <path d="M131 21C131 25.4183 127.418 29 123 29C118.582 29 115 25.4183 115 21C115 16.5817 118.582 13 123 13C127.418 13 131 16.5817 131 21ZM119.8 21C119.8 22.7673 121.233 24.2 123 24.2C124.767 24.2 126.2 22.7673 126.2 21C126.2 19.2327 124.767 17.8 123 17.8C121.233 17.8 119.8 19.2327 119.8 21Z" fill="black"/>
-                              <circle cx="8" cy="21" r="8" fill="black"/>
-                              <path d="M66.6001 16.6003L68.4501 16.6003C69.1667 16.6003 69.5167 16.0669 69.2334 15.4169L65.6334 7.06693C65.0667 5.75026 65.7667 4.68359 67.1834 4.68359L69.3834 4.68359C70.5167 4.68359 71.8334 5.53359 72.2667 6.58359L76.3501 16.0836C76.4834 16.3503 76.8334 16.5836 77.1334 16.5836L82.2334 16.5836C83.8334 16.5836 85.7501 17.7669 86.4834 19.1836C86.7334 19.6836 86.7334 20.2836 86.4834 20.7836C85.7501 22.2169 83.8501 23.4003 82.2501 23.4003L77.1501 23.4003C76.8501 23.4003 76.5001 23.6336 76.3667 23.9003L75.6334 25.6336L66.6001 16.6003Z" fill="black"/>
-                              <path d="M69.3838 35.3173L67.1838 35.3173C65.7671 35.3173 65.0671 34.2506 65.6338 32.9339L69.2338 24.5839C69.5005 23.9173 69.1671 23.4006 68.4505 23.4006L63.6005 23.4006C63.2171 23.4006 62.6671 23.6173 62.4005 23.9006L58.5171 27.7673C58.1171 28.1673 57.3171 28.3506 56.7671 28.1673L54.5005 27.4173C53.5171 27.0839 53.0671 25.9673 53.5171 25.0506L56.8505 21.0839C57.3671 20.4839 57.3671 19.5006 56.8505 18.9006L53.5171 14.9339C53.0505 14.0173 53.5171 12.9006 54.5005 12.6006L56.7671 11.8506C57.3338 11.6673 58.1171 11.8506 58.5171 12.2506L62.4005 16.1173C62.6671 16.3839 63.2171 16.6006 63.6005 16.6006L66.6005 16.6006L75.6338 25.6339L72.2838 33.4173C71.8338 34.4673 70.5171 35.3173 69.3838 35.3173Z" fill="#B1B1B1"/>
+                      <div class="flex items-center gap-2 relative">
+                        <button
+                        aria-controls="fly-details-1"
+                        data-group="ticket-1"
+                          class="text-tiny *:pointer-events-none plan-toggle before:hidden [.active]:before:block group before:bottom-0 before:right-0 before:translate-y-full before:absolute before:bg-white before:w-full before:h-full flex items-center  gap-2 fly-details-button [.active]:bg-white [.active]:text-black w-fit [.active]:rounded-b-none rounded-lg bg-black [.active]:px-3 px-5.5 py-1.5 text-white"
+                        >
+                          <p>اطلاعات پرواز</p>
+                          <div class="group-[.active]:block hidden">
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.38012 8.7793L6.18345 4.97596C6.63262 4.5268 7.36762 4.5268 7.81678 4.97596L11.6201 8.7793" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                               </svg>
                               
                           </div>
-                          <div class="flex flex-col items-center">
-                            <p>09:10</p>
-                            <p class="text-xl font-bold">SYZ</p>
-                            <p>شیراز</p>
-                          </div>
-                        </div>
+                        </button>
                       
                       </div>
-                   
-                      <div class="flex items-center gap-2.5">
-                        <div>
-                          <div
-                            class="flex min-w-[10.125rem] items-center gap-1 rounded-t-lg bg-black p-3.5 text-white"
-                          >
-                            <span
-                              class="block size-1.5 rounded-full bg-white"
-                            ></span>
-                            <p class="text-xs font-light">اکونومی</p>
-                          </div>
-                          <div class="rounded-b-lg bg-white p-3.5">
-                            <div class="flex items-center gap-1">
-                              <div>
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    opacity="0.4"
-                                    d="M7.4925 13.485C10.8021 13.485 13.485 10.8021 13.485 7.4925C13.485 4.18293 10.8021 1.5 7.4925 1.5C4.18293 1.5 1.5 4.18293 1.5 7.4925C1.5 10.8021 4.18293 13.485 7.4925 13.485Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M16.4771 11.9921C16.4771 14.4671 14.4671 16.4771 11.9921 16.4771C10.4621 16.4771 9.11957 15.7121 8.30957 14.5496C11.5796 14.1821 14.1821 11.5796 14.5496 8.30957C15.7121 9.11957 16.4771 10.4621 16.4771 11.9921Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M8.5875 7.28262L6.7875 6.65262C6.6075 6.59262 6.57 6.57762 6.57 6.31512C6.57 6.12012 6.705 5.96262 6.8775 5.96262H8.0025C8.2425 5.96262 8.4375 6.18012 8.4375 6.45012C8.4375 6.75762 8.6925 7.01262 9 7.01262C9.3075 7.01262 9.5625 6.75762 9.5625 6.45012C9.5625 5.58762 8.895 4.88262 8.0625 4.84512V4.80762C8.0625 4.50012 7.8075 4.24512 7.5 4.24512C7.1925 4.24512 6.9375 4.49262 6.9375 4.80762V4.84512H6.87C6.0825 4.84512 5.4375 5.50512 5.4375 6.32262C5.4375 7.03512 5.7525 7.49262 6.405 7.71762L8.2125 8.34762C8.3925 8.40762 8.43 8.42262 8.43 8.68512C8.43 8.88012 8.295 9.03762 8.1225 9.03762H6.9975C6.7575 9.03762 6.5625 8.82012 6.5625 8.55012C6.5625 8.24262 6.3075 7.98762 6 7.98762C5.6925 7.98762 5.4375 8.24262 5.4375 8.55012C5.4375 9.41262 6.105 10.1176 6.9375 10.1551V10.2001C6.9375 10.5076 7.1925 10.7626 7.5 10.7626C7.8075 10.7626 8.0625 10.5076 8.0625 10.2001V10.1626H8.13C8.9175 10.1626 9.5625 9.50262 9.5625 8.68512C9.5625 7.97262 9.24 7.51512 8.5875 7.28262Z"
-                                    fill="black"
-                                  />
-                                </svg>
-                              </div>
-                              <p class="text-base font-bold">
-                                3.200.000 <span class="text-xs">تومان</span>
-                              </p>
-                            </div>
-                            <div class="mt-3.5 flex items-center gap-1">
-                              <div>
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    opacity="0.4"
-                                    d="M13.1478 5.8275C13.0953 5.82 13.0428 5.82 12.9903 5.8275C11.8278 5.79 10.9053 4.8375 10.9053 3.6675C10.9053 2.475 11.8728 1.5 13.0728 1.5C14.2653 1.5 15.2403 2.4675 15.2403 3.6675C15.2328 4.8375 14.3103 5.79 13.1478 5.8275Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    opacity="0.4"
-                                    d="M15.5927 11.0253C14.7527 11.5878 13.5752 11.7978 12.4877 11.6553C12.7727 11.0403 12.9227 10.3578 12.9302 9.6378C12.9302 8.8878 12.7652 8.1753 12.4502 7.5528C13.5602 7.4028 14.7377 7.61279 15.5852 8.17529C16.7702 8.95529 16.7702 10.2378 15.5927 11.0253Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    opacity="0.4"
-                                    d="M4.8298 5.8275C4.8823 5.82 4.9348 5.82 4.9873 5.8275C6.1498 5.79 7.0723 4.8375 7.0723 3.6675C7.0723 2.475 6.1048 1.5 4.9048 1.5C3.7123 1.5 2.7373 2.4675 2.7373 3.6675C2.7448 4.8375 3.6673 5.79 4.8298 5.8275Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    opacity="0.4"
-                                    d="M4.91234 9.63795C4.91234 10.3654 5.06984 11.0554 5.35484 11.6779C4.29734 11.7904 3.19484 11.5654 2.38484 11.0329C1.19984 10.2454 1.19984 8.96294 2.38484 8.17544C3.18734 7.63544 4.31984 7.41794 5.38484 7.53794C5.07734 8.16794 4.91234 8.88045 4.91234 9.63795Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M9.08961 11.9025C9.02961 11.895 8.96211 11.895 8.89461 11.9025C7.51461 11.8575 6.41211 10.725 6.41211 9.33C6.41211 7.905 7.55961 6.75 8.99211 6.75C10.4171 6.75 11.5721 7.905 11.5721 9.33C11.5721 10.725 10.4771 11.8575 9.08961 11.9025Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M6.65211 13.4555C5.51961 14.213 5.51961 15.458 6.65211 16.208C7.94211 17.0705 10.0571 17.0705 11.3471 16.208C12.4796 15.4505 12.4796 14.2055 11.3471 13.4555C10.0646 12.593 7.94961 12.593 6.65211 13.4555Z"
-                                    fill="black"
-                                  />
-                                </svg>
-                              </div>
-                              <p class="text-xs">12 صندلی باقی مانده</p>
-                            </div>
-                            <button
-                              aria-controls="economy-plans-1"
-                              data-group="ticket-1"
-                              class="plan-toggle group mt-4.5 flex w-full items-center justify-center gap-2 rounded-lg border bg-black py-1.5 text-sm text-white *:pointer-events-none [.plan-opened]:border-black [.plan-opened]:bg-white [.plan-opened]:text-black"
-                            >
-                              <p>نمایش بیشتر</p>
-                              <div>
-                                <svg
-                                  width="14"
-                                  height="14"
-                                  viewBox="0 0 14 14"
-                                  fill="none"
-                                  class="group-[.plan-opened]:rotate-180 group-[.plan-opened]:*:stroke-black"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M2.38012 5.2207L6.18345 9.02404C6.63262 9.4732 7.36762 9.4732 7.81678 9.02404L11.6201 5.2207"
-                                    stroke="white"
-                                    stroke-width="1.5"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </svg>
-                              </div>
-                            </button>
-                          </div>
+                    </div>
+                    <div class="flex items-center gap-2.5 p-3.5">
+                      <div>
+                        <div
+                          class="flex min-w-[10.125rem] items-center gap-1 rounded-t-lg bg-black p-3.5 text-white"
+                        >
+                          <span
+                            class="block size-1.5 rounded-full bg-white"
+                          ></span>
+                          <p class="text-xs font-light">اکونومی</p>
                         </div>
-                        <div>
-                          <div
-                            class="flex min-w-[10.125rem] items-center gap-1 rounded-t-lg bg-black p-3.5 text-white"
+                        <div class="rounded-b-lg bg-white p-3.5">
+                          <div class="flex items-center gap-1">
+                            <div>
+                              <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.4"
+                                  d="M7.4925 13.485C10.8021 13.485 13.485 10.8021 13.485 7.4925C13.485 4.18293 10.8021 1.5 7.4925 1.5C4.18293 1.5 1.5 4.18293 1.5 7.4925C1.5 10.8021 4.18293 13.485 7.4925 13.485Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M16.4771 11.9921C16.4771 14.4671 14.4671 16.4771 11.9921 16.4771C10.4621 16.4771 9.11957 15.7121 8.30957 14.5496C11.5796 14.1821 14.1821 11.5796 14.5496 8.30957C15.7121 9.11957 16.4771 10.4621 16.4771 11.9921Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M8.5875 7.28262L6.7875 6.65262C6.6075 6.59262 6.57 6.57762 6.57 6.31512C6.57 6.12012 6.705 5.96262 6.8775 5.96262H8.0025C8.2425 5.96262 8.4375 6.18012 8.4375 6.45012C8.4375 6.75762 8.6925 7.01262 9 7.01262C9.3075 7.01262 9.5625 6.75762 9.5625 6.45012C9.5625 5.58762 8.895 4.88262 8.0625 4.84512V4.80762C8.0625 4.50012 7.8075 4.24512 7.5 4.24512C7.1925 4.24512 6.9375 4.49262 6.9375 4.80762V4.84512H6.87C6.0825 4.84512 5.4375 5.50512 5.4375 6.32262C5.4375 7.03512 5.7525 7.49262 6.405 7.71762L8.2125 8.34762C8.3925 8.40762 8.43 8.42262 8.43 8.68512C8.43 8.88012 8.295 9.03762 8.1225 9.03762H6.9975C6.7575 9.03762 6.5625 8.82012 6.5625 8.55012C6.5625 8.24262 6.3075 7.98762 6 7.98762C5.6925 7.98762 5.4375 8.24262 5.4375 8.55012C5.4375 9.41262 6.105 10.1176 6.9375 10.1551V10.2001C6.9375 10.5076 7.1925 10.7626 7.5 10.7626C7.8075 10.7626 8.0625 10.5076 8.0625 10.2001V10.1626H8.13C8.9175 10.1626 9.5625 9.50262 9.5625 8.68512C9.5625 7.97262 9.24 7.51512 8.5875 7.28262Z"
+                                  fill="black"
+                                />
+                              </svg>
+                            </div>
+                            <p class="text-base font-bold">
+                              3.200.000 <span class="text-xs">تومان</span>
+                            </p>
+                          </div>
+                          <div class="mt-3.5 flex items-center gap-1">
+                            <div>
+                              <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.4"
+                                  d="M13.1478 5.8275C13.0953 5.82 13.0428 5.82 12.9903 5.8275C11.8278 5.79 10.9053 4.8375 10.9053 3.6675C10.9053 2.475 11.8728 1.5 13.0728 1.5C14.2653 1.5 15.2403 2.4675 15.2403 3.6675C15.2328 4.8375 14.3103 5.79 13.1478 5.8275Z"
+                                  fill="black"
+                                />
+                                <path
+                                  opacity="0.4"
+                                  d="M15.5927 11.0253C14.7527 11.5878 13.5752 11.7978 12.4877 11.6553C12.7727 11.0403 12.9227 10.3578 12.9302 9.6378C12.9302 8.8878 12.7652 8.1753 12.4502 7.5528C13.5602 7.4028 14.7377 7.61279 15.5852 8.17529C16.7702 8.95529 16.7702 10.2378 15.5927 11.0253Z"
+                                  fill="black"
+                                />
+                                <path
+                                  opacity="0.4"
+                                  d="M4.8298 5.8275C4.8823 5.82 4.9348 5.82 4.9873 5.8275C6.1498 5.79 7.0723 4.8375 7.0723 3.6675C7.0723 2.475 6.1048 1.5 4.9048 1.5C3.7123 1.5 2.7373 2.4675 2.7373 3.6675C2.7448 4.8375 3.6673 5.79 4.8298 5.8275Z"
+                                  fill="black"
+                                />
+                                <path
+                                  opacity="0.4"
+                                  d="M4.91234 9.63795C4.91234 10.3654 5.06984 11.0554 5.35484 11.6779C4.29734 11.7904 3.19484 11.5654 2.38484 11.0329C1.19984 10.2454 1.19984 8.96294 2.38484 8.17544C3.18734 7.63544 4.31984 7.41794 5.38484 7.53794C5.07734 8.16794 4.91234 8.88045 4.91234 9.63795Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M9.08961 11.9025C9.02961 11.895 8.96211 11.895 8.89461 11.9025C7.51461 11.8575 6.41211 10.725 6.41211 9.33C6.41211 7.905 7.55961 6.75 8.99211 6.75C10.4171 6.75 11.5721 7.905 11.5721 9.33C11.5721 10.725 10.4771 11.8575 9.08961 11.9025Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M6.65211 13.4555C5.51961 14.213 5.51961 15.458 6.65211 16.208C7.94211 17.0705 10.0571 17.0705 11.3471 16.208C12.4796 15.4505 12.4796 14.2055 11.3471 13.4555C10.0646 12.593 7.94961 12.593 6.65211 13.4555Z"
+                                  fill="black"
+                                />
+                              </svg>
+                            </div>
+                            <p class="text-xs">12 صندلی باقی مانده</p>
+                          </div>
+                          <button
+                            aria-controls="economy-plans-1"
+                            data-group="ticket-1"
+                            class="plan-toggle group mt-4.5 flex w-full items-center justify-center gap-2 rounded-lg border bg-black py-1.5 text-sm text-white *:pointer-events-none [.plan-opened]:border-black [.plan-opened]:bg-white [.plan-opened]:text-black"
                           >
-                            <span
-                              class="block size-1.5 rounded-full bg-white"
-                            ></span>
-                            <p class="text-xs font-light">بیزنس</p>
-                          </div>
-                          <div class="rounded-b-lg bg-white p-3.5">
-                            <div class="flex items-center gap-1">
-                              <div>
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    opacity="0.4"
-                                    d="M7.4925 13.485C10.8021 13.485 13.485 10.8021 13.485 7.4925C13.485 4.18293 10.8021 1.5 7.4925 1.5C4.18293 1.5 1.5 4.18293 1.5 7.4925C1.5 10.8021 4.18293 13.485 7.4925 13.485Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M16.4771 11.9921C16.4771 14.4671 14.4671 16.4771 11.9921 16.4771C10.4621 16.4771 9.11957 15.7121 8.30957 14.5496C11.5796 14.1821 14.1821 11.5796 14.5496 8.30957C15.7121 9.11957 16.4771 10.4621 16.4771 11.9921Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M8.5875 7.28262L6.7875 6.65262C6.6075 6.59262 6.57 6.57762 6.57 6.31512C6.57 6.12012 6.705 5.96262 6.8775 5.96262H8.0025C8.2425 5.96262 8.4375 6.18012 8.4375 6.45012C8.4375 6.75762 8.6925 7.01262 9 7.01262C9.3075 7.01262 9.5625 6.75762 9.5625 6.45012C9.5625 5.58762 8.895 4.88262 8.0625 4.84512V4.80762C8.0625 4.50012 7.8075 4.24512 7.5 4.24512C7.1925 4.24512 6.9375 4.49262 6.9375 4.80762V4.84512H6.87C6.0825 4.84512 5.4375 5.50512 5.4375 6.32262C5.4375 7.03512 5.7525 7.49262 6.405 7.71762L8.2125 8.34762C8.3925 8.40762 8.43 8.42262 8.43 8.68512C8.43 8.88012 8.295 9.03762 8.1225 9.03762H6.9975C6.7575 9.03762 6.5625 8.82012 6.5625 8.55012C6.5625 8.24262 6.3075 7.98762 6 7.98762C5.6925 7.98762 5.4375 8.24262 5.4375 8.55012C5.4375 9.41262 6.105 10.1176 6.9375 10.1551V10.2001C6.9375 10.5076 7.1925 10.7626 7.5 10.7626C7.8075 10.7626 8.0625 10.5076 8.0625 10.2001V10.1626H8.13C8.9175 10.1626 9.5625 9.50262 9.5625 8.68512C9.5625 7.97262 9.24 7.51512 8.5875 7.28262Z"
-                                    fill="black"
-                                  />
-                                </svg>
-                              </div>
-                              <p class="text-base font-bold">
-                                3.200.000 <span class="text-xs">تومان</span>
-                              </p>
+                            <p>نمایش بیشتر</p>
+                            <div>
+                              <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                class="group-[.plan-opened]:rotate-180 group-[.plan-opened]:*:stroke-black"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M2.38012 5.2207L6.18345 9.02404C6.63262 9.4732 7.36762 9.4732 7.81678 9.02404L11.6201 5.2207"
+                                  stroke="white"
+                                  stroke-width="1.5"
+                                  stroke-miterlimit="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
                             </div>
-                            <div class="mt-3.5 flex items-center gap-1">
-                              <div>
-                                <svg
-                                  width="18"
-                                  height="18"
-                                  viewBox="0 0 18 18"
-                                  fill="none"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    opacity="0.4"
-                                    d="M13.1478 5.8275C13.0953 5.82 13.0428 5.82 12.9903 5.8275C11.8278 5.79 10.9053 4.8375 10.9053 3.6675C10.9053 2.475 11.8728 1.5 13.0728 1.5C14.2653 1.5 15.2403 2.4675 15.2403 3.6675C15.2328 4.8375 14.3103 5.79 13.1478 5.8275Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    opacity="0.4"
-                                    d="M15.5927 11.0253C14.7527 11.5878 13.5752 11.7978 12.4877 11.6553C12.7727 11.0403 12.9227 10.3578 12.9302 9.6378C12.9302 8.8878 12.7652 8.1753 12.4502 7.5528C13.5602 7.4028 14.7377 7.61279 15.5852 8.17529C16.7702 8.95529 16.7702 10.2378 15.5927 11.0253Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    opacity="0.4"
-                                    d="M4.8298 5.8275C4.8823 5.82 4.9348 5.82 4.9873 5.8275C6.1498 5.79 7.0723 4.8375 7.0723 3.6675C7.0723 2.475 6.1048 1.5 4.9048 1.5C3.7123 1.5 2.7373 2.4675 2.7373 3.6675C2.7448 4.8375 3.6673 5.79 4.8298 5.8275Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    opacity="0.4"
-                                    d="M4.91234 9.63795C4.91234 10.3654 5.06984 11.0554 5.35484 11.6779C4.29734 11.7904 3.19484 11.5654 2.38484 11.0329C1.19984 10.2454 1.19984 8.96294 2.38484 8.17544C3.18734 7.63544 4.31984 7.41794 5.38484 7.53794C5.07734 8.16794 4.91234 8.88045 4.91234 9.63795Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M9.08961 11.9025C9.02961 11.895 8.96211 11.895 8.89461 11.9025C7.51461 11.8575 6.41211 10.725 6.41211 9.33C6.41211 7.905 7.55961 6.75 8.99211 6.75C10.4171 6.75 11.5721 7.905 11.5721 9.33C11.5721 10.725 10.4771 11.8575 9.08961 11.9025Z"
-                                    fill="black"
-                                  />
-                                  <path
-                                    d="M6.65211 13.4555C5.51961 14.213 5.51961 15.458 6.65211 16.208C7.94211 17.0705 10.0571 17.0705 11.3471 16.208C12.4796 15.4505 12.4796 14.2055 11.3471 13.4555C10.0646 12.593 7.94961 12.593 6.65211 13.4555Z"
-                                    fill="black"
-                                  />
-                                </svg>
-                              </div>
-                              <p class="text-xs">12 صندلی باقی مانده</p>
+                          </button>
+                        </div>
+                      </div>
+                      <div>
+                        <div
+                          class="flex min-w-[10.125rem] items-center gap-1 rounded-t-lg bg-black p-3.5 text-white"
+                        >
+                          <span
+                            class="block size-1.5 rounded-full bg-white"
+                          ></span>
+                          <p class="text-xs font-light">بیزنس</p>
+                        </div>
+                        <div class="rounded-b-lg bg-white p-3.5">
+                          <div class="flex items-center gap-1">
+                            <div>
+                              <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.4"
+                                  d="M7.4925 13.485C10.8021 13.485 13.485 10.8021 13.485 7.4925C13.485 4.18293 10.8021 1.5 7.4925 1.5C4.18293 1.5 1.5 4.18293 1.5 7.4925C1.5 10.8021 4.18293 13.485 7.4925 13.485Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M16.4771 11.9921C16.4771 14.4671 14.4671 16.4771 11.9921 16.4771C10.4621 16.4771 9.11957 15.7121 8.30957 14.5496C11.5796 14.1821 14.1821 11.5796 14.5496 8.30957C15.7121 9.11957 16.4771 10.4621 16.4771 11.9921Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M8.5875 7.28262L6.7875 6.65262C6.6075 6.59262 6.57 6.57762 6.57 6.31512C6.57 6.12012 6.705 5.96262 6.8775 5.96262H8.0025C8.2425 5.96262 8.4375 6.18012 8.4375 6.45012C8.4375 6.75762 8.6925 7.01262 9 7.01262C9.3075 7.01262 9.5625 6.75762 9.5625 6.45012C9.5625 5.58762 8.895 4.88262 8.0625 4.84512V4.80762C8.0625 4.50012 7.8075 4.24512 7.5 4.24512C7.1925 4.24512 6.9375 4.49262 6.9375 4.80762V4.84512H6.87C6.0825 4.84512 5.4375 5.50512 5.4375 6.32262C5.4375 7.03512 5.7525 7.49262 6.405 7.71762L8.2125 8.34762C8.3925 8.40762 8.43 8.42262 8.43 8.68512C8.43 8.88012 8.295 9.03762 8.1225 9.03762H6.9975C6.7575 9.03762 6.5625 8.82012 6.5625 8.55012C6.5625 8.24262 6.3075 7.98762 6 7.98762C5.6925 7.98762 5.4375 8.24262 5.4375 8.55012C5.4375 9.41262 6.105 10.1176 6.9375 10.1551V10.2001C6.9375 10.5076 7.1925 10.7626 7.5 10.7626C7.8075 10.7626 8.0625 10.5076 8.0625 10.2001V10.1626H8.13C8.9175 10.1626 9.5625 9.50262 9.5625 8.68512C9.5625 7.97262 9.24 7.51512 8.5875 7.28262Z"
+                                  fill="black"
+                                />
+                              </svg>
                             </div>
-                            <button
-                              aria-controls="business-plans-1"
-                              data-group="ticket-1"
-                              class="plan-toggle group mt-4.5 flex w-full items-center justify-center gap-2 rounded-lg border bg-black py-1.5 text-sm text-white *:pointer-events-none [.plan-opened]:border-black [.plan-opened]:bg-white [.plan-opened]:text-black"
-                            >
-                              <p>نمایش بیشتر</p>
-                              <div>
-                                <svg
-                                  width="14"
-                                  height="14"
-                                  viewBox="0 0 14 14"
-                                  fill="none"
-                                  class="group-[.plan-opened]:rotate-180 group-[.plan-opened]:*:stroke-black"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                >
-                                  <path
-                                    d="M2.38012 5.2207L6.18345 9.02404C6.63262 9.4732 7.36762 9.4732 7.81678 9.02404L11.6201 5.2207"
-                                    stroke="white"
-                                    stroke-width="1.5"
-                                    stroke-miterlimit="10"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                  />
-                                </svg>
-                              </div>
-                            </button>
+                            <p class="text-base font-bold">
+                              3.200.000 <span class="text-xs">تومان</span>
+                            </p>
                           </div>
+                          <div class="mt-3.5 flex items-center gap-1">
+                            <div>
+                              <svg
+                                width="18"
+                                height="18"
+                                viewBox="0 0 18 18"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  opacity="0.4"
+                                  d="M13.1478 5.8275C13.0953 5.82 13.0428 5.82 12.9903 5.8275C11.8278 5.79 10.9053 4.8375 10.9053 3.6675C10.9053 2.475 11.8728 1.5 13.0728 1.5C14.2653 1.5 15.2403 2.4675 15.2403 3.6675C15.2328 4.8375 14.3103 5.79 13.1478 5.8275Z"
+                                  fill="black"
+                                />
+                                <path
+                                  opacity="0.4"
+                                  d="M15.5927 11.0253C14.7527 11.5878 13.5752 11.7978 12.4877 11.6553C12.7727 11.0403 12.9227 10.3578 12.9302 9.6378C12.9302 8.8878 12.7652 8.1753 12.4502 7.5528C13.5602 7.4028 14.7377 7.61279 15.5852 8.17529C16.7702 8.95529 16.7702 10.2378 15.5927 11.0253Z"
+                                  fill="black"
+                                />
+                                <path
+                                  opacity="0.4"
+                                  d="M4.8298 5.8275C4.8823 5.82 4.9348 5.82 4.9873 5.8275C6.1498 5.79 7.0723 4.8375 7.0723 3.6675C7.0723 2.475 6.1048 1.5 4.9048 1.5C3.7123 1.5 2.7373 2.4675 2.7373 3.6675C2.7448 4.8375 3.6673 5.79 4.8298 5.8275Z"
+                                  fill="black"
+                                />
+                                <path
+                                  opacity="0.4"
+                                  d="M4.91234 9.63795C4.91234 10.3654 5.06984 11.0554 5.35484 11.6779C4.29734 11.7904 3.19484 11.5654 2.38484 11.0329C1.19984 10.2454 1.19984 8.96294 2.38484 8.17544C3.18734 7.63544 4.31984 7.41794 5.38484 7.53794C5.07734 8.16794 4.91234 8.88045 4.91234 9.63795Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M9.08961 11.9025C9.02961 11.895 8.96211 11.895 8.89461 11.9025C7.51461 11.8575 6.41211 10.725 6.41211 9.33C6.41211 7.905 7.55961 6.75 8.99211 6.75C10.4171 6.75 11.5721 7.905 11.5721 9.33C11.5721 10.725 10.4771 11.8575 9.08961 11.9025Z"
+                                  fill="black"
+                                />
+                                <path
+                                  d="M6.65211 13.4555C5.51961 14.213 5.51961 15.458 6.65211 16.208C7.94211 17.0705 10.0571 17.0705 11.3471 16.208C12.4796 15.4505 12.4796 14.2055 11.3471 13.4555C10.0646 12.593 7.94961 12.593 6.65211 13.4555Z"
+                                  fill="black"
+                                />
+                              </svg>
+                            </div>
+                            <p class="text-xs">12 صندلی باقی مانده</p>
+                          </div>
+                          <button
+                            aria-controls="business-plans-1"
+                            data-group="ticket-1"
+                            class="plan-toggle group mt-4.5 flex w-full items-center justify-center gap-2 rounded-lg border bg-black py-1.5 text-sm text-white *:pointer-events-none [.plan-opened]:border-black [.plan-opened]:bg-white [.plan-opened]:text-black"
+                          >
+                            <p>نمایش بیشتر</p>
+                            <div>
+                              <svg
+                                width="14"
+                                height="14"
+                                viewBox="0 0 14 14"
+                                fill="none"
+                                class="group-[.plan-opened]:rotate-180 group-[.plan-opened]:*:stroke-black"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M2.38012 5.2207L6.18345 9.02404C6.63262 9.4732 7.36762 9.4732 7.81678 9.02404L11.6201 5.2207"
+                                  stroke="white"
+                                  stroke-width="1.5"
+                                  stroke-miterlimit="10"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </div>
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="p-3 xl:p-8 pt-8 rounded-b-2xl hidden" style="box-shadow: 0 0 20px 0 rgba(0,0,0,.06);">
-
+                <div
+                  class="hidden rounded-b-2xl p-3 pt-8 xl:p-8"
+     
+                >
                   <ul
                     id="economy-plans-1"
-                    class=" flex  items-center gap-3 *:basis-full *:overflow-hidden"
+                    class="flex items-center gap-3 *:basis-full *:overflow-hidden"
                   >
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
@@ -6070,7 +6331,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                        <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -6091,7 +6352,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6117,7 +6378,7 @@
                         </div>
                       </div>
                     </li>
-  
+
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
                         <div class="flex items-center gap-1">
@@ -6276,7 +6537,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -6297,7 +6558,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center سث gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6323,7 +6584,7 @@
                         </div>
                       </div>
                     </li>
-  
+
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
                         <div class="flex items-center gap-1">
@@ -6482,7 +6743,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -6503,7 +6764,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6529,7 +6790,7 @@
                         </div>
                       </div>
                     </li>
-  
+
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
                         <div class="flex items-center gap-1">
@@ -6688,7 +6949,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -6709,7 +6970,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6737,11 +6998,13 @@
                     </li>
                   </ul>
                 </div>
-                <div class="p-3 xl:p-8 pt-8 rounded-b-2xl hidden" style="box-shadow: 0 0 20px 0 rgba(0,0,0,.06);">
-
+                <div
+                  class="hidden rounded-b-2xl p-3 pt-8 xl:p-8"
+         
+                >
                   <ul
                     id="business-plans-1"
-                    class=" flex  items-center gap-3 *:basis-full *:overflow-hidden"
+                    class="flex items-center gap-3 *:basis-full *:overflow-hidden"
                   >
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
@@ -6901,7 +7164,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -6922,7 +7185,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6948,7 +7211,7 @@
                         </div>
                       </div>
                     </li>
-  
+
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
                         <div class="flex items-center gap-1">
@@ -7107,7 +7370,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -7128,7 +7391,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7154,7 +7417,7 @@
                         </div>
                       </div>
                     </li>
-  
+
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
                         <div class="flex items-center gap-1">
@@ -7313,7 +7576,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -7334,7 +7597,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7360,7 +7623,7 @@
                         </div>
                       </div>
                     </li>
-  
+
                     <li class="rounded-xxl outline outline-transparent">
                       <div class="rounded-t-xxl bg-black p-2.5 text-white">
                         <div class="flex items-center gap-1">
@@ -7519,7 +7782,7 @@
                             </div>
                           </li>
                         </ul>
-                  <div class="overflow-hidden w-full">
+                      <div class="overflow-hidden w-full">
                           <svg
                           class="max-w-full object-over"
                             width="500"
@@ -7540,7 +7803,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white select-plan"
+                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7566,15 +7829,62 @@
                         </div>
                       </div>
                     </li>
+                  </ul>
+                </div>
+                <div
+                  class="hidden rounded-b-2xl p-3 pt-8 xl:p-8"
+         
+                >
+                  <ul
+                    id="fly-details-1"
+                    class="grid max-w-[50vw] mx-auto grid-cols-3 gap-5 *:overflow-hidden"
+                  >
+                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
+                    <div class="bg-white rounded-xl py-1.5 w-full">
+                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
+                    </div>
+                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
+                   </li>
+                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
+                    <div class="bg-white rounded-xl py-1.5 w-full">
+                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
+                    </div>
+                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
+                   </li>
+                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
+                    <div class="bg-white rounded-xl py-1.5 w-full">
+                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
+                    </div>
+                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
+                   </li>
+                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
+                    <div class="bg-white rounded-xl py-1.5 w-full">
+                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
+                    </div>
+                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
+                   </li>
+                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
+                    <div class="bg-white rounded-xl py-1.5 w-full">
+                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
+                    </div>
+                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
+                   </li>
+                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
+                    <div class="bg-white rounded-xl py-1.5 w-full">
+                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
+                    </div>
+                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
+                   </li>
                   </ul>
                 </div>
               </li>
+           
             </ul>
           </section>
         </div>
       </div>
     </main>
-    <footer class="page-content mt-77 text-white">
+    <footer class="page-content mt-35 pb-20 text-white">
       <div class="bg-gray-750 rounded-[1.25rem] p-12.5">
         <div class="flex items-start">
           <div>
@@ -7956,5 +8266,6 @@
     <script defer src="@assets/js/slider-range.js"></script>
     <script defer src="@assets/js/booking.js"></script>
     <script defer src="@assets/js/search-ticket.js"></script>
+    <script defer src="@assets/js/initSelect.js"></script>
   </body>
 </html>

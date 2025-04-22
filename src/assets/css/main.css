@@ -95,6 +95,11 @@
   /* Fonts */
 
   --font-poopins: "Poppins", "sens-serif";
+
+  /* Box Shadow */
+
+  --shadow-curve :inset 2px -10px 9px -6px rgba(0,0,0,0.06);
+  --shadow-curve-down : inset 1px 35px 20px -21px rgba(0,0,0,0.06);
 }
 
 @layer base {
@@ -618,6 +623,23 @@
 dialog::backdrop {
   @apply bg-black/45
 }
+
+.ticket-box-vertical {
+  mask: radial-gradient(var(--r) at 17rem var(--r), #0000 calc(100% - 1px), #000)
+    calc(0px) calc(-1 * var(--r));
+    @apply h-full;
+}
+
+.curve {
+  background: #fff;
+  border-radius:100%;
+
+ margin:0 auto;
+
+ position:absolute;
+}
+
+
 
 @media (min-width: 68.5625rem) {
   .ticket-search-overlay {

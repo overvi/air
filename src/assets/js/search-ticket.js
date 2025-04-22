@@ -535,7 +535,7 @@ addRoute.addEventListener("click", () => {
                     </div>
 
                       <div class="peer min-w-0">
-                        <input readonly="" type="text" aria-expanded="false" aria-controls="dropdown-list-route${routes}" autocomplete="off" id="passengers-route${routes}" data-dropdown="dropdown-list-route${routes}" placeholder="مسافر:" class=" w-full overflow-ellipsis  outline-none dropdown-input">
+                        <input readonly="" type="text" aria-expanded="false" aria-controls="dropdown-list-route${routes}" autocomplete="off" id="passengers-route${routes}" data-dropdown="dropdown-list-route${routes}" placeholder="مسافر:" class=" w-full overflow-ellipsis pe-4  outline-none dropdown-input">
                       </div>
                       <ul role="listbox" id="dropdown-list-route${routes}" class="bg-white z-[50] peer min-w-[14rem] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.08)] py-7.5 px-4 hidden rounded-[22px] dropdown-list top-16 absolute left-0 right-0">
                         <li class="dropdown-item flex items-center justify-between py-2 border-b border-b-gray-tag cursor-pointer " role="option">
@@ -600,7 +600,7 @@ addRoute.addEventListener("click", () => {
                         </li>
 
                       </ul>
-                      <div class="peer-[.hidden]:rotate-180">
+                      <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
                         <svg width="16" height="16" class="rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
@@ -969,7 +969,7 @@ addRoute.addEventListener("click", () => {
                     </div>
 
                       <div class="peer min-w-0">
-                        <input readonly="" type="text" aria-expanded="false" aria-controls="dropdown-list-route${routes}" autocomplete="off" id="passengers-route${routes}" data-dropdown="dropdown-list-route${routes}" placeholder="مسافر:" class=" w-full overflow-ellipsis  outline-none dropdown-input">
+                        <input readonly="" type="text" aria-expanded="false" aria-controls="dropdown-list-route${routes}" autocomplete="off" id="passengers-route${routes}" data-dropdown="dropdown-list-route${routes}" placeholder="مسافر:" class=" w-full overflow-ellipsis  pe-4 outline-none dropdown-input">
                       </div>
                       <ul role="listbox" id="dropdown-list-route${routes}" class="bg-white z-[50] peer min-w-[14rem] shadow-[0px_0px_20px_0px_rgba(0,0,0,0.08)] py-7.5 px-4 hidden rounded-[22px] dropdown-list top-16 absolute left-0 right-0">
                         <li class="dropdown-item flex items-center justify-between py-2 border-b border-b-gray-tag cursor-pointer " role="option">
@@ -1034,7 +1034,7 @@ addRoute.addEventListener("click", () => {
                         </li>
 
                       </ul>
-                      <div class="peer-[.hidden]:rotate-180">
+                      <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
                         <svg width="16" height="16" class="rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M13.2802 5.9668L8.93355 10.3135C8.42021 10.8268 7.58021 10.8268 7.06688 10.3135L2.72021 5.9668" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>

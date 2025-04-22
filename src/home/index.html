@@ -76,11 +76,16 @@
             >
               پذیرش آنلاین
             </button>
-            <button
-              class="flex size-8.5 items-center justify-center rounded-lg bg-black text-center !text-base font-semibold text-white transition-colors hover:bg-gray-200"
+            <div>
+
+           
+              <button
+              class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
             >
               FA
             </button>
+             
+          </div>
           </div>
           <button
             aria-label="Close Nav"
@@ -519,11 +524,94 @@
           >
             پذیرش آنلاین
           </button>
-          <button
-            class="rounded-xxl hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
-          >
-            FA
-          </button>
+          <div>
+
+           
+            <div tabindex="0" class="relative">
+              <div class="slct *:text-tiny group">
+                <div class="select-trigger">
+                  <div
+                    class="input"
+                  >
+                    <div class=" hidden">
+                      <p
+                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                      >
+                      </p>
+                    </div>
+                    <button
+                    class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
+                  >
+                    FA
+                  </button>
+
+                    <div class="group-[.open]:rotate-180 hidden">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div
+                class="options-list shadow-[0_0_20px_0_rgba(0,0,0,0.08)] min-w-[6.3125rem] absolute top-full  left-0 z-50 mt-2 hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
+              >
+                <label
+                  for="en"
+                  class="option border-b border-b-[#E9E9E9] pb-1.5 flex items-center gap-1.5"
+                  data-value="en"
+                >
+                  <input
+                    id="en"
+                    name="gender"
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">EN</p>
+                </label>
+                <label
+                  for="fa"
+                  class="option flex items-center gap-1.5"
+                  data-value="fa"
+                >
+                  <input
+                    id="fa"
+                    name="gender"
+                    checked
+                    class="checkbox !border-[#898989]"
+                    type="radio"
+                  />
+
+                  <p class="font-bold">FA</p>
+                </label>
+              </div>
+
+                <!-- Hidden select for form submission -->
+                <select
+                  name="customSelectValue"
+                  class="hidden-select hidden"
+                  required
+                >
+                  <option value="">جنسیت...</option>
+                  <option value="fa">FA</option>
+                  <option value="en">EN</option>
+                </select>
+              </div>
+            </div>
+        </div>
           <button
             class="rounded-xxl hidden min-h-10 border border-black bg-white px-5.5 text-sm font-bold transition-colors hover:bg-gray-400 lg:block"
           >
@@ -1784,7 +1872,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="peer-has-[div.hidden]:rotate-180">
+                      <div class="peer-has-[div.hidden]:rotate-180 pointer-events-none">
                         <svg
                           width="18"
                           class="rotate-180"
@@ -1847,7 +1935,7 @@
                           id="passengers-outbound"
                           data-dropdown="dropdown-list-outbound"
                           placeholder="مسافر:"
-                          class="dropdown-input w-full overflow-ellipsis outline-none"
+                          class="dropdown-input pe-4 w-full overflow-ellipsis outline-none"
                         />
                       </div>
                       <ul
@@ -2057,7 +2145,7 @@
                           </div>
                         </li>
                       </ul>
-                      <div class="peer-[.hidden]:rotate-180">
+                      <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none " >
                         <svg
                           width="16"
                           height="16"
@@ -2792,7 +2880,7 @@
                           id="passengers-roundTrip"
                           data-dropdown="dropdown-list-roundTrip"
                           placeholder="مسافر:"
-                          class="dropdown-input w-full overflow-ellipsis outline-none"
+                          class="dropdown-input  pe-4 w-full overflow-ellipsis outline-none"
                         />
                       </div>
                       <ul
@@ -3002,7 +3090,7 @@
                           </div>
                         </li>
                       </ul>
-                      <div class="peer-[.hidden]:rotate-180">
+                      <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
                         <svg
                           width="16"
                           height="16"
@@ -3752,7 +3840,7 @@
                             id="passengers-multicity"
                             data-dropdown="dropdown-list-multicity"
                             placeholder="مسافر:"
-                            class="dropdown-input w-full overflow-ellipsis outline-none"
+                            class="dropdown-input pe-4 w-full overflow-ellipsis outline-none"
                           />
                         </div>
                         <ul
@@ -3962,7 +4050,7 @@
                             </div>
                           </li>
                         </ul>
-                        <div class="peer-[.hidden]:rotate-180">
+                        <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
                           <svg
                             width="16"
                             height="16"
@@ -5214,7 +5302,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="peer-has-[div.hidden]:rotate-180">
+                        <div class="peer-has-[div.hidden]:rotate-180 pointer-events-none">
                           <svg
                             width="18"
                             class="rotate-180"
@@ -5396,7 +5484,7 @@
                             </div>
                           </div>
                         </div>
-                        <div class="peer-has-[div.hidden]:rotate-180">
+                        <div class="peer-has-[div.hidden]:rotate-180 pointer-events-none">
                           <svg
                             width="18"
                             class="rotate-180"
