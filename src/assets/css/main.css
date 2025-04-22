@@ -639,6 +639,27 @@ dialog::backdrop {
  position:absolute;
 }
 
+.vertical-bordered-table tbody tr td:not(:last-child) {
+ @apply border-x border-gray-300 px-4 ;
+}
+.vertical-bordered-table tbody tr:first-child td {
+ @apply pt-2 ;
+}
+.vertical-bordered-table tbody tr:last-child {
+ @apply *:pb-0 ;
+}
+.vertical-bordered-table tbody tr th {
+ @apply font-normal;
+}
+.vertical-bordered-table tbody tr td:last-child {
+ @apply  px-4;
+}
+
+.dashed {
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='%23696969FF' stroke-width='1' stroke-dasharray='6' stroke-dashoffset='32' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 0.93;
+}
+
 
 
 @media (min-width: 68.5625rem) {
