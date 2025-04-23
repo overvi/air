@@ -14,11 +14,11 @@ module.exports = {
     "search-ticket": "./src/assets/js/search-ticket.js",
     "slider-range": "./src/assets/js/slider-range.js",
     booking: "./src/assets/js/booking.js",
-    passengers : "./src/assets/js/passengers.js",
-    inlineDatepicker : "./src/assets/js/inlineDatepicker.js",
-    paymentlist : "./src/assets/js/paymentlist.js",
-    passengerDetails : "./src/assets/js/passengerDetails.js",
-    initSelect : "./src/assets/js/initSelect.js"
+    passengers: "./src/assets/js/passengers.js",
+    inlineDatepicker: "./src/assets/js/inlineDatepicker.js",
+    paymentlist: "./src/assets/js/paymentlist.js",
+    passengerDetails: "./src/assets/js/passengerDetails.js",
+    initSelect: "./src/assets/js/initSelect.js",
   },
 
   plugins: [
@@ -39,17 +39,22 @@ module.exports = {
           "./src/booking/one-way/confirmation/index.html",
         "booking/two-way/a/index": "./src/booking/two-way/a/index.html",
         "booking/two-way/b/index": "./src/booking/two-way/b/index.html",
-        "booking/two-way/passenger-details/index" : "./src/booking/two-way/passenger-details/index.html",
-        "booking/one-way/passenger-details/index" : "./src/booking/one-way/passenger-details/index.html",
+        "booking/two-way/passenger-details/index":
+          "./src/booking/two-way/passenger-details/index.html",
+        "booking/one-way/passenger-details/index":
+          "./src/booking/one-way/passenger-details/index.html",
 
         "booking/two-way/confirmation/index":
           "./src/booking/two-way/confirmation/index.html",
         "user/passengers/index": "./src/user/passengers/index.html",
-        "user/payment-list/index" : "./src/user/payment-list/index.html",
-        "user/wallet/index" : "./src/user/wallet/index.html",
-        "user/withdraw-list/index" : "./src/user/withdraw-list/index.html",
-        "dashboard/index" : './src/dashboard/index.html',
-        "agency-signup/index" : "./src/agency-signup/index.html"
+        "user/payment-list/index": "./src/user/payment-list/index.html",
+        "user/wallet/index": "./src/user/wallet/index.html",
+        "user/withdraw-list/index": "./src/user/withdraw-list/index.html",
+        "dashboard/index": "./src/dashboard/index.html",
+        "agency-signup/index": "./src/agency-signup/index.html",
+
+        "blog/index": "./src/blog/index.html",
+        "blog/1/index": "./src/blog/1/index.html",
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag

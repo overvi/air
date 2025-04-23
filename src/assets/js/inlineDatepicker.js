@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     dayInput.addEventListener("input", function () {
       if (this.value.length === 2) {
-        monthInput.focus(); // Optional: Remove focus after completing the date
+        monthInput.focus(); 
       }
     });
   });

@@ -12,7 +12,7 @@
         <div class="basis-[60%]">
           <div class="relative flex justify-center">
             <div
-              class="h-[58vw] w-[63vw] bg-[url(../images/image.webp)] bg-contain bg-no-repeat"
+              class="h-[58vw] w-[63vw] bg-[url(../images/auth-bg.webp)] bg-contain bg-no-repeat"
             ></div>
           </div>
         </div>
@@ -25,84 +25,48 @@
           <div class="mt-[2.3125rem] w-full max-w-[22.75rem]">
             <form class="w-full space-y-4">
               <div tabindex="0" class="relative">
-                <div class="slct *:text-tiny group mt-5">
+                <div class="slct *:text-tiny group" data-custom-select="true">
                   <div class="select-trigger">
-                    <div
-                      class="input rounded-xxl relative flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
-                    >
+                    <div class="input rounded-xxl relative flex min-h-13 items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black">
                       <div class="flex flex-col">
-                        <p
-                          class="text-tiny input-mimic-label top-2 leading-normal font-bold"
-                        >
-                          جنسیت
+                        <p class="text-tiny input-mimic-label top-2 leading-normal font-bold">
+                 جنسیت
                         </p>
-                        <span class="selected-value group-[.filled]:font-bold"
-                          >جنسیت...</span
-                        >
+                        <span class="selected-value group-[.filled]:font-bold">جنسیت...</span>
                       </div>
 
                       <div class="group-[.open]:rotate-180">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
-                            stroke="#292D32"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                       </div>
                     </div>
                   </div>
-                  <div
-                    class="options-list absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
-                  >
-                    <label
-                      for="woman"
-                      class="option flex items-center gap-1.5"
-                      data-value="زن"
-                    >
-                      <input
-                        id="woman"
-                        name="gender"
-                        class="checkbox"
-                        type="radio"
-                      />
-
-                      <p>زن</p>
+                  <div class="options-list absolute top-full right-0 left-0 z-50 mt-[0.25rem] space-y-2 rounded-2xl bg-white !p-4 !pb-5 shadow-[0_0_20px_0_rgba(0,0,0,0.06)] *:cursor-pointer *:border-b *:border-b-[#e9e9e9] *:!text-sm hidden">
+                    <label tabindex="0" for="man" data-value="مرد" class="option block pb-2">
+                      <div class="flex justify-between">
+                        <div class="flex w-full justify-between gap-1">
+                          <p class="text-tiny font-semibold">مرد</p>
+                          <input type="radio" id="man" name="gender" class="radio-hidden hidden w-full">
+                          <label for="man" class="radio radio--black mt-0.5 aspect-square outline-[#838383]"></label>
+                        </div>
+                      </div>
                     </label>
-                    <label
-                      for="man"
-                      class="option flex items-center gap-1.5"
-                      data-value="مرد"
-                    >
-                      <input
-                        id="man"
-                        name="gender"
-                        class="checkbox"
-                        type="radio"
-                      />
-
-                      <p>مرد</p>
+                    <label tabindex="0" for="woman" data-value="زن" class="option block pb-2">
+                      <div class="flex justify-between">
+                        <div class="flex w-full justify-between gap-1">
+                          <p class="text-tiny font-semibold">زن</p>
+                          <input type="radio" id="woman" name="gender" class="radio-hidden hidden w-full">
+                          <label for="woman" class="radio radio--black mt-0.5 aspect-square outline-[#838383]"></label>
+                        </div>
+                      </div>
                     </label>
                   </div>
 
-                  <!-- Hidden select for form submission -->
-                  <select
-                    name="customSelectValue"
-                    class="hidden-select hidden"
-                    required
-                  >
-                    <option value="">جنسیت...</option>
-                    <option value="زن">زن</option>
-                    <option value="مرد">مرد</option>
+                  <select name="customSelectValue" class="hidden-select hidden" required="">
+                    <option value="">نوع مالکیت...</option>
+                    <option value="man">مرد</option>
+                    <option value="woman">زن</option>
                   </select>
                 </div>
               </div>

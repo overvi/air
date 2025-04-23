@@ -167,16 +167,17 @@ updateSticky(window.scrollY);
 const selectplans = document.querySelectorAll(".select-plan")
 
 selectplans.forEach(button => {
-  button.addEventListener("click" , () => {
+  const li = button.closest("li");
 
-    selectplans.forEach(btn =>  {
-      if (btn !== button) {
-        btn.closest("li").classList.replace("outline-black" , "outline-transparent")
-      }
-    })
-    button.closest("li").classList.replace("outline-transparent" ,"outline-black")
-  })
-})
+  li.addEventListener("mouseover", () => {
+    li.classList.replace("outline-transparent", "outline-black");
+  });
+
+  li.addEventListener("mouseleave", () => {
+    li.classList.replace("outline-black", "outline-transparent");
+  });
+});
+
 
 const flyDetails = document.querySelectorAll(".fly-details-button")
 
