@@ -70,19 +70,23 @@ ticketBoxes.forEach((tb) => {
           document
             .getElementById(elTarget)
             .parentElement.classList.add("hidden");
-            const p = el.querySelector("p");
-        if (p) p.textContent = "نمایش بیشتر";
+            if (el.classList.contains("show")) {
+
+              const p = el.querySelector("p");
+          if (p) p.textContent = "نمایش بیشتر";
+            }
         }
       });
 
       const p = event.target.querySelector("p");
-      if (p) {
+      if (p && event.target.classList.contains("show")) {
         if (event.target.classList.contains("plan-opened")) {
           p.textContent = "نمایش بیشتر";
         } else {
           p.textContent = "نمایش کمتر";
         }
       }
+      
   
 
       target.closest("li").classList.toggle("shadow-[0_0_20px_0_rgba(0,0,0,.06)]")
