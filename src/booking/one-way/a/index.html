@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..700;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
   </head>
   <body data-page="differ-ticket">
     <div
@@ -19,7 +18,7 @@
       class="fixed right-2 left-2 z-[999999] hidden rounded-b-[2.5rem] bg-black/40 py-3"
     ></div>
     <h1 class="sr-only">Booking One Way</h1>
-<header class="page-content relative z-[5000] pt-10 lg:pt-12">
+    <header class="page-content relative z-[5000] pt-10 lg:pt-12">
       <nav class="flex items-center justify-between">
         <div class="block lg:hidden">
           <button aria-label="Mobile Nav Toggle" id="mobile-nav-toggle">
@@ -175,27 +174,22 @@
             پذیرش آنلاین
           </button>
           <div>
-
-           
             <div tabindex="0" class="relative">
               <div class="slct *:text-tiny group">
                 <div class="select-trigger">
-                  <div
-                    class="input"
-                  >
-                    <div class=" hidden">
+                  <div class="input">
+                    <div class="hidden">
                       <p
                         class="text-tiny input-mimic-label top-2 leading-normal font-bold"
-                      >
-                      </p>
+                      ></p>
                     </div>
                     <button
-                    class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
-                  >
-                    FA
-                  </button>
+                      class="rounded-xxl selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white uppercase transition-colors hover:bg-gray-200 lg:flex"
+                    >
+                      FA
+                    </button>
 
-                    <div class="group-[.open]:rotate-180 hidden">
+                    <div class="hidden group-[.open]:rotate-180">
                       <svg
                         width="18"
                         height="18"
@@ -216,38 +210,38 @@
                   </div>
                 </div>
                 <div
-                class="options-list shadow-[0_0_20px_0_rgba(0,0,0,0.08)] min-w-[6.3125rem] absolute top-full  left-0 z-50 mt-2 hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
-              >
-                <label
-                  for="en"
-                  class="option border-b border-b-[#E9E9E9] pb-1.5 flex items-center gap-1.5"
-                  data-value="en"
+                  class="options-list absolute top-full left-0 z-50 mt-2 hidden min-w-[6.3125rem] space-y-1 rounded-lg bg-white !p-4 !pb-5 shadow-[0_0_20px_0_rgba(0,0,0,0.08)] *:cursor-pointer *:!text-sm"
                 >
-                  <input
-                    id="en"
-                    name="gender"
-                    class="checkbox !border-[#898989]"
-                    type="radio"
-                  />
+                  <label
+                    for="en"
+                    class="option flex items-center gap-1.5 border-b border-b-[#E9E9E9] pb-1.5"
+                    data-value="en"
+                  >
+                    <input
+                      id="en"
+                      name="gender"
+                      class="checkbox !border-[#898989]"
+                      type="radio"
+                    />
 
-                  <p class="font-bold">EN</p>
-                </label>
-                <label
-                  for="fa"
-                  class="option flex items-center gap-1.5"
-                  data-value="fa"
-                >
-                  <input
-                    id="fa"
-                    name="gender"
-                    checked
-                    class="checkbox !border-[#898989]"
-                    type="radio"
-                  />
+                    <p class="font-bold">EN</p>
+                  </label>
+                  <label
+                    for="fa"
+                    class="option flex items-center gap-1.5"
+                    data-value="fa"
+                  >
+                    <input
+                      id="fa"
+                      name="gender"
+                      checked
+                      class="checkbox !border-[#898989]"
+                      type="radio"
+                    />
 
-                  <p class="font-bold">FA</p>
-                </label>
-              </div>
+                    <p class="font-bold">FA</p>
+                  </label>
+                </div>
 
                 <!-- Hidden select for form submission -->
                 <select
@@ -261,7 +255,7 @@
                 </select>
               </div>
             </div>
-        </div>
+          </div>
           <button
             class="rounded-xxl hidden min-h-10 border border-black bg-white px-5.5 text-sm font-bold transition-colors hover:bg-gray-400 lg:block"
           >
@@ -498,7 +492,7 @@
                   </label>
                 </div>
               </div>
-              <div class="mt-3.5 lg:ps-35 max-w-[90%] overflow-hidden">
+              <div class="mt-3.5 max-w-[90%] overflow-hidden lg:ps-35">
                 <svg
                   width="1900"
                   height="2"
@@ -509,7 +503,6 @@
                   <path d="M0 1H1900" stroke="#838383" stroke-dasharray="7 7" />
                 </svg>
               </div>
-
 
               <div
                 id="outbound-variant"
@@ -1261,9 +1254,9 @@
                     </div>
                   </div>
                   <div
-                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
+                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 *:text-black"
                   >
-                    <div>
+                    <div class="pointer-events-none absolute right-3.5">
                       <svg
                         width="24"
                         height="24"
@@ -1274,36 +1267,36 @@
                         <path
                           d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
                           fill="black"
-                        ></path>
+                        />
                         <path
                           opacity="0.4"
                           d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
                           fill="#292D32"
-                        ></path>
+                        />
                       </svg>
                     </div>
 
@@ -1314,16 +1307,16 @@
                     >
                       <div class="date_picker_input peer min-w-0">
                         <input
-                          readonly=""
+                          readonly
                           type="text"
                           placeholder="تاریخ رفت:"
-                          class="date overflow-hidden overflow-ellipsis outline-none"
+                          class="date absolute inset-0 overflow-hidden py-3.5 ps-11 overflow-ellipsis outline-none"
                         />
                       </div>
                       <div
                         class="date_picker_calendar absolute right-0 z-[1000] mt-4 hidden"
                       >
-                        <div class="calendar_header">
+                        <div class="calendar_header" class="items-center">
                           <div class="flex items-center">
                             <p class="fw-bold cal_label">تاریخ رفت</p>
 
@@ -1331,96 +1324,7 @@
                               class="select-container year-container relative flex items-center gap-2"
                             >
                               <div class="custom-select">
-                                <select name="" id="">
-                                  <option value="1404">1404</option>
-                                  <option value="1405">1405</option>
-                                  <option value="1406">1406</option>
-                                  <option value="1407">1407</option>
-                                </select>
-                                <div class="select-value">1404</div>
-                                <div class="select-items select-hide">
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1404</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          opacity="0.4"
-                                          d="M10.794 1.3335H5.20732C2.78065 1.3335 1.33398 2.78016 1.33398 5.20683V10.7868C1.33398 13.2202 2.78065 14.6668 5.20732 14.6668H10.7873C13.214 14.6668 14.6607 13.2202 14.6607 10.7935V5.20683C14.6673 2.78016 13.2207 1.3335 10.794 1.3335Z"
-                                          fill="black"
-                                        ></path>
-                                        <path
-                                          d="M7.05297 10.3862C6.91964 10.3862 6.79297 10.3329 6.69964 10.2396L4.81297 8.35291C4.61964 8.15958 4.61964 7.83958 4.81297 7.64624C5.0063 7.45291 5.3263 7.45291 5.51964 7.64624L7.05297 9.17958L10.4796 5.75291C10.673 5.55958 10.993 5.55958 11.1863 5.75291C11.3796 5.94624 11.3796 6.26624 11.1863 6.45958L7.4063 10.2396C7.31297 10.3329 7.1863 10.3862 7.05297 10.3862Z"
-                                          fill="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1405</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1406</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1407</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                </div>
+                                <select name="" id=""></select>
                               </div>
                               <div class="dropdown-ico">
                                 <svg
@@ -1437,7 +1341,7 @@
                                     stroke-miterlimit="10"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                  ></path>
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -1455,265 +1359,12 @@
                           <div class="month-picker">
                             <div class="month-list-container">
                               <div class="selection-indicator"></div>
-                              <div class="month-list">
-                                <div
-                                  class="month-item"
-                                  style="font-size: 14px; color: rgb(0, 0, 0)"
-                                >
-                                  فروردین
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 12px;
-                                    color: rgb(90, 90, 90);
-                                  "
-                                >
-                                  اردیبهشت
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 10px;
-                                    color: rgb(133, 133, 133);
-                                  "
-                                >
-                                  خرداد
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 8px;
-                                    color: rgb(182, 182, 182);
-                                  "
-                                >
-                                  تیر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  مرداد
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  شهریور
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  مهر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  آبان
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  آذر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  دی
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  بهمن
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  اسفند
-                                </div>
-                              </div>
+                              <div class="month-list"></div>
                             </div>
                           </div>
                           <div class="cal_wrapper">
-                            <div class="cal_days">
-                              <div class="cell_wrapper">
-                                <span class="cell_item">شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">یکشنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">دوشنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">سه شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">چهار شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">پنج شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">جمعه</span>
-                              </div>
-                            </div>
-                            <div class="calendar_main">
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">25</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">26</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">27</span>
-                              </div>
-                              <div
-                                class="cell_wrapper cal_date hiddenz active isSelected"
-                              >
-                                <span class="cell_item">28</span>
-                              </div>
-                              <div class="cell_wrapper cal_date hiddenz">
-                                <span class="cell_item">29</span>
-                              </div>
-                              <div class="cell_wrapper cal_date hiddenz">
-                                <span class="cell_item">30</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">1</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">2</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">3</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">4</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">5</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">6</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">7</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">8</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">9</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">10</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">11</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">12</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">13</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">14</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">15</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">16</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">17</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">18</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">19</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">20</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">21</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">22</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">23</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">24</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">25</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">26</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">27</span>
-                              </div>
-                              <div
-                                class="cell_wrapper cal_date current active isCurrent isSelected"
-                              >
-                                <span class="cell_item">28</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">29</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">30</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">31</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">1</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">2</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">3</span>
-                              </div>
-                            </div>
+                            <div class="cal_days"></div>
+                            <div class="calendar_main"></div>
                           </div>
                         </div>
                         <div class="actions flex items-center">
@@ -1726,7 +1377,9 @@
                         </div>
                       </div>
                     </div>
-                    <div class="peer-has-[div.hidden]:rotate-180 pointer-events-none">
+                    <div
+                      class="pointer-events-none peer-has-[div.hidden]:rotate-180"
+                    >
                       <svg
                         width="18"
                         class="rotate-180"
@@ -1742,14 +1395,14 @@
                           stroke-miterlimit="10"
                           stroke-linecap="round"
                           stroke-linejoin="round"
-                        ></path>
+                        />
                       </svg>
                     </div>
                   </div>
                   <div
-                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
+                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white *:text-black"
                   >
-                    <div>
+                    <div class="pointer-events-none absolute right-3.5">
                       <svg
                         style="flex-basis: 100%"
                         width="24"
@@ -1789,7 +1442,7 @@
                         id="passengers-outbound"
                         data-dropdown="dropdown-list-outbound"
                         placeholder="مسافر:"
-                        class="dropdown-input pe-4 w-full overflow-ellipsis outline-none"
+                        class="dropdown-input w-full px-3.5 py-3.5 ps-11.5 pe-8 overflow-ellipsis outline-none"
                       />
                     </div>
                     <ul
@@ -1999,7 +1652,9 @@
                         </div>
                       </li>
                     </ul>
-                    <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
+                    <div
+                      class="pointer-events-none absolute left-3.5 peer-[.hidden]:rotate-180"
+                    >
                       <svg
                         width="16"
                         height="16"
@@ -2490,9 +2145,9 @@
                     </div>
                   </div>
                   <div
-                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
+                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white *:text-black"
                   >
-                    <div>
+                    <div class="pointer-events-none absolute right-3.5">
                       <svg
                         width="24"
                         height="24"
@@ -2503,36 +2158,36 @@
                         <path
                           d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
                           fill="black"
-                        ></path>
+                        />
                         <path
                           opacity="0.4"
                           d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
                           fill="#292D32"
-                        ></path>
+                        />
                         <path
                           d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
                           fill="#292D32"
-                        ></path>
+                        />
                       </svg>
                     </div>
 
@@ -2543,16 +2198,16 @@
                     >
                       <div class="date_picker_input peer min-w-0">
                         <input
-                          readonly=""
+                          readonly
                           type="text"
                           placeholder="تاریخ رفت:"
-                          class="date max-w-[8ch] overflow-hidden overflow-ellipsis outline-none xl:max-w-full"
+                          class="date max-w-[12ch] overflow-hidden py-3.5 ps-11 overflow-ellipsis outline-none xl:max-w-full"
                         />
                       </div>
                       <div
                         class="date_picker_calendar absolute right-0 z-[1000] mt-4 hidden"
                       >
-                        <div class="calendar_header">
+                        <div class="calendar_header" class="items-center">
                           <div class="flex items-center">
                             <p class="fw-bold cal_label">تاریخ رفت</p>
 
@@ -2560,96 +2215,7 @@
                               class="select-container year-container relative flex items-center gap-2"
                             >
                               <div class="custom-select">
-                                <select name="" id="">
-                                  <option value="1404">1404</option>
-                                  <option value="1405">1405</option>
-                                  <option value="1406">1406</option>
-                                  <option value="1407">1407</option>
-                                </select>
-                                <div class="select-value">1404</div>
-                                <div class="select-items select-hide">
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1404</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          opacity="0.4"
-                                          d="M10.794 1.3335H5.20732C2.78065 1.3335 1.33398 2.78016 1.33398 5.20683V10.7868C1.33398 13.2202 2.78065 14.6668 5.20732 14.6668H10.7873C13.214 14.6668 14.6607 13.2202 14.6607 10.7935V5.20683C14.6673 2.78016 13.2207 1.3335 10.794 1.3335Z"
-                                          fill="black"
-                                        ></path>
-                                        <path
-                                          d="M7.05297 10.3862C6.91964 10.3862 6.79297 10.3329 6.69964 10.2396L4.81297 8.35291C4.61964 8.15958 4.61964 7.83958 4.81297 7.64624C5.0063 7.45291 5.3263 7.45291 5.51964 7.64624L7.05297 9.17958L10.4796 5.75291C10.673 5.55958 10.993 5.55958 11.1863 5.75291C11.3796 5.94624 11.3796 6.26624 11.1863 6.45958L7.4063 10.2396C7.31297 10.3329 7.1863 10.3862 7.05297 10.3862Z"
-                                          fill="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1405</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1406</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1407</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                </div>
+                                <select name="" id=""></select>
                               </div>
                               <div class="dropdown-ico">
                                 <svg
@@ -2666,7 +2232,7 @@
                                     stroke-miterlimit="10"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                  ></path>
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -2684,265 +2250,12 @@
                           <div class="month-picker">
                             <div class="month-list-container">
                               <div class="selection-indicator"></div>
-                              <div class="month-list">
-                                <div
-                                  class="month-item"
-                                  style="font-size: 14px; color: rgb(0, 0, 0)"
-                                >
-                                  فروردین
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 12px;
-                                    color: rgb(90, 90, 90);
-                                  "
-                                >
-                                  اردیبهشت
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 10px;
-                                    color: rgb(133, 133, 133);
-                                  "
-                                >
-                                  خرداد
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 8px;
-                                    color: rgb(182, 182, 182);
-                                  "
-                                >
-                                  تیر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  مرداد
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  شهریور
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  مهر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  آبان
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  آذر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  دی
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  بهمن
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  اسفند
-                                </div>
-                              </div>
+                              <div class="month-list"></div>
                             </div>
                           </div>
                           <div class="cal_wrapper">
-                            <div class="cal_days">
-                              <div class="cell_wrapper">
-                                <span class="cell_item">شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">یکشنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">دوشنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">سه شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">چهار شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">پنج شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">جمعه</span>
-                              </div>
-                            </div>
-                            <div class="calendar_main">
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">25</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">26</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">27</span>
-                              </div>
-                              <div
-                                class="cell_wrapper cal_date hiddenz active isSelected"
-                              >
-                                <span class="cell_item">28</span>
-                              </div>
-                              <div class="cell_wrapper cal_date hiddenz">
-                                <span class="cell_item">29</span>
-                              </div>
-                              <div class="cell_wrapper cal_date hiddenz">
-                                <span class="cell_item">30</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">1</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">2</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">3</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">4</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">5</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">6</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">7</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">8</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">9</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">10</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">11</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">12</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">13</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">14</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">15</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">16</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">17</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">18</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">19</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">20</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">21</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">22</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">23</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">24</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">25</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">26</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">27</span>
-                              </div>
-                              <div
-                                class="cell_wrapper cal_date current active isCurrent isSelected"
-                              >
-                                <span class="cell_item">28</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">29</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">30</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">31</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">1</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">2</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">3</span>
-                              </div>
-                            </div>
+                            <div class="cal_days"></div>
+                            <div class="calendar_main"></div>
                           </div>
                         </div>
                         <div class="actions flex items-center">
@@ -2956,23 +2269,24 @@
                       </div>
                     </div>
 
+                    <span class="h-ful bg-gray-tag block w-[1px] py-3"></span>
                     <div
-                      class="dp peer border-r-gray-tag min-w-0 border-r ps-2"
+                      class="dp peer min-w-0"
                       id="round_trip_to_date_picker"
                       style="direction: rtl"
                     >
                       <div class="date_picker_input peer min-w-0">
                         <input
-                          readonly=""
+                          readonly
                           type="text"
                           placeholder="تاریخ برگشت:"
-                          class="date max-w-[10ch] overflow-hidden overflow-ellipsis outline-none xl:max-w-full"
+                          class="date max-w-[10ch] overflow-hidden py-3.5 overflow-ellipsis outline-none xl:max-w-full"
                         />
                       </div>
                       <div
                         class="date_picker_calendar absolute right-0 z-[1000] mt-4 hidden"
                       >
-                        <div class="calendar_header">
+                        <div class="calendar_header" class="items-center">
                           <div class="flex items-center">
                             <p class="fw-bold cal_label">تاریخ رفت</p>
 
@@ -2980,96 +2294,7 @@
                               class="select-container year-container relative flex items-center gap-2"
                             >
                               <div class="custom-select">
-                                <select name="" id="">
-                                  <option value="1404">1404</option>
-                                  <option value="1405">1405</option>
-                                  <option value="1406">1406</option>
-                                  <option value="1407">1407</option>
-                                </select>
-                                <div class="select-value">1404</div>
-                                <div class="select-items select-hide">
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1404</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          opacity="0.4"
-                                          d="M10.794 1.3335H5.20732C2.78065 1.3335 1.33398 2.78016 1.33398 5.20683V10.7868C1.33398 13.2202 2.78065 14.6668 5.20732 14.6668H10.7873C13.214 14.6668 14.6607 13.2202 14.6607 10.7935V5.20683C14.6673 2.78016 13.2207 1.3335 10.794 1.3335Z"
-                                          fill="black"
-                                        ></path>
-                                        <path
-                                          d="M7.05297 10.3862C6.91964 10.3862 6.79297 10.3329 6.69964 10.2396L4.81297 8.35291C4.61964 8.15958 4.61964 7.83958 4.81297 7.64624C5.0063 7.45291 5.3263 7.45291 5.51964 7.64624L7.05297 9.17958L10.4796 5.75291C10.673 5.55958 10.993 5.55958 11.1863 5.75291C11.3796 5.94624 11.3796 6.26624 11.1863 6.45958L7.4063 10.2396C7.31297 10.3329 7.1863 10.3862 7.05297 10.3862Z"
-                                          fill="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1405</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1406</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                  <div
-                                    class="select-option flex gap-2"
-                                    style="line-height: 1"
-                                  >
-                                    <span>1407</span
-                                    ><span style="order: -1"
-                                      ><svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
-                                        viewBox="0 0 16 16"
-                                        fill="none"
-                                      >
-                                        <path
-                                          d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                          stroke="black"
-                                        ></path></svg
-                                    ></span>
-                                  </div>
-                                </div>
+                                <select name="" id=""></select>
                               </div>
                               <div class="dropdown-ico">
                                 <svg
@@ -3086,7 +2311,7 @@
                                     stroke-miterlimit="10"
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                  ></path>
+                                  />
                                 </svg>
                               </div>
                             </div>
@@ -3104,265 +2329,12 @@
                           <div class="month-picker">
                             <div class="month-list-container">
                               <div class="selection-indicator"></div>
-                              <div class="month-list">
-                                <div
-                                  class="month-item"
-                                  style="font-size: 14px; color: rgb(0, 0, 0)"
-                                >
-                                  فروردین
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 12px;
-                                    color: rgb(90, 90, 90);
-                                  "
-                                >
-                                  اردیبهشت
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 10px;
-                                    color: rgb(133, 133, 133);
-                                  "
-                                >
-                                  خرداد
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 8px;
-                                    color: rgb(182, 182, 182);
-                                  "
-                                >
-                                  تیر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  مرداد
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  شهریور
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  مهر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  آبان
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  آذر
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  دی
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  بهمن
-                                </div>
-                                <div
-                                  class="month-item"
-                                  style="
-                                    font-size: 6px;
-                                    color: rgb(212, 212, 212);
-                                  "
-                                >
-                                  اسفند
-                                </div>
-                              </div>
+                              <div class="month-list"></div>
                             </div>
                           </div>
                           <div class="cal_wrapper">
-                            <div class="cal_days">
-                              <div class="cell_wrapper">
-                                <span class="cell_item">شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">یکشنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">دوشنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">سه شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">چهار شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">پنج شنبه</span>
-                              </div>
-                              <div class="cell_wrapper">
-                                <span class="cell_item">جمعه</span>
-                              </div>
-                            </div>
-                            <div class="calendar_main">
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">25</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">26</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">27</span>
-                              </div>
-                              <div
-                                class="cell_wrapper cal_date hiddenz active isSelected"
-                              >
-                                <span class="cell_item">28</span>
-                              </div>
-                              <div class="cell_wrapper cal_date hiddenz">
-                                <span class="cell_item">29</span>
-                              </div>
-                              <div class="cell_wrapper cal_date hiddenz">
-                                <span class="cell_item">30</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">1</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">2</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">3</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">4</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">5</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">6</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">7</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">8</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">9</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">10</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">11</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">12</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">13</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">14</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">15</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">16</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">17</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">18</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">19</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">20</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">21</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">22</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">23</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">24</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">25</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">26</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">27</span>
-                              </div>
-                              <div
-                                class="cell_wrapper cal_date current active isCurrent isSelected"
-                              >
-                                <span class="cell_item">28</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">29</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">30</span>
-                              </div>
-                              <div class="cell_wrapper cal_date current">
-                                <span class="cell_item">31</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">1</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">2</span>
-                              </div>
-                              <div class="cell_wrapper cal_date disabled">
-                                <span class="cell_item">3</span>
-                              </div>
-                            </div>
+                            <div class="cal_days"></div>
+                            <div class="calendar_main"></div>
                           </div>
                         </div>
                         <div class="actions flex items-center">
@@ -3377,9 +2349,9 @@
                     </div>
                   </div>
                   <div
-                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
+                    class="relative flex h-full items-center gap-2 rounded-2xl bg-white *:text-black"
                   >
-                    <div>
+                    <div class="pointer-events-none absolute right-3.5">
                       <svg
                         style="flex-basis: 100%"
                         width="24"
@@ -3419,7 +2391,7 @@
                         id="passengers-roundTrip"
                         data-dropdown="dropdown-list-roundTrip"
                         placeholder="مسافر:"
-                        class="dropdown-input pe-4 w-full overflow-ellipsis outline-none"
+                        class="dropdown-input w-full px-3.5 py-3.5 ps-11.5 pe-8 overflow-ellipsis outline-none"
                       />
                     </div>
                     <ul
@@ -3629,7 +2601,9 @@
                         </div>
                       </li>
                     </ul>
-                    <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
+                    <div
+                      class="pointer-events-none absolute left-3.5 peer-[.hidden]:rotate-180"
+                    >
                       <svg
                         width="16"
                         height="16"
@@ -4120,9 +3094,9 @@
                       </div>
                     </div>
                     <div
-                      class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
+                      class="relative flex h-full items-center gap-2 rounded-2xl bg-white *:text-black"
                     >
-                      <div>
+                      <div class="pointer-events-none absolute right-3.5">
                         <svg
                           width="24"
                           height="24"
@@ -4133,36 +3107,36 @@
                           <path
                             d="M16.7502 3.56V2C16.7502 1.59 16.4102 1.25 16.0002 1.25C15.5902 1.25 15.2502 1.59 15.2502 2V3.5H8.75023V2C8.75023 1.59 8.41023 1.25 8.00023 1.25C7.59023 1.25 7.25023 1.59 7.25023 2V3.56C4.55023 3.81 3.24023 5.42 3.04023 7.81C3.02023 8.1 3.26023 8.34 3.54023 8.34H20.4602C20.7502 8.34 20.9902 8.09 20.9602 7.81C20.7602 5.42 19.4502 3.81 16.7502 3.56Z"
                             fill="black"
-                          ></path>
+                          />
                           <path
                             opacity="0.4"
                             d="M20 9.83984C20.55 9.83984 21 10.2898 21 10.8398V16.9998C21 19.9998 19.5 21.9998 16 21.9998H8C4.5 21.9998 3 19.9998 3 16.9998V10.8398C3 10.2898 3.45 9.83984 4 9.83984H20Z"
                             fill="#292D32"
-                          ></path>
+                          />
                           <path
                             d="M8.5 14.9999C8.24 14.9999 7.98 14.8899 7.79 14.7099C7.61 14.5199 7.5 14.2599 7.5 13.9999C7.5 13.7399 7.61 13.4799 7.79 13.2899C8.07 13.0099 8.51 12.9199 8.88 13.0799C9.01 13.1299 9.12 13.1999 9.21 13.2899C9.39 13.4799 9.5 13.7399 9.5 13.9999C9.5 14.2599 9.39 14.5199 9.21 14.7099C9.02 14.8899 8.76 14.9999 8.5 14.9999Z"
                             fill="#292D32"
-                          ></path>
+                          />
                           <path
                             d="M12 14.9999C11.74 14.9999 11.48 14.8899 11.29 14.7099C11.11 14.5199 11 14.2599 11 13.9999C11 13.7399 11.11 13.4799 11.29 13.2899C11.38 13.1999 11.49 13.1299 11.62 13.0799C11.99 12.9199 12.43 13.0099 12.71 13.2899C12.89 13.4799 13 13.7399 13 13.9999C13 14.2599 12.89 14.5199 12.71 14.7099C12.66 14.7499 12.61 14.7899 12.56 14.8299C12.5 14.8699 12.44 14.8999 12.38 14.9199C12.32 14.9499 12.26 14.9699 12.2 14.9799C12.13 14.9899 12.07 14.9999 12 14.9999Z"
                             fill="#292D32"
-                          ></path>
+                          />
                           <path
                             d="M15.5 15C15.24 15 14.98 14.89 14.79 14.71C14.61 14.52 14.5 14.26 14.5 14C14.5 13.74 14.61 13.48 14.79 13.29C14.89 13.2 14.99 13.13 15.12 13.08C15.3 13 15.5 12.98 15.7 13.02C15.76 13.03 15.82 13.05 15.88 13.08C15.94 13.1 16 13.13 16.06 13.17C16.11 13.21 16.16 13.25 16.21 13.29C16.39 13.48 16.5 13.74 16.5 14C16.5 14.26 16.39 14.52 16.21 14.71C16.16 14.75 16.11 14.79 16.06 14.83C16 14.87 15.94 14.9 15.88 14.92C15.82 14.95 15.76 14.97 15.7 14.98C15.63 14.99 15.56 15 15.5 15Z"
                             fill="#292D32"
-                          ></path>
+                          />
                           <path
                             d="M8.5 18.5C8.37 18.5 8.24 18.47 8.12 18.42C7.99 18.37 7.89 18.3 7.79 18.21C7.61 18.02 7.5 17.76 7.5 17.5C7.5 17.24 7.61 16.98 7.79 16.79C7.89 16.7 7.99 16.63 8.12 16.58C8.3 16.5 8.5 16.48 8.7 16.52C8.76 16.53 8.82 16.55 8.88 16.58C8.94 16.6 9 16.63 9.06 16.67C9.11 16.71 9.16 16.75 9.21 16.79C9.39 16.98 9.5 17.24 9.5 17.5C9.5 17.76 9.39 18.02 9.21 18.21C9.16 18.25 9.11 18.3 9.06 18.33C9 18.37 8.94 18.4 8.88 18.42C8.82 18.45 8.76 18.47 8.7 18.48C8.63 18.49 8.57 18.5 8.5 18.5Z"
                             fill="#292D32"
-                          ></path>
+                          />
                           <path
                             d="M12 18.5002C11.74 18.5002 11.48 18.3902 11.29 18.2102C11.11 18.0202 11 17.7602 11 17.5002C11 17.2402 11.11 16.9802 11.29 16.7902C11.66 16.4202 12.34 16.4202 12.71 16.7902C12.89 16.9802 13 17.2402 13 17.5002C13 17.7602 12.89 18.0202 12.71 18.2102C12.52 18.3902 12.26 18.5002 12 18.5002Z"
                             fill="#292D32"
-                          ></path>
+                          />
                           <path
                             d="M15.5 18.5002C15.24 18.5002 14.98 18.3902 14.79 18.2102C14.61 18.0202 14.5 17.7602 14.5 17.5002C14.5 17.2402 14.61 16.9802 14.79 16.7902C15.16 16.4202 15.84 16.4202 16.21 16.7902C16.39 16.9802 16.5 17.2402 16.5 17.5002C16.5 17.7602 16.39 18.0202 16.21 18.2102C16.02 18.3902 15.76 18.5002 15.5 18.5002Z"
                             fill="#292D32"
-                          ></path>
+                          />
                         </svg>
                       </div>
 
@@ -4173,16 +3147,16 @@
                       >
                         <div class="date_picker_input peer min-w-0">
                           <input
-                            readonly=""
+                            readonly
                             type="text"
                             placeholder="تاریخ رفت:"
-                            class="date max-w-[8ch] overflow-hidden overflow-ellipsis outline-none xl:max-w-full"
+                            class="date max-w-[12ch] overflow-hidden py-3.5 ps-11 overflow-ellipsis outline-none xl:max-w-full"
                           />
                         </div>
                         <div
                           class="date_picker_calendar absolute right-0 z-[1000] mt-4 hidden"
                         >
-                          <div class="calendar_header">
+                          <div class="calendar_header" class="items-center">
                             <div class="flex items-center">
                               <p class="fw-bold cal_label">تاریخ رفت</p>
 
@@ -4190,96 +3164,7 @@
                                 class="select-container year-container relative flex items-center gap-2"
                               >
                                 <div class="custom-select">
-                                  <select name="" id="">
-                                    <option value="1404">1404</option>
-                                    <option value="1405">1405</option>
-                                    <option value="1406">1406</option>
-                                    <option value="1407">1407</option>
-                                  </select>
-                                  <div class="select-value">1404</div>
-                                  <div class="select-items select-hide">
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1404</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            opacity="0.4"
-                                            d="M10.794 1.3335H5.20732C2.78065 1.3335 1.33398 2.78016 1.33398 5.20683V10.7868C1.33398 13.2202 2.78065 14.6668 5.20732 14.6668H10.7873C13.214 14.6668 14.6607 13.2202 14.6607 10.7935V5.20683C14.6673 2.78016 13.2207 1.3335 10.794 1.3335Z"
-                                            fill="black"
-                                          ></path>
-                                          <path
-                                            d="M7.05297 10.3862C6.91964 10.3862 6.79297 10.3329 6.69964 10.2396L4.81297 8.35291C4.61964 8.15958 4.61964 7.83958 4.81297 7.64624C5.0063 7.45291 5.3263 7.45291 5.51964 7.64624L7.05297 9.17958L10.4796 5.75291C10.673 5.55958 10.993 5.55958 11.1863 5.75291C11.3796 5.94624 11.3796 6.26624 11.1863 6.45958L7.4063 10.2396C7.31297 10.3329 7.1863 10.3862 7.05297 10.3862Z"
-                                            fill="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1405</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                            stroke="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1406</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                            stroke="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1407</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                            stroke="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                  </div>
+                                  <select name="" id=""></select>
                                 </div>
                                 <div class="dropdown-ico">
                                   <svg
@@ -4296,7 +3181,7 @@
                                       stroke-miterlimit="10"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
-                                    ></path>
+                                    />
                                   </svg>
                                 </div>
                               </div>
@@ -4314,265 +3199,12 @@
                             <div class="month-picker">
                               <div class="month-list-container">
                                 <div class="selection-indicator"></div>
-                                <div class="month-list">
-                                  <div
-                                    class="month-item"
-                                    style="font-size: 14px; color: rgb(0, 0, 0)"
-                                  >
-                                    فروردین
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 12px;
-                                      color: rgb(90, 90, 90);
-                                    "
-                                  >
-                                    اردیبهشت
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 10px;
-                                      color: rgb(133, 133, 133);
-                                    "
-                                  >
-                                    خرداد
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 8px;
-                                      color: rgb(182, 182, 182);
-                                    "
-                                  >
-                                    تیر
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    مرداد
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    شهریور
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    مهر
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    آبان
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    آذر
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    دی
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    بهمن
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    اسفند
-                                  </div>
-                                </div>
+                                <div class="month-list"></div>
                               </div>
                             </div>
                             <div class="cal_wrapper">
-                              <div class="cal_days">
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">یکشنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">دوشنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">سه شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">چهار شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">پنج شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">جمعه</span>
-                                </div>
-                              </div>
-                              <div class="calendar_main">
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">25</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">26</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">27</span>
-                                </div>
-                                <div
-                                  class="cell_wrapper cal_date hiddenz active isSelected"
-                                >
-                                  <span class="cell_item">28</span>
-                                </div>
-                                <div class="cell_wrapper cal_date hiddenz">
-                                  <span class="cell_item">29</span>
-                                </div>
-                                <div class="cell_wrapper cal_date hiddenz">
-                                  <span class="cell_item">30</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">1</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">2</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">3</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">4</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">5</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">6</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">7</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">8</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">9</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">10</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">11</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">12</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">13</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">14</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">15</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">16</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">17</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">18</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">19</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">20</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">21</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">22</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">23</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">24</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">25</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">26</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">27</span>
-                                </div>
-                                <div
-                                  class="cell_wrapper cal_date current active isCurrent isSelected"
-                                >
-                                  <span class="cell_item">28</span>
-                                </div>
-                                <div class="cell_wrapper cal_date current">
-                                  <span class="cell_item">29</span>
-                                </div>
-                                <div class="cell_wrapper cal_date current">
-                                  <span class="cell_item">30</span>
-                                </div>
-                                <div class="cell_wrapper cal_date current">
-                                  <span class="cell_item">31</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">1</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">2</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">3</span>
-                                </div>
-                              </div>
+                              <div class="cal_days"></div>
+                              <div class="calendar_main"></div>
                             </div>
                           </div>
                           <div class="actions flex items-center">
@@ -4586,23 +3218,24 @@
                         </div>
                       </div>
 
+                      <span class="h-ful bg-gray-tag block w-[1px] py-3"></span>
                       <div
-                        class="dp peer border-r-gray-tag min-w-0 border-r ps-2"
+                        class="dp peer min-w-0"
                         id="multicity_to_date_picker"
                         style="direction: rtl"
                       >
                         <div class="date_picker_input peer min-w-0">
                           <input
-                            readonly=""
+                            readonly
                             type="text"
                             placeholder="تاریخ برگشت:"
-                            class="date max-w-[10ch] overflow-hidden overflow-ellipsis outline-none xl:max-w-full"
+                            class="date max-w-[10ch] overflow-hidden py-3.5 overflow-ellipsis outline-none xl:max-w-full"
                           />
                         </div>
                         <div
                           class="date_picker_calendar absolute right-0 z-[1000] mt-4 hidden"
                         >
-                          <div class="calendar_header">
+                          <div class="calendar_header" class="items-center">
                             <div class="flex items-center">
                               <p class="fw-bold cal_label">تاریخ رفت</p>
 
@@ -4610,96 +3243,7 @@
                                 class="select-container year-container relative flex items-center gap-2"
                               >
                                 <div class="custom-select">
-                                  <select name="" id="">
-                                    <option value="1404">1404</option>
-                                    <option value="1405">1405</option>
-                                    <option value="1406">1406</option>
-                                    <option value="1407">1407</option>
-                                  </select>
-                                  <div class="select-value">1404</div>
-                                  <div class="select-items select-hide">
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1404</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            opacity="0.4"
-                                            d="M10.794 1.3335H5.20732C2.78065 1.3335 1.33398 2.78016 1.33398 5.20683V10.7868C1.33398 13.2202 2.78065 14.6668 5.20732 14.6668H10.7873C13.214 14.6668 14.6607 13.2202 14.6607 10.7935V5.20683C14.6673 2.78016 13.2207 1.3335 10.794 1.3335Z"
-                                            fill="black"
-                                          ></path>
-                                          <path
-                                            d="M7.05297 10.3862C6.91964 10.3862 6.79297 10.3329 6.69964 10.2396L4.81297 8.35291C4.61964 8.15958 4.61964 7.83958 4.81297 7.64624C5.0063 7.45291 5.3263 7.45291 5.51964 7.64624L7.05297 9.17958L10.4796 5.75291C10.673 5.55958 10.993 5.55958 11.1863 5.75291C11.3796 5.94624 11.3796 6.26624 11.1863 6.45958L7.4063 10.2396C7.31297 10.3329 7.1863 10.3862 7.05297 10.3862Z"
-                                            fill="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1405</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                            stroke="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1406</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                            stroke="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                    <div
-                                      class="select-option flex gap-2"
-                                      style="line-height: 1"
-                                    >
-                                      <span>1407</span
-                                      ><span style="order: -1"
-                                        ><svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          width="16"
-                                          height="16"
-                                          viewBox="0 0 16 16"
-                                          fill="none"
-                                        >
-                                          <path
-                                            d="M14.1607 5.20546V5.20683V10.7935C14.1607 11.9074 13.8306 12.7365 13.2804 13.2866C12.7303 13.8367 11.9012 14.1668 10.7873 14.1668H5.20732C4.09343 14.1668 3.26449 13.8367 2.71443 13.286C2.16429 12.7352 1.83398 11.9044 1.83398 10.7868V5.20683C1.83398 4.09293 2.16408 3.26384 2.7142 2.71372C3.26433 2.16359 4.09342 1.8335 5.20732 1.8335H10.794C11.908 1.8335 12.7369 2.16363 13.286 2.71349C13.8351 3.26325 14.1637 4.09188 14.1607 5.20546Z"
-                                            stroke="black"
-                                          ></path></svg
-                                      ></span>
-                                    </div>
-                                  </div>
+                                  <select name="" id=""></select>
                                 </div>
                                 <div class="dropdown-ico">
                                   <svg
@@ -4716,7 +3260,7 @@
                                       stroke-miterlimit="10"
                                       stroke-linecap="round"
                                       stroke-linejoin="round"
-                                    ></path>
+                                    />
                                   </svg>
                                 </div>
                               </div>
@@ -4734,265 +3278,12 @@
                             <div class="month-picker">
                               <div class="month-list-container">
                                 <div class="selection-indicator"></div>
-                                <div class="month-list">
-                                  <div
-                                    class="month-item"
-                                    style="font-size: 14px; color: rgb(0, 0, 0)"
-                                  >
-                                    فروردین
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 12px;
-                                      color: rgb(90, 90, 90);
-                                    "
-                                  >
-                                    اردیبهشت
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 10px;
-                                      color: rgb(133, 133, 133);
-                                    "
-                                  >
-                                    خرداد
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 8px;
-                                      color: rgb(182, 182, 182);
-                                    "
-                                  >
-                                    تیر
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    مرداد
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    شهریور
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    مهر
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    آبان
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    آذر
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    دی
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    بهمن
-                                  </div>
-                                  <div
-                                    class="month-item"
-                                    style="
-                                      font-size: 6px;
-                                      color: rgb(212, 212, 212);
-                                    "
-                                  >
-                                    اسفند
-                                  </div>
-                                </div>
+                                <div class="month-list"></div>
                               </div>
                             </div>
                             <div class="cal_wrapper">
-                              <div class="cal_days">
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">یکشنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">دوشنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">سه شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">چهار شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">پنج شنبه</span>
-                                </div>
-                                <div class="cell_wrapper">
-                                  <span class="cell_item">جمعه</span>
-                                </div>
-                              </div>
-                              <div class="calendar_main">
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">25</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">26</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">27</span>
-                                </div>
-                                <div
-                                  class="cell_wrapper cal_date hiddenz active isSelected"
-                                >
-                                  <span class="cell_item">28</span>
-                                </div>
-                                <div class="cell_wrapper cal_date hiddenz">
-                                  <span class="cell_item">29</span>
-                                </div>
-                                <div class="cell_wrapper cal_date hiddenz">
-                                  <span class="cell_item">30</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">1</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">2</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">3</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">4</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">5</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">6</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">7</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">8</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">9</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">10</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">11</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">12</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">13</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">14</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">15</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">16</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">17</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">18</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">19</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">20</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">21</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">22</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">23</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">24</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">25</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">26</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">27</span>
-                                </div>
-                                <div
-                                  class="cell_wrapper cal_date current active isCurrent isSelected"
-                                >
-                                  <span class="cell_item">28</span>
-                                </div>
-                                <div class="cell_wrapper cal_date current">
-                                  <span class="cell_item">29</span>
-                                </div>
-                                <div class="cell_wrapper cal_date current">
-                                  <span class="cell_item">30</span>
-                                </div>
-                                <div class="cell_wrapper cal_date current">
-                                  <span class="cell_item">31</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">1</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">2</span>
-                                </div>
-                                <div class="cell_wrapper cal_date disabled">
-                                  <span class="cell_item">3</span>
-                                </div>
-                              </div>
+                              <div class="cal_days"></div>
+                              <div class="calendar_main"></div>
                             </div>
                           </div>
                           <div class="actions flex items-center">
@@ -5007,9 +3298,9 @@
                       </div>
                     </div>
                     <div
-                      class="relative flex h-full items-center gap-2 rounded-2xl bg-white px-3.5 py-3.5 *:text-black"
+                      class="relative flex h-full items-center gap-2 rounded-2xl bg-white *:text-black"
                     >
-                      <div>
+                      <div class="pointer-events-none absolute right-3.5">
                         <svg
                           style="flex-basis: 100%"
                           width="24"
@@ -5049,7 +3340,7 @@
                           id="passengers-multicity"
                           data-dropdown="dropdown-list-multicity"
                           placeholder="مسافر:"
-                          class="dropdown-input pe-4 w-full overflow-ellipsis outline-none"
+                          class="dropdown-input w-full px-3.5 py-3.5 ps-11.5 pe-8 overflow-ellipsis outline-none"
                         />
                       </div>
                       <ul
@@ -5259,7 +3550,9 @@
                           </div>
                         </li>
                       </ul>
-                      <div class="peer-[.hidden]:rotate-180 absolute left-3.5 pointer-events-none">
+                      <div
+                        class="pointer-events-none absolute left-3.5 peer-[.hidden]:rotate-180"
+                      >
                         <svg
                           width="16"
                           height="16"
@@ -5334,9 +3627,11 @@
       </div>
     </header>
 
-    <main class="page-content  -mt-8 pb-7">
+    <main class="page-content -mt-8 pb-7">
       <div class="flex w-full gap-6">
-        <div class="basis-[22%] h-fit space-y-3.5 rounded-[1.25rem] bg-[#f8f8f8] p-6">
+        <div
+          class="h-fit basis-[22%] space-y-3.5 rounded-[1.25rem] bg-[#f8f8f8] p-6"
+        >
           <div
             class="border-b-gray-tag flex items-center justify-between border-b pb-4"
           >
@@ -5930,21 +4225,32 @@
                           <p>شیراز</p>
                         </div>
                       </div>
-                      <div class="flex items-center gap-2 relative">
+                      <div class="relative flex items-center gap-2">
                         <button
-                        aria-controls="fly-details-1"
-                        data-group="ticket-1"
-                          class="text-tiny *:pointer-events-none plan-toggle before:hidden [.active]:before:block group before:bottom-0 before:right-0 before:translate-y-full before:absolute before:bg-white before:w-full before:h-full flex items-center  gap-2 fly-details-button [.active]:bg-white [.active]:text-black w-fit [.active]:rounded-b-none rounded-lg bg-black [.active]:px-3 px-5.5 py-1.5 text-white"
+                          aria-controls="fly-details-1"
+                          data-group="ticket-1"
+                          class="text-tiny plan-toggle group fly-details-button flex w-fit items-center gap-2 rounded-lg bg-black px-5.5 py-1.5 text-white *:pointer-events-none before:absolute before:right-0 before:bottom-0 before:hidden before:h-full before:w-full before:translate-y-full before:bg-white [.active]:rounded-b-none [.active]:bg-white [.active]:px-3 [.active]:text-black [.active]:before:block"
                         >
                           <p>اطلاعات پرواز</p>
-                          <div class="group-[.active]:block hidden">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                              <path d="M2.38012 8.7793L6.18345 4.97596C6.63262 4.5268 7.36762 4.5268 7.81678 4.97596L11.6201 8.7793" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                              
+                          <div class="hidden group-[.active]:block">
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 14 14"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M2.38012 8.7793L6.18345 4.97596C6.63262 4.5268 7.36762 4.5268 7.81678 4.97596L11.6201 8.7793"
+                                stroke="black"
+                                stroke-width="1.5"
+                                stroke-miterlimit="10"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
                           </div>
                         </button>
-                      
                       </div>
                     </div>
                     <div class="flex items-center gap-2.5 p-3.5">
@@ -6165,10 +4471,7 @@
                     </div>
                   </div>
                 </div>
-                <div
-                  class="hidden rounded-b-2xl p-3 pt-8 xl:p-8"
-     
-                >
+                <div class="hidden rounded-b-2xl p-3 pt-8 xl:p-8">
                   <ul
                     id="economy-plans-1"
                     class="flex items-center gap-3 *:basis-full *:overflow-hidden"
@@ -6179,7 +4482,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -6331,9 +4634,9 @@
                             </div>
                           </li>
                         </ul>
-                        <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -6352,7 +4655,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6385,7 +4688,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -6537,9 +4840,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -6558,7 +4861,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center hover:bg-gray-200 hover:text-black gap-1 rounded-lg bg-black px-3.5 py-1 text-white"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6591,7 +4894,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -6743,9 +5046,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -6764,7 +5067,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6797,7 +5100,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -6949,9 +5252,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -6970,7 +5273,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -6998,10 +5301,7 @@
                     </li>
                   </ul>
                 </div>
-                <div
-                  class="hidden rounded-b-2xl p-3 pt-8 xl:p-8"
-         
-                >
+                <div class="hidden rounded-b-2xl p-3 pt-8 xl:p-8">
                   <ul
                     id="business-plans-1"
                     class="flex items-center gap-3 *:basis-full *:overflow-hidden"
@@ -7012,7 +5312,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -7164,9 +5464,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -7185,7 +5485,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7218,7 +5518,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -7370,9 +5670,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -7391,7 +5691,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7424,7 +5724,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -7576,9 +5876,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -7597,7 +5897,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7630,7 +5930,7 @@
                           <span
                             class="block size-1.5 rounded-full bg-white"
                           ></span>
-                          <p class="text-xs ">اکونومی کلاسیک</p>
+                          <p class="text-xs">اکونومی کلاسیک</p>
                         </div>
                         <p class="text-tiny font-light">مزایای بیشتر</p>
                       </div>
@@ -7782,9 +6082,9 @@
                             </div>
                           </li>
                         </ul>
-                      <div class="overflow-hidden w-full">
+                        <div class="w-full overflow-hidden">
                           <svg
-                          class="max-w-full object-over"
+                            class="object-over max-w-full"
                             width="500"
                             height="2"
                             viewBox="0 0 220 2"
@@ -7803,7 +6103,7 @@
                             3.200.000 <br />تومان
                           </p>
                           <button
-                            class="flex select-plan items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
+                            class="select-plan flex items-center gap-1 rounded-lg bg-black px-3.5 py-1 text-white hover:bg-gray-200 hover:text-black"
                           >
                             <p>انتخاب</p>
                             <div>
@@ -7831,80 +6131,89 @@
                     </li>
                   </ul>
                 </div>
-                <div
-                  class="hidden rounded-b-2xl p-3 pt-8 xl:p-8"
-         
-                >
+                <div class="hidden rounded-b-2xl p-3 pt-8 xl:p-8">
                   <ul
                     id="fly-details-1"
-                    class="grid max-w-[50vw] mx-auto grid-cols-3 gap-5 *:overflow-hidden"
+                    class="mx-auto grid max-w-[50vw] grid-cols-3 gap-5 *:overflow-hidden"
                   >
-                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
-                    <div class="bg-white rounded-xl py-1.5 w-full">
-                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
-                    </div>
-                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
-                   </li>
-                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
-                    <div class="bg-white rounded-xl py-1.5 w-full">
-                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
-                    </div>
-                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
-                   </li>
-                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
-                    <div class="bg-white rounded-xl py-1.5 w-full">
-                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
-                    </div>
-                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
-                   </li>
-                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
-                    <div class="bg-white rounded-xl py-1.5 w-full">
-                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
-                    </div>
-                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
-                   </li>
-                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
-                    <div class="bg-white rounded-xl py-1.5 w-full">
-                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
-                    </div>
-                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
-                   </li>
-                   <li class="bg-[#ebebeb] rounded-xxl p-0.5 pb-1.5">
-                    <div class="bg-white rounded-xl py-1.5 w-full">
-                      <p class="font-semibold text-center text-sm">شماره پرواز</p>
-                    </div>
-                    <p class="text-sm font-bold mt-2.5 text-center">932</p>
-                   </li>
+                    <li class="rounded-xxl bg-[#ebebeb] p-0.5 pb-1.5">
+                      <div class="w-full rounded-xl bg-white py-1.5">
+                        <p class="text-center text-sm font-semibold">
+                          شماره پرواز
+                        </p>
+                      </div>
+                      <p class="mt-2.5 text-center text-sm font-bold">932</p>
+                    </li>
+                    <li class="rounded-xxl bg-[#ebebeb] p-0.5 pb-1.5">
+                      <div class="w-full rounded-xl bg-white py-1.5">
+                        <p class="text-center text-sm font-semibold">
+                          شماره پرواز
+                        </p>
+                      </div>
+                      <p class="mt-2.5 text-center text-sm font-bold">932</p>
+                    </li>
+                    <li class="rounded-xxl bg-[#ebebeb] p-0.5 pb-1.5">
+                      <div class="w-full rounded-xl bg-white py-1.5">
+                        <p class="text-center text-sm font-semibold">
+                          شماره پرواز
+                        </p>
+                      </div>
+                      <p class="mt-2.5 text-center text-sm font-bold">932</p>
+                    </li>
+                    <li class="rounded-xxl bg-[#ebebeb] p-0.5 pb-1.5">
+                      <div class="w-full rounded-xl bg-white py-1.5">
+                        <p class="text-center text-sm font-semibold">
+                          شماره پرواز
+                        </p>
+                      </div>
+                      <p class="mt-2.5 text-center text-sm font-bold">932</p>
+                    </li>
+                    <li class="rounded-xxl bg-[#ebebeb] p-0.5 pb-1.5">
+                      <div class="w-full rounded-xl bg-white py-1.5">
+                        <p class="text-center text-sm font-semibold">
+                          شماره پرواز
+                        </p>
+                      </div>
+                      <p class="mt-2.5 text-center text-sm font-bold">932</p>
+                    </li>
+                    <li class="rounded-xxl bg-[#ebebeb] p-0.5 pb-1.5">
+                      <div class="w-full rounded-xl bg-white py-1.5">
+                        <p class="text-center text-sm font-semibold">
+                          شماره پرواز
+                        </p>
+                      </div>
+                      <p class="mt-2.5 text-center text-sm font-bold">932</p>
+                    </li>
                   </ul>
                 </div>
               </li>
-           
             </ul>
           </section>
         </div>
       </div>
     </main>
-    <footer class="page-content mt-35 pb-20 text-white">
-      <div class="bg-gray-750 rounded-[1.25rem] p-12.5">
+    <footer class="page-content text-white my-20">
+      <div class="bg-gray-750 relative rounded-[1.25rem] p-12.5 pt-17 px-20">
         <div class="flex items-start">
           <div>
-            <img src="@assets/images/logo-contrast.svg" alt="" />
+            <img width="70" height="70" src="@assets/images/logo-contrast.webp" alt="" />
           </div>
-          <div class="mt-7">
-            <div class="absolute left-20">
+          <div class="">
+            <div class="absolute top-0 mr-10">
               <object
                 type="image/svg+xml"
                 data="@assets/images/air-contrast.svg"
-                width="1020"
-                height="142"
+                width="100%"
+                class="pe-14"
+                height="320"
               ></object>
             </div>
           </div>
         </div>
         <div>
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between mt-7 ">
             <div>
-              <p class="me-12.5 max-w-[50ch] font-light">
+              <p class=" max-w-[50ch] text-justify font-light">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                 استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
@@ -7962,7 +6271,7 @@
                 <p>تهران، چهارراه جهان کودک، ضلع جنوب شرقی، برج آوان، طبقه 9</p>
               </div>
             </div>
-            <div class="grid grid-cols-4 *:text-nowrap">
+            <div class="flex  gap-10 *:text-nowrap">
               <dl>
                 <dt class="mb-6 text-[1.25rem] font-bold">دسترسی سریع</dt>
                 <dd class="mb-4">
@@ -8041,7 +6350,7 @@
               </p>
               <div
                 dir="ltr"
-                class="mt-3.5 flex w-fit items-center justify-between rounded-2xl bg-[#ececec] pe-2"
+                class="mt-3.5 w-full flex w-fit items-center justify-between rounded-2xl bg-[#ececec] pe-2"
               >
                 <input
                   placeholder="john@doe.com"

@@ -665,6 +665,7 @@ dialog::backdrop {
   border-radius: 0.93;
 }
 
+
 .select-plan {
   @apply hover:bg-gray-200 hover:text-black duration-500
 }

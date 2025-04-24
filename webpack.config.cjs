@@ -38,6 +38,7 @@ module.exports = {
         "booking/one-way/confirmation/index":
           "./src/booking/one-way/confirmation/index.html",
         "booking/two-way/a/index": "./src/booking/two-way/a/index.html",
+        "booking/two-way/a/other/index": "./src/booking/two-way/a/other/index.html",
         "booking/two-way/b/index": "./src/booking/two-way/b/index.html",
         "booking/two-way/passenger-details/index":
           "./src/booking/two-way/passenger-details/index.html",
