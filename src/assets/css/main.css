@@ -677,6 +677,19 @@ dialog::backdrop {
   @apply hover:bg-gray-200 hover:text-black duration-500
 }
 
+.blog-item {
+  transform-style: preserve-3d;
+  transform: translateZ(-1px);
+}
+
+.gradient-splide {
+  background: linear-gradient(
+    90deg,
+    rgba(234, 234, 234, 0) 0%,
+    rgba(234, 234, 234, 1) 60vw
+  );
+}
+
 @media (min-width: 68.5625rem) {
   .ticket-search-overlay {
     --r: 30px;

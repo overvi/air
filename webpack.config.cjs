@@ -19,6 +19,7 @@ module.exports = {
     paymentlist: "./src/assets/js/paymentlist.js",
     passengerDetails: "./src/assets/js/passengerDetails.js",
     initSelect: "./src/assets/js/initSelect.js",
+    blogs : "./src/assets/js/blogs.js"
   },
 
   plugins: [
