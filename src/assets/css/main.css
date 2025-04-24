@@ -135,6 +135,13 @@
     -webkit-box-shadow: 0 0 0 30px transparent inset !important;
     font: inherit;
   }
+
+  label {
+    cursor: pointer;
+  }
+  div:has(div.dp) * {
+    cursor: pointer;
+  }
 }
 
 .page-content {

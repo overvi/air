@@ -64,16 +64,30 @@ ticketBoxes.forEach((tb) => {
         if (el !== event.target) {
        
           el.classList.remove("plan-opened");
+          
           el.classList.remove("active");
           const elTarget = el.getAttribute("aria-controls");
           document
             .getElementById(elTarget)
             .parentElement.classList.add("hidden");
+            const p = el.querySelector("p");
+        if (p) p.textContent = "نمایش بیشتر";
         }
       });
 
+      const p = event.target.querySelector("p");
+      if (p) {
+        if (event.target.classList.contains("plan-opened")) {
+          p.textContent = "نمایش بیشتر";
+        } else {
+          p.textContent = "نمایش کمتر";
+        }
+      }
+  
+
       target.closest("li").classList.toggle("shadow-[0_0_20px_0_rgba(0,0,0,.06)]")
       event.target.classList.toggle("plan-opened");
+      
       target.parentElement.classList.toggle("hidden");
 
       const anyOpen =
