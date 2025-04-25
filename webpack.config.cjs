@@ -14,12 +14,17 @@ module.exports = {
     "search-ticket": "./src/assets/js/search-ticket.js",
     "slider-range": "./src/assets/js/slider-range.js",
     booking: "./src/assets/js/booking.js",
+    validation : "./src/assets/js/validation.js",
     passengers: "./src/assets/js/passengers.js",
     inlineDatepicker: "./src/assets/js/inlineDatepicker.js",
     paymentlist: "./src/assets/js/paymentlist.js",
     passengerDetails: "./src/assets/js/passengerDetails.js",
     initSelect: "./src/assets/js/initSelect.js",
-    blogs : "./src/assets/js/blogs.js"
+    blogs : "./src/assets/js/blogs.js",
+    flightstatus : "./src/assets/js/flightstatus.js",
+    dp : "./src/assets/js/dp.js",
+    swpapable : "./src/assets/js/swapable.js",
+    citySelect : "./src/assets/js/citySelect.js"
   },
 
   plugins: [
@@ -57,6 +62,10 @@ module.exports = {
 
         "blog/index": "./src/blog/index.html",
         "blog/1/index": "./src/blog/1/index.html",
+
+
+        "flight-status/index" : "./src/flight-status/index.html",
+        
       },
       js: {
         // output filename of extracted JS from source script loaded in HTML via `<script>` tag

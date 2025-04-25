@@ -3,9 +3,14 @@ import "../../lib/datepicker.css";
 import CustomSelect from "./select.js";
 import "./tab.js";
 import "./dropdown.js";
-import JustValidate from "just-validate";
+import "./dp.js";
+import "./swapable.js";
+import citySelectCallback from "./citySelect.js";
+import safeCreateValidator from "./validation";
 
-const isDifferPage = document.body.dataset.page === "differ-ticket";
+
+
+export const isDifferPage = document.body.dataset.page === "differ-ticket";
 
 function safeInitDatePicker(id) {
   const el = document.getElementById(id);
@@ -21,48 +26,6 @@ safeInitDatePicker("multicity_from_date_picker");
 safeInitDatePicker("multicity_to_date_picker");
 safeInitDatePicker("fly_status_date_picker");
 safeInitDatePicker("fly_number_date_picker");
-
-document.addEventListener("click", (e) => {
-  const swapButton = e.target.closest(".input-swap");
-  if (!swapButton) return;
-
-  const swap = swapButton.closest(".swapable");
-  if (!swap) return;
-
-  const boxes = swap.querySelectorAll(".swap-box");
-  if (boxes.length < 2) return; // Ensure there are at least two boxes to swap
-
-  const parent = boxes[0].parentNode;
-  const firstBox = boxes[0];
-  const secondBox = boxes[1];
-  const inputSwap = parent.querySelector(".input-swap");
-
-  if (isDifferPage) {
-    if (inputSwap.parentElement.nextElementSibling === secondBox) {
-      const reference = inputSwap.parentElement;
-      parent.insertBefore(secondBox, reference);
-      parent.insertBefore(firstBox, reference.nextElementSibling);
-    } else {
-      parent.insertBefore(firstBox, secondBox);
-    }
-  } else {
-    if (firstBox.nextElementSibling === secondBox) {
-      parent.insertBefore(secondBox, firstBox);
-    } else {
-      parent.insertBefore(firstBox, secondBox);
-    }
-  }
-});
-
-const initializeSwapables = () => {
-  document.querySelectorAll(".swapable").forEach((swap) => {
-    if (!swap.hasAttribute("data-initialized")) {
-      swap.setAttribute("data-initialized", "true");
-    }
-  });
-};
-
-initializeSwapables();
 
 document.addEventListener("click", (e) => {
   // Increment logic
@@ -96,24 +59,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("click", (event) => {
-  document.querySelectorAll(".dp").forEach((picker) => {
-    const input = picker.querySelector(".date");
-    const calendar = picker.querySelector(".date_picker_calendar");
-
-    if (input.contains(event.target)) {
-      document.querySelectorAll(".date_picker_calendar").forEach((cal) => {
-        if (cal !== calendar) cal.classList.add("hidden");
-      });
-      calendar.classList.toggle("hidden");
-      picker.classList.toggle("open");
-    } else if (!picker.contains(event.target)) {
-      calendar.classList.add("hidden");
-      picker.classList.remove("open");
-    }
-  });
-});
-
 function updatePassengerText(prefix) {
   prefix = prefix || "";
   const adults = document.getElementById(`adults${prefix}`).value;
@@ -132,15 +77,6 @@ function updatePassengerText(prefix) {
 
   passengerInput.value = text;
 }
-
-const citySelectCallback = (value, index) => {
-  const svg = value.querySelector("svg");
-  const city_icon = value.closest(".swap-box").querySelector(`.city-icon`);
-
-  if (svg && city_icon.children.length > 0) {
-    city_icon.replaceChild(svg.cloneNode(true), city_icon.children[0]);
-  }
-};
 
 const multipleRoutes = document.getElementById("multiple-routes-container");
 
@@ -1516,46 +1452,7 @@ const validators = {
   ),
 };
 
-const err = document.getElementById("unselected-city-error");
 
-function safeCreateValidator(formId, fromField, toField) {
-  const form = document.querySelector(formId);
-  if (!form) return null;
-
-  const validator = new JustValidate(formId, {
-    errorLabelStyle: { display: "none" },
-  });
-
-  validator
-    .addField(fromField, [{ rule: "required" }])
-    .addField(toField, [{ rule: "required" }])
-    .onValidate((info) => {
-      handleValidationResult(info, fromField, toField);
-    });
-
-  return validator;
-}
-
-// Handles validation results dynamically
-function handleValidationResult(info, fromField, toField) {
-  if (!info.isSubmitted) return;
-  if (info.isValid) {
-    ticketOutboundValidateField("success");
-  } else {
-    if (info.fields[fromField] || info.fields[toField]) {
-      ticketOutboundValidateField("error", "لطفا مبدا و مقصد را مشخص کنید");
-    }
-  }
-}
-
-function ticketOutboundValidateField(type, message = "") {
-  if (type === "success") {
-    err.classList.add("opacity-0");
-  } else {
-    err.classList.remove("opacity-0");
-    err.querySelector("p").textContent = message;
-  }
-}
 
 function addFieldToForm(formKey, fieldId, rules = [{ rule: "required" }]) {
   if (validators[formKey]) {

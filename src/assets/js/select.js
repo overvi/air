@@ -7,7 +7,6 @@ class CustomSelect {
     this.options = this.container.querySelectorAll(".option");
     this.onSelect = onSelect;
     this.hiddenSelect = this.container.querySelector(".hidden-select");
-    this.maxLetters = 20;
 
     // Mark the select element with a unique data attribute
     this.container.setAttribute("data-custom-select", "true");
@@ -47,7 +46,7 @@ class CustomSelect {
   }
 
   setTextContent(value) {
-    return value.length > this.maxLetters ? value.slice(0, this.maxLetters) + "..." : value;
+    return value;
   }
 
   setupOptionsListeners() {
