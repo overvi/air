@@ -65,6 +65,7 @@ module.exports = {
 
 
         "flight-status/index" : "./src/flight-status/index.html",
+        "reservation-management/index" : "./src/reservation-management/index.html"
         
       },
       js: {
