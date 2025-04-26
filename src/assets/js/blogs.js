@@ -10,14 +10,7 @@ const blog = new Splide(".splide", {
 arrows :false,
     mediaQuery: "min",
     autoplay :  true,
-    breakpoints: {
-      1440: {
-        perPage: 5,
-      },
-      1660: {
-        perPage: 6,
-      },
-    },
+ 
   }).mount();
 
   const buttons = document.querySelectorAll('.custom-pagination button');
