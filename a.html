@@ -1,31 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .parent {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sword {
   position: relative;
-  transform-style: preserve-3d;
-  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.child {
-  position: absolute;
-  top: 0;
-  background-color: red;
-  left: 0;
-  transform: translateZ(-1px); /* pushes the child "behind" the parent */
+.blade {
+  width: 10px;
+  height: 150px;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border-radius: 2px;
 }
 
-    </style>
+.guard {
+  width: 40px;
+  height: 10px;
+  background: #555;
+  margin: 2px 0;
+  border-radius: 5px;
+}
+
+.handle {
+  width: 10px;
+  height: 40px;
+  background: brown;
+  border-radius: 5px;
+}
+
+  </style>
 </head>
 <body>
-    <div class="parent">
-        Parent Content
-        <div class="child">Child Behind</div>
-      </div>
-      
+  <div class="sword">
+    <div class="blade"></div>
+    <div class="guard"></div>
+    <div class="handle"></div>
+  </div>
+  
 </body>
 </html>

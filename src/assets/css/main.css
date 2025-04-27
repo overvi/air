@@ -672,9 +672,8 @@ dialog::backdrop {
   border-radius: 0.93;
 }
 
-
 .select-plan {
-  @apply hover:bg-gray-200 hover:text-black duration-500
+  @apply duration-500 hover:bg-gray-200 hover:text-black;
 }
 
 .blog-item {
@@ -688,6 +687,37 @@ dialog::backdrop {
     rgba(234, 234, 234, 0) 0%,
     rgba(234, 234, 234, 1) 60vw
   );
+}
+
+.seat .top {
+  @apply absolute top-0 right-0 left-0 mx-auto h-[1.4875rem] w-[2.1375rem] -translate-y-[60%] rounded-lg;
+}
+
+.seat .bottom {
+  @apply relative z-[500] h-8 w-12 rounded-lg;
+}
+.seat--small .top {
+  @apply w-[1.375rem] h-[1.125rem]  rounded-[5px]
+}
+
+.seat--small .bottom { 
+ @apply h-[1.3125rem] w-[2rem]  rounded-[5px]
+}
+.seat-empty .top,
+.seat-empty .bottom {
+  @apply bg-[#C5C5C5];
+}
+.seat-reserved .top,
+.seat-reserved .bottom {
+  @apply border border-[#ffa000] bg-[hsl(39,100%,90%)];
+}
+.seat-reserved .bottom,
+.seat-unavailable .bottom {
+  @apply !border-t-0;
+}
+.seat-unavailable .top,
+.seat-unavailable .bottom {
+  @apply border border-red-700 bg-[hsl(0,100%,92%)];
 }
 
 @media (min-width: 68.5625rem) {

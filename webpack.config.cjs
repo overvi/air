@@ -24,7 +24,9 @@ module.exports = {
     flightstatus : "./src/assets/js/flightstatus.js",
     dp : "./src/assets/js/dp.js",
     swpapable : "./src/assets/js/swapable.js",
-    citySelect : "./src/assets/js/citySelect.js"
+    citySelect : "./src/assets/js/citySelect.js",
+    reservationManagement : "./src/assets/js/reservationManagement.js",
+    inc : "./src/assets/js/inc.js"
   },
 
   plugins: [
