@@ -28,7 +28,7 @@ safeInitDatePicker("fly_status_date_picker");
 safeInitDatePicker("fly_number_date_picker");
 
 document.addEventListener("click", (e) => {
-  // Increment logic
+
   if (e.target.closest(".increment")) {
     const button = e.target.closest("button");
     const target = button.getAttribute("aria-controls");

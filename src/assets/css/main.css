@@ -697,11 +697,11 @@ dialog::backdrop {
   @apply relative z-[500] h-8 w-12 rounded-lg;
 }
 .seat--small .top {
-  @apply w-[1.375rem] h-[1.125rem]  rounded-[5px]
+  @apply h-[1.125rem] w-[1.375rem] rounded-[5px];
 }
 
-.seat--small .bottom { 
- @apply h-[1.3125rem] w-[2rem]  rounded-[5px]
+.seat--small .bottom {
+  @apply h-[1.3125rem] w-[2rem] rounded-[5px];
 }
 .seat-empty .top,
 .seat-empty .bottom {
@@ -718,6 +718,17 @@ dialog::backdrop {
 .seat-unavailable .top,
 .seat-unavailable .bottom {
   @apply border border-red-700 bg-[hsl(0,100%,92%)];
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.hide-scroll {
+  scrollbar-width: none;
 }
 
 @media (min-width: 68.5625rem) {

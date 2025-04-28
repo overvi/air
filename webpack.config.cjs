@@ -14,19 +14,19 @@ module.exports = {
     "search-ticket": "./src/assets/js/search-ticket.js",
     "slider-range": "./src/assets/js/slider-range.js",
     booking: "./src/assets/js/booking.js",
-    validation : "./src/assets/js/validation.js",
+    validation: "./src/assets/js/validation.js",
     passengers: "./src/assets/js/passengers.js",
     inlineDatepicker: "./src/assets/js/inlineDatepicker.js",
     paymentlist: "./src/assets/js/paymentlist.js",
     passengerDetails: "./src/assets/js/passengerDetails.js",
     initSelect: "./src/assets/js/initSelect.js",
-    blogs : "./src/assets/js/blogs.js",
-    flightstatus : "./src/assets/js/flightstatus.js",
-    dp : "./src/assets/js/dp.js",
-    swpapable : "./src/assets/js/swapable.js",
-    citySelect : "./src/assets/js/citySelect.js",
-    reservationManagement : "./src/assets/js/reservationManagement.js",
-    inc : "./src/assets/js/inc.js"
+    blogs: "./src/assets/js/blogs.js",
+    flightstatus: "./src/assets/js/flightstatus.js",
+    dp: "./src/assets/js/dp.js",
+    swpapable: "./src/assets/js/swapable.js",
+    citySelect: "./src/assets/js/citySelect.js",
+    reservationManagement: "./src/assets/js/reservationManagement.js",
+    inc: "./src/assets/js/inc.js",
   },
 
   plugins: [
@@ -46,7 +46,8 @@ module.exports = {
         "booking/one-way/confirmation/index":
           "./src/booking/one-way/confirmation/index.html",
         "booking/two-way/a/index": "./src/booking/two-way/a/index.html",
-        "booking/two-way/a/other/index": "./src/booking/two-way/a/other/index.html",
+        "booking/two-way/a/other/index":
+          "./src/booking/two-way/a/other/index.html",
         "booking/two-way/b/index": "./src/booking/two-way/b/index.html",
         "booking/two-way/passenger-details/index":
           "./src/booking/two-way/passenger-details/index.html",
@@ -65,13 +66,12 @@ module.exports = {
         "blog/index": "./src/blog/index.html",
         "blog/1/index": "./src/blog/1/index.html",
 
-
-        "flight-status/index" : "./src/flight-status/index.html",
-        "reservation-management/index" : "./src/reservation-management/index.html"
-        
+        "flight-status/index": "./src/flight-status/index.html",
+        "reservation-management/index":
+          "./src/reservation-management/index.html",
+        "airplanes/index": "./src/airplanes/index.html",
       },
       js: {
-        // output filename of extracted JS from source script loaded in HTML via `<script>` tag
         filename: "js/[name].[contenthash:8].js",
       },
       css: {
