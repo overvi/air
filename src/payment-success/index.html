@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="@assets/css/main.css" />
+  </head>
+  <body>
+    <dialog
+      id="payment-success"
+      class="dialog fixed top-[3vh] m-auto overflow-visible bg-transparent outline-none"
+    >
+      <div
+        class="m-auto flex w-[52.5rem] flex-col items-center justify-center overflow-visible rounded-[2.5rem] bg-white p-6 py-12 text-center"
+      >
+        <div class="mx-auto w-fit">
+          <svg
+            width="100"
+            height="100"
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              opacity="0.4"
+              d="M91.6673 37.4993V62.4993C91.6673 77.0827 83.334 83.3327 70.834 83.3327H35.209C36.6674 80.8743 37.5007 78.041 37.5007 74.9993C37.5007 65.791 30.0423 58.3327 20.834 58.3327C15.834 58.3327 11.3757 60.541 8.33398 63.9993V37.4993C8.33398 22.916 16.6673 16.666 29.1673 16.666H70.834C83.334 16.666 91.6673 22.916 91.6673 37.4993Z"
+              fill="#2FAC66"
+            />
+            <path
+              d="M50.0007 60.4173C55.7536 60.4173 60.4173 55.7536 60.4173 50.0007C60.4173 44.2477 55.7536 39.584 50.0007 39.584C44.2477 39.584 39.584 44.2477 39.584 50.0007C39.584 55.7536 44.2477 60.4173 50.0007 60.4173Z"
+              fill="#2FAC66"
+            />
+            <path
+              d="M77.084 61.4577C75.3757 61.4577 73.959 60.041 73.959 58.3327V41.666C73.959 39.9577 75.3757 38.541 77.084 38.541C78.7923 38.541 80.209 39.9577 80.209 41.666V58.3327C80.209 60.041 78.7923 61.4577 77.084 61.4577Z"
+              fill="#2FAC66"
+            />
+            <path
+              d="M20.8327 58.334C11.6243 58.334 4.16602 65.7923 4.16602 75.0007C4.16602 78.1257 5.04096 81.084 6.58263 83.584C9.45763 88.4173 14.7493 91.6673 20.8327 91.6673C26.916 91.6673 32.2077 88.4173 35.0827 83.584C36.6244 81.084 37.4993 78.1257 37.4993 75.0007C37.4993 65.7923 30.041 58.334 20.8327 58.334ZM29.041 73.6256L20.166 81.834C19.5827 82.3757 18.791 82.6674 18.041 82.6674C17.2493 82.6674 16.4576 82.3756 15.8326 81.7506L11.7077 77.6257C10.4993 76.4173 10.4993 74.4173 11.7077 73.209C12.916 72.0007 14.916 72.0007 16.1243 73.209L18.1244 75.2089L24.7911 69.0423C26.0411 67.8757 28.0411 67.9589 29.2077 69.2089C30.3744 70.4589 30.291 72.4589 29.041 73.6256Z"
+              fill="#2FAC66"
+            />
+          </svg>
+        </div>
+        <div>
+          <p class="mt-5 text-[2.5rem] font-bold text-green-500">
+            .پرداخت با موفقیت انجام شد
+          </p>
+          <div
+            class="mt-8 flex items-center justify-center text-2xl text-green-500"
+          >
+            <p>473828992</p>
+            <p>:کد رهگیری</p>
+          </div>
+          <p class="mt-4 text-[1.25rem]">
+            تا چندثانیه دیگر به صورت خودکار به صفحه اصلی هدایت میشوید.
+          </p>
+          <button
+            class="mt-6 rounded-xl bg-black px-6 py-2 font-bold text-white transition-colors outline-none hover:bg-gray-400 hover:text-black"
+          >
+            رفتن به صفحه اصلی
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+  <script>
+    const modal = document.getElementById("payment-success");
+    modal.showModal();
+  </script>
+</html>

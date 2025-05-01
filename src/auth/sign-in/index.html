@@ -79,13 +79,12 @@
                     </p>
                   </div>
                   <input
-                    class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                    class="placeholder:text-tiny password-input w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
                     type="password"
-                    id="password-input"
                     placeholder="کلمه عبور خود را وارد کنید..."
                   />
                 </div>
-                <button id="password-visibility">
+                <button class="password-visibility">
                   <svg
                     class="input-icon"
                     width="24"
@@ -112,7 +111,7 @@
                 >
               </div>
               <button
-                class="rounded-xxl transition-colors hover:bg-gray-200 hover:text-black mt-6 w-full bg-black py-3.5 text-sm font-bold text-white"
+                class="rounded-xxl mt-6 w-full bg-black py-3.5 text-sm font-bold text-white transition-colors hover:bg-gray-200 hover:text-black"
               >
                 ورود به حساب کاربری
               </button>
@@ -149,21 +148,6 @@
         </div>
       </div>
     </main>
-    <script>
-      const passwordVisibilityToggle = document.getElementById(
-        "password-visibility",
-      );
-      const passwordInput = document.getElementById("password-input");
-
-      passwordVisibilityToggle.addEventListener("click", () => {
-        passwordInput.type = passwordInput.type == "text" ? "password" : "text";
-      });
-
-      document
-        .querySelector("input[type='number']")
-        .addEventListener("input", function (e) {
-          this.value = this.value.replace(/[^0-9.-]/g, "");
-        });
-    </script>
   </body>
+  <script src="@assets/js/passwordInput.js"></script>
 </html>

@@ -6,147 +6,230 @@
     <title>Confirmation</title>
     <link rel="stylesheet" href="@assets/css/main.css" />
     <style>
-       td,
-    th {
-      width: 20%;
-    }
-    .th-large {
-      width: 40% !important;
-    }
+      td,
+      th {
+        width: 20%;
+      }
+      .th-large {
+        width: 40% !important;
+      }
     </style>
   </head>
   <body>
     <dialog
-    id="prev-passengers"
-    class=" m-auto  bg-transparent outline-none rounded-[2.5rem] overflow-hidden"
-  >
-    <div
-      class="m-auto flex w-[52.2rem]  min-h-[26.25rem] flex-col pt-10  rounded-[2.5rem] bg-white px-10"
+      id="prev-passengers"
+      class="m-auto overflow-hidden rounded-[2.5rem] bg-transparent outline-none"
     >
-     
-  <div class="flex items-center justify-between">
-    <p class="font-bold">لیست مسافران قبلی</p>
-    <button aria-label="Close Modal" class="close-modal">
-      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z" fill="#D70000"/>
-        <path d="M13.0604 12.0004L15.3604 9.70035C15.6504 9.41035 15.6504 8.93035 15.3604 8.64035C15.0704 8.35035 14.5904 8.35035 14.3004 8.64035L12.0004 10.9404L9.70035 8.64035C9.41035 8.35035 8.93035 8.35035 8.64035 8.64035C8.35035 8.93035 8.35035 9.41035 8.64035 9.70035L10.9404 12.0004L8.64035 14.3004C8.35035 14.5904 8.35035 15.0704 8.64035 15.3604C8.79035 15.5104 8.98035 15.5804 9.17035 15.5804C9.36035 15.5804 9.55035 15.5104 9.70035 15.3604L12.0004 13.0604L14.3004 15.3604C14.4504 15.5104 14.6404 15.5804 14.8304 15.5804C15.0204 15.5804 15.2104 15.5104 15.3604 15.3604C15.6504 15.0704 15.6504 14.5904 15.3604 14.3004L13.0604 12.0004Z" fill="#D70000"/>
-        </svg>
-        
-    </button>
-  </div>
-  <div class="rounded-xxl has-[input:focus]:!outline-black z-[50] outline-black has-[input:placeholder-shown]:outline-gray-300  outline  flex mt-6 pe-3.5 items-center justify-between ">
-    <label for="search" class="flex w-full items-center gap-2 py-3 ps-3.5">
-      
-      <input id="search" type="text" class="outline-none placeholder:text-sm placeholder:text-[#616161]" placeholder="جستجو نام مسافر...">
-    </label>
-    <div>
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path opacity="0.4" d="M11.0002 20.0102C15.9763 20.0102 20.0102 15.9763 20.0102 11.0002C20.0102 6.02415 15.9763 1.99023 11.0002 1.99023C6.02415 1.99023 1.99023 6.02415 1.99023 11.0002C1.99023 15.9763 6.02415 20.0102 11.0002 20.0102Z" fill="black"/>
-        <path d="M14 10.25H8C7.59 10.25 7.25 9.91 7.25 9.5C7.25 9.09 7.59 8.75 8 8.75H14C14.41 8.75 14.75 9.09 14.75 9.5C14.75 9.91 14.41 10.25 14 10.25Z" fill="black"/>
-        <path d="M11 13.25H8C7.59 13.25 7.25 12.91 7.25 12.5C7.25 12.09 7.59 11.75 8 11.75H11C11.41 11.75 11.75 12.09 11.75 12.5C11.75 12.91 11.41 13.25 11 13.25Z" fill="black"/>
-        <path d="M21.9901 18.95C21.6601 18.34 20.9601 18 20.0201 18C19.3101 18 18.7001 18.29 18.3401 18.79C17.9801 19.29 17.9001 19.96 18.1201 20.63C18.5501 21.93 19.3001 22.22 19.7101 22.27C19.7701 22.28 19.8301 22.28 19.9001 22.28C20.3401 22.28 21.0201 22.09 21.6801 21.1C22.2101 20.33 22.3101 19.56 21.9901 18.95Z" fill="black"/>
-        </svg>
-        
-    </div>
-  </div>
-  <div class="relative z-0 w-full rounded-[2.125rem] bg-white  pt-12.5 pb-6">
+      <div
+        class="m-auto flex min-h-[26.25rem] w-[52.2rem] flex-col rounded-[2.5rem] bg-white px-10 pt-10"
+      >
+        <div class="flex items-center justify-between">
+          <p class="font-bold">لیست مسافران قبلی</p>
+          <button aria-label="Close Modal" class="close-modal">
+            <svg
+              aria-hidden="true"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                fill="#D70000"
+              />
+              <path
+                d="M13.0604 12.0004L15.3604 9.70035C15.6504 9.41035 15.6504 8.93035 15.3604 8.64035C15.0704 8.35035 14.5904 8.35035 14.3004 8.64035L12.0004 10.9404L9.70035 8.64035C9.41035 8.35035 8.93035 8.35035 8.64035 8.64035C8.35035 8.93035 8.35035 9.41035 8.64035 9.70035L10.9404 12.0004L8.64035 14.3004C8.35035 14.5904 8.35035 15.0704 8.64035 15.3604C8.79035 15.5104 8.98035 15.5804 9.17035 15.5804C9.36035 15.5804 9.55035 15.5104 9.70035 15.3604L12.0004 13.0604L14.3004 15.3604C14.4504 15.5104 14.6404 15.5804 14.8304 15.5804C15.0204 15.5804 15.2104 15.5104 15.3604 15.3604C15.6504 15.0704 15.6504 14.5904 15.3604 14.3004L13.0604 12.0004Z"
+                fill="#D70000"
+              />
+            </svg>
+          </button>
+        </div>
+        <div
+          class="rounded-xxl z-[50] mt-6 flex items-center justify-between pe-3.5 outline outline-black has-[input:focus]:!outline-black has-[input:placeholder-shown]:outline-gray-300"
+        >
+          <label
+            for="search"
+            class="flex w-full items-center gap-2 py-3 ps-3.5"
+          >
+            <input
+              id="search"
+              type="text"
+              class="outline-none placeholder:text-sm placeholder:text-[#616161]"
+              placeholder="جستجو نام مسافر..."
+            />
+          </label>
+          <div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.4"
+                d="M11.0002 20.0102C15.9763 20.0102 20.0102 15.9763 20.0102 11.0002C20.0102 6.02415 15.9763 1.99023 11.0002 1.99023C6.02415 1.99023 1.99023 6.02415 1.99023 11.0002C1.99023 15.9763 6.02415 20.0102 11.0002 20.0102Z"
+                fill="black"
+              />
+              <path
+                d="M14 10.25H8C7.59 10.25 7.25 9.91 7.25 9.5C7.25 9.09 7.59 8.75 8 8.75H14C14.41 8.75 14.75 9.09 14.75 9.5C14.75 9.91 14.41 10.25 14 10.25Z"
+                fill="black"
+              />
+              <path
+                d="M11 13.25H8C7.59 13.25 7.25 12.91 7.25 12.5C7.25 12.09 7.59 11.75 8 11.75H11C11.41 11.75 11.75 12.09 11.75 12.5C11.75 12.91 11.41 13.25 11 13.25Z"
+                fill="black"
+              />
+              <path
+                d="M21.9901 18.95C21.6601 18.34 20.9601 18 20.0201 18C19.3101 18 18.7001 18.29 18.3401 18.79C17.9801 19.29 17.9001 19.96 18.1201 20.63C18.5501 21.93 19.3001 22.22 19.7101 22.27C19.7701 22.28 19.8301 22.28 19.9001 22.28C20.3401 22.28 21.0201 22.09 21.6801 21.1C22.2101 20.33 22.3101 19.56 21.9901 18.95Z"
+                fill="black"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="relative z-0 w-full rounded-[2.125rem] bg-white pt-12.5 pb-6"
+        >
+          <div dir="ltr" class="relative mt-6">
+            <div
+              class="absolute top-0 right-0 left-0 z-[50] mx-auto h-5 w-[95%] -translate-y-1/2 rounded-[0.4375rem] bg-black"
+            ></div>
+            <table class="w-full table-fixed">
+              <thead class="sticky top-0 z-10">
+                <tr
+                  class="*:bg-gray-150 *:pt-7.5 *:pb-3.5 *:text-right *:font-normal"
+                >
+                  <th class="rounded-s-xxl th-large ps-3.5">
+                    <p>جنسیت</p>
+                  </th>
+                  <th class="">تاریخ تولد</th>
+                  <th class="">کد ملی</th>
+                  <th class="rounded-e-xxl !w-[23%] pe-10.5">نام خانوادگی</th>
+                </tr>
+              </thead>
+            </table>
+            <div class="table-scroll max-h-[15rem] overflow-y-scroll">
+              <table class="w-full">
+                <tbody class="w-full overflow-hidden overflow-y-scroll">
+                  <tr class="*:py-5.5 *:text-right">
+                    <td class="th-large ps-12 leading-5">
+                      <div class="flex items-center justify-between">
+                        <button
+                          class="close-modal select-plan flex items-center gap-1 rounded-lg border bg-white px-3.5 py-1.5 text-black"
+                        >
+                          <div>
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                opacity="0.4"
+                                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                                fill="#292D32"
+                              />
+                              <path
+                                d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </div>
+                          <p>انتخاب</p>
+                        </button>
+                        <p>مرد</p>
+                      </div>
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
 
-    <div dir="ltr" class="relative mt-6">
-      <div class="absolute top-0 right-0 left-0 z-[50] mx-auto h-5 w-[95%] -translate-y-1/2 rounded-[0.4375rem] bg-black"></div>
-      <table class="w-full table-fixed">
-        <thead class="sticky top-0 z-10">
-          <tr class="*:bg-gray-150 *:pt-7.5 *:pb-3.5 *:text-right *:font-normal">
-            
-            <th class="rounded-s-xxl th-large ps-3.5">
-              <p>جنسیت</p>
-            </th>
-            <th class="">تاریخ تولد</th>
-            <th class="">کد ملی</th>
-            <th class="rounded-e-xxl pe-10.5 !w-[23%]">نام خانوادگی</th>
-          </tr>
-        </thead>
-      </table>
-      <div class="table-scroll max-h-[15rem] overflow-y-scroll">
-        <table class="w-full">
-          <tbody class="w-full overflow-hidden overflow-y-scroll">
-            <tr class="*:py-5.5 *:text-right">
-              <td class="th-large leading-5 ps-12">
-                <div class="flex items-center justify-between">
-                  <button class="flex close-modal select-plan items-center gap-1 rounded-lg border  px-3.5 py-1.5 text-black bg-white">
-                    <div>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z" fill="#292D32"/>
-                        <path d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z" fill="black"/>
-                        </svg>
-                        
-                    </div>
-                    <p>انتخاب</p>
-                  </button>
-<p>مرد</p>
-                </div>
-              </td>
-              <td class="">تهران</td>
-              <td class="">1360/10/12</td>
+                    <td class="pe-6">
+                      <p class="">خرید خدمات</p>
+                    </td>
+                  </tr>
+                  <tr class="*:bg-[#F9F9F9] *:py-5.5 *:text-right">
+                    <td class="th-large ps-12 leading-5">
+                      <div class="flex items-center justify-between">
+                        <button
+                          class="close-modal select-plan flex items-center gap-1 rounded-lg border bg-white px-3.5 py-1.5 text-black"
+                        >
+                          <div>
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                opacity="0.4"
+                                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                                fill="#292D32"
+                              />
+                              <path
+                                d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </div>
+                          <p>انتخاب</p>
+                        </button>
+                        <p>مرد</p>
+                      </div>
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
 
-              <td class="pe-6">
-                <p class="">خرید خدمات</p>
-              </td>
-            </tr>
-            <tr class="*:py-5.5 *:bg-[#F9F9F9] *:text-right">
-              <td class="th-large leading-5 ps-12">
-                <div class="flex items-center justify-between">
-                  <button class="flex close-modal select-plan items-center gap-1 rounded-lg border  px-3.5 py-1.5 text-black bg-white">
-                    <div>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z" fill="#292D32"/>
-                        <path d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z" fill="black"/>
-                        </svg>
-                        
-                    </div>
-                    <p>انتخاب</p>
-                  </button>
-<p>مرد</p>
-                </div>
-              </td>
-              <td class="">تهران</td>
-              <td class="">1360/10/12</td>
+                    <td class="pe-6">
+                      <p class="">خرید خدمات</p>
+                    </td>
+                  </tr>
+                  <tr class="*:py-5.5 *:text-right">
+                    <td class="th-large ps-12 leading-5">
+                      <div class="flex items-center justify-between">
+                        <button
+                          class="close-modal select-plan flex items-center gap-1 rounded-lg border bg-white px-3.5 py-1.5 text-black"
+                        >
+                          <div>
+                            <svg
+                              width="24"
+                              height="24"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                opacity="0.4"
+                                d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z"
+                                fill="#292D32"
+                              />
+                              <path
+                                d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z"
+                                fill="black"
+                              />
+                            </svg>
+                          </div>
+                          <p>انتخاب</p>
+                        </button>
+                        <p>مرد</p>
+                      </div>
+                    </td>
+                    <td class="">تهران</td>
+                    <td class="">1360/10/12</td>
 
-              <td class="pe-6">
-                <p class="">خرید خدمات</p>
-              </td>
-            </tr>
-            <tr class="*:py-5.5 *:text-right">
-              <td class="th-large leading-5 ps-12">
-                <div class="flex items-center justify-between">
-                  <button class="flex close-modal select-plan items-center gap-1 rounded-lg border  px-3.5 py-1.5 text-black bg-white">
-                    <div>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path opacity="0.4" d="M16.19 2H7.81C4.17 2 2 4.17 2 7.81V16.18C2 19.83 4.17 22 7.81 22H16.18C19.82 22 21.99 19.83 21.99 16.19V7.81C22 4.17 19.83 2 16.19 2Z" fill="#292D32"/>
-                        <path d="M16 11.25H12.75V8C12.75 7.59 12.41 7.25 12 7.25C11.59 7.25 11.25 7.59 11.25 8V11.25H8C7.59 11.25 7.25 11.59 7.25 12C7.25 12.41 7.59 12.75 8 12.75H11.25V16C11.25 16.41 11.59 16.75 12 16.75C12.41 16.75 12.75 16.41 12.75 16V12.75H16C16.41 12.75 16.75 12.41 16.75 12C16.75 11.59 16.41 11.25 16 11.25Z" fill="black"/>
-                        </svg>
-                        
-                    </div>
-                    <p>انتخاب</p>
-                  </button>
-<p>مرد</p>
-                </div>
-              </td>
-              <td class="">تهران</td>
-              <td class="">1360/10/12</td>
-
-              <td class="pe-6">
-                <p class="">خرید خدمات</p>
-              </td>
-            </tr>
-       
-        
-          </tbody>
-        </table>
+                    <td class="pe-6">
+                      <p class="">خرید خدمات</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-    </div>
-  </dialog>
+    </dialog>
     <h1 class="sr-only">Booking One Way</h1>
     <header class="page-content pt-10 lg:pt-12">
       <nav class="flex items-center justify-between">
@@ -304,55 +387,48 @@
             پذیرش آنلاین
           </button>
           <div>
-
-           
-              <div tabindex="0" class="relative">
-                <div class="slct *:text-tiny group">
-                  <div class="select-trigger">
-                    <div
-                      class="input"
-                    >
-                      <div class=" hidden">
-                        <p
-                          class="text-tiny input-mimic-label top-2 leading-normal font-bold"
-                        >
-                        </p>
-                        <span class=" group-[.filled]:font-bold"
-                          ></span
-                        >
-                      </div>
-                      <button
-                      class="rounded-xxl uppercase selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white transition-colors hover:bg-gray-200 lg:flex"
+            <div tabindex="0" class="relative">
+              <div class="slct *:text-tiny group">
+                <div class="select-trigger">
+                  <div class="input">
+                    <div class="hidden">
+                      <p
+                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
+                      ></p>
+                      <span class="group-[.filled]:font-bold"></span>
+                    </div>
+                    <button
+                      class="rounded-xxl selected-value hidden size-10 items-center justify-center bg-black text-center text-sm font-bold text-white uppercase transition-colors hover:bg-gray-200 lg:flex"
                     >
                       FA
                     </button>
-  
-                      <div class="group-[.open]:rotate-180 hidden">
-                        <svg
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
-                            stroke="#292D32"
-                            stroke-width="1.5"
-                            stroke-miterlimit="10"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          />
-                        </svg>
-                      </div>
+
+                    <div class="hidden group-[.open]:rotate-180">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 18 18"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
+                          stroke="#292D32"
+                          stroke-width="1.5"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
                     </div>
                   </div>
-                  <div
-                  class="options-list shadow-[0_0_20px_0_rgba(0,0,0,0.08)] min-w-[6.3125rem] absolute top-full  left-0 z-50 mt-2 hidden space-y-1 rounded-lg bg-white !p-4 !pb-5 *:cursor-pointer *:!text-sm"
+                </div>
+                <div
+                  class="options-list absolute top-full left-0 z-50 mt-2 hidden min-w-[6.3125rem] space-y-1 rounded-lg bg-white !p-4 !pb-5 shadow-[0_0_20px_0_rgba(0,0,0,0.08)] *:cursor-pointer *:!text-sm"
                 >
                   <label
                     for="en"
-                    class="option border-b border-b-[#E9E9E9] pb-1.5 flex items-center gap-1.5"
+                    class="option flex items-center gap-1.5 border-b border-b-[#E9E9E9] pb-1.5"
                     data-value="en"
                   >
                     <input
@@ -380,19 +456,19 @@
                     <p class="font-bold">FA</p>
                   </label>
                 </div>
-  
-                  <!-- Hidden select for form submission -->
-                  <select
-                    name="customSelectValue"
-                    class="hidden-select hidden"
-                    required
-                  >
-                    <option value="">جنسیت...</option>
-                    <option value="fa">FA</option>
-                    <option value="en">EN</option>
-                  </select>
-                </div>
+
+                <!-- Hidden select for form submission -->
+                <select
+                  name="customSelectValue"
+                  class="hidden-select hidden"
+                  required
+                >
+                  <option value="">جنسیت...</option>
+                  <option value="fa">FA</option>
+                  <option value="en">EN</option>
+                </select>
               </div>
+            </div>
           </div>
           <button
             class="rounded-xxl hidden min-h-10 border border-black bg-white px-5.5 text-sm font-bold transition-colors hover:bg-gray-400 lg:block"
@@ -435,7 +511,7 @@
                 </div>
               </div>
               <button
-                class="flex items-center hover:bg-gray-400 transition-colors gap-2 rounded-lg bg-white px-17.5 py-2"
+                class="flex items-center gap-2 rounded-lg bg-white px-17.5 py-2 transition-colors hover:bg-gray-400"
               >
                 <p class="text-sm font-bold">تغییر بیلیت</p>
               </button>
@@ -772,8 +848,7 @@
             </div>
             <div class="flex items-center gap-2.5">
               <button
-         
-                class="flex hover:bg-gray-200 hover:text-black duration-500 open-modal items-center gap-2 rounded-lg border px-3.5 py-1.5"
+                class="open-modal flex items-center gap-2 rounded-lg border px-3.5 py-1.5 duration-500 hover:bg-gray-200 hover:text-black"
               >
                 <div>
                   <svg
@@ -844,26 +919,54 @@
                     </div>
                   </div>
                 </div>
-                <div class="options-list hidden absolute top-full right-0 left-0 z-50 mt-[0.25rem] space-y-2 rounded-2xl bg-white !p-4 !pb-5 *:cursor-pointer *:border-b *:border-b-[#e9e9e9] *:!text-sm">
-                    <label tabindex="0" for="woman" data-value="زن" class="option block pb-2">
-                      <div class="flex justify-between">
-                        <div class="flex w-full justify-between gap-1">
-                          <p class="text-tiny font-semibold">زن</p>
-                          <input type="radio" id="woman" name="gender" class="radio-hidden hidden w-full">
-                          <label for="woman" class="radio radio--black mt-0.5 aspect-square outline-[#838383]"></label>
-                        </div>
+                <div
+                  class="options-list absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden space-y-2 rounded-2xl bg-white !p-4 !pb-5 *:cursor-pointer *:border-b *:border-b-[#e9e9e9] *:!text-sm"
+                >
+                  <label
+                    tabindex="0"
+                    for="woman"
+                    data-value="زن"
+                    class="option block pb-2"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex w-full justify-between gap-1">
+                        <p class="text-tiny font-semibold">زن</p>
+                        <input
+                          type="radio"
+                          id="woman"
+                          name="gender"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="woman"
+                          class="radio radio--black mt-0.5 aspect-square outline-[#838383]"
+                        ></label>
                       </div>
-                    </label>
-                    <label tabindex="0" for="man" data-value="مرد" class="option block pb-2 selected">
-                      <div class="flex justify-between">
-                        <div class="flex w-full justify-between gap-1">
-                          <p class="text-tiny font-semibold">مرد</p>
-                          <input type="radio" id="man" name="gender" class="radio-hidden hidden w-full">
-                          <label for="man" class="radio radio--black mt-0.5 aspect-square outline-[#838383]"></label>
-                        </div>
+                    </div>
+                  </label>
+                  <label
+                    tabindex="0"
+                    for="man"
+                    data-value="مرد"
+                    class="option selected block pb-2"
+                  >
+                    <div class="flex justify-between">
+                      <div class="flex w-full justify-between gap-1">
+                        <p class="text-tiny font-semibold">مرد</p>
+                        <input
+                          type="radio"
+                          id="man"
+                          name="gender"
+                          class="radio-hidden hidden w-full"
+                        />
+                        <label
+                          for="man"
+                          class="radio radio--black mt-0.5 aspect-square outline-[#838383]"
+                        ></label>
                       </div>
-                    </label>
-                  </div>
+                    </div>
+                  </label>
+                </div>
 
                 <!-- Hidden select for form submission -->
                 <select
@@ -1450,102 +1553,45 @@
                 </svg>
               </div>
             </label>
-            <div
-              tabindex="0"
-              class="relative group-peer-has-[label:nth-child(1)>input:checked]:hidden"
+            <label
+              for="passport-number"
+              class="input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
             >
-              <div class="slct *:text-tiny group">
-                <div class="select-trigger">
-                  <div
-                    class="input rounded-xxl relative flex min-h-13 items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 group-[.filled]:!border-black focus:border-black"
+              <div>
+                <div class="relative pb-2.5">
+                  <p
+                    class="text-tiny input-mimic-label absolute leading-normal font-bold"
                   >
-                    <div class="flex flex-col">
-                      <p
-                        class="text-tiny input-mimic-label top-2 leading-normal font-bold"
-                      >
-                        شماره پاسپورت
-                      </p>
-                      <span
-                        class="selected-value group-[.filled]:font-bold"
-                      ></span>
-                    </div>
-
-                    <div class="group-[.open]:rotate-180">
-                      <svg
-                        width="18"
-                        height="18"
-                        viewBox="0 0 18 18"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M14.94 6.71249L10.05 11.6025C9.4725 12.18 8.5275 12.18 7.95 11.6025L3.06 6.71249"
-                          stroke="#292D32"
-                          stroke-width="1.5"
-                          stroke-miterlimit="10"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        ></path>
-                      </svg>
-                    </div>
-                  </div>
+                    شماره پاسپورت
+                  </p>
                 </div>
-                <div
-                  class="options-list absolute top-full right-0 left-0 z-50 mt-[0.25rem] hidden space-y-2 rounded-2xl bg-white !p-4 !pb-5 *:cursor-pointer *:border-b *:border-b-[#e9e9e9] *:!text-sm"
-                >
-                  <label
-                    tabindex="0"
-                    for="number-1"
-                    data-value="1"
-                    class="option block pb-2"
-                  >
-                    <div class="flex justify-between">
-                      <div class="flex w-full justify-between gap-1">
-                        <p class="text-tiny font-semibold">1</p>
-                        <input
-                          type="radio"
-                          id="number-1"
-                          name="passport-number"
-                          class="radio-hidden hidden w-full"
-                        />
-                        <label
-                          for="number-1"
-                          class="radio radio--black mt-0.5 aspect-square outline-[#838383]"
-                        ></label>
-                      </div>
-                    </div>
-                  </label>
-                  <label
-                    tabindex="0"
-                    for="number-2"
-                    data-value="2"
-                    class="option block pb-2"
-                  >
-                    <div class="flex justify-between">
-                      <div class="flex w-full justify-between gap-1">
-                        <p class="text-tiny font-semibold">2</p>
-                        <input
-                          type="radio"
-                          id="number-1"
-                          name="passport-number"
-                          class="radio-hidden hidden w-full"
-                        />
-                        <label
-                          for="number-2"
-                          class="radio radio--black mt-0.5 aspect-square outline-[#838383]"
-                        ></label>
-                      </div>
-                    </div>
-                  </label>
-                </div>
-
-                <select class="hidden-select hidden">
-                  <option value="">شماره پاسپورت</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                </select>
+                <input
+                  id="passport-number"
+                  class="placeholder:text-tiny w-full text-xs leading-normal font-bold outline-none placeholder:font-light placeholder:text-black"
+                  type="text"
+                  placeholder="شماره پاسپورت خود را وارد کنید..."
+                />
               </div>
-            </div>
+              <div class="input-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.5"
+                    d="M14 4H10C6.229 4 4.343 4 3.172 5.172C2.001 6.344 2 8.229 2 12C2 15.771 2 17.657 3.172 18.828C4.344 19.999 6.229 20 10 20H14C17.771 20 19.657 20 20.828 18.828C21.999 17.656 22 15.771 22 12C22 8.229 22 6.343 20.828 5.172C19.656 4.001 17.771 4 14 4Z"
+                    fill="#6A6A6A"
+                  ></path>
+                  <path
+                    d="M13.25 9C13.25 8.80109 13.329 8.61032 13.4697 8.46967C13.6103 8.32902 13.8011 8.25 14 8.25H19C19.1989 8.25 19.3897 8.32902 19.5303 8.46967C19.671 8.61032 19.75 8.80109 19.75 9C19.75 9.19891 19.671 9.38968 19.5303 9.53033C19.3897 9.67098 19.1989 9.75 19 9.75H14C13.8011 9.75 13.6103 9.67098 13.4697 9.53033C13.329 9.38968 13.25 9.19891 13.25 9ZM14.25 12C14.25 11.8011 14.329 11.6103 14.4697 11.4697C14.6103 11.329 14.8011 11.25 15 11.25H19C19.1989 11.25 19.3897 11.329 19.5303 11.4697C19.671 11.6103 19.75 11.8011 19.75 12C19.75 12.1989 19.671 12.3897 19.5303 12.5303C19.3897 12.671 19.1989 12.75 19 12.75H15C14.8011 12.75 14.6103 12.671 14.4697 12.5303C14.329 12.3897 14.25 12.1989 14.25 12ZM15.25 15C15.25 14.8011 15.329 14.6103 15.4697 14.4697C15.6103 14.329 15.8011 14.25 16 14.25H19C19.1989 14.25 19.3897 14.329 19.5303 14.4697C19.671 14.6103 19.75 14.8011 19.75 15C19.75 15.1989 19.671 15.3897 19.5303 15.5303C19.3897 15.671 19.1989 15.75 19 15.75H16C15.8011 15.75 15.6103 15.671 15.4697 15.5303C15.329 15.3897 15.25 15.1989 15.25 15ZM9 11C9.53043 11 10.0391 10.7893 10.4142 10.4142C10.7893 10.0391 11 9.53043 11 9C11 8.46957 10.7893 7.96086 10.4142 7.58579C10.0391 7.21071 9.53043 7 9 7C8.46957 7 7.96086 7.21071 7.58579 7.58579C7.21071 7.96086 7 8.46957 7 9C7 9.53043 7.21071 10.0391 7.58579 10.4142C7.96086 10.7893 8.46957 11 9 11ZM9 17C13 17 13 16.105 13 15C13 13.895 11.21 13 9 13C6.79 13 5 13.895 5 15C5 16.105 5 17 9 17Z"
+                    fill="#6A6A6A"
+                  ></path>
+                </svg>
+              </div>
+            </label>
           </div>
           <div
             class="border-b-gray-tag relative mt-8 flex items-center gap-2 border-b pb-4 before:absolute before:right-0 before:h-[1.875rem] before:w-[0.875rem] before:translate-x-[250%] before:rounded-[0.25rem] before:bg-black before:content-['']"
@@ -1642,7 +1688,7 @@
                   <p
                     class="text-tiny input-mimic-label absolute leading-normal font-bold"
                   >
-       ایمیل
+                    ایمیل
                   </p>
                 </div>
                 <input
@@ -1653,18 +1699,27 @@
                 />
               </div>
               <div class="input-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path opacity="0.4" d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" fill="#6A6A6A"/>
-                  <path d="M11.9998 12.87C11.1598 12.87 10.3098 12.61 9.65978 12.08L6.52978 9.57997C6.20978 9.31997 6.14978 8.84997 6.40978 8.52997C6.66978 8.20997 7.13978 8.14997 7.45978 8.40997L10.5898 10.91C11.3498 11.52 12.6398 11.52 13.3998 10.91L16.5298 8.40997C16.8498 8.14997 17.3298 8.19997 17.5798 8.52997C17.8398 8.84997 17.7898 9.32997 17.4598 9.57997L14.3298 12.08C13.6898 12.61 12.8398 12.87 11.9998 12.87Z" fill="#6A6A6A"/>
-                  </svg>
-                  
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                    fill="#6A6A6A"
+                  />
+                  <path
+                    d="M11.9998 12.87C11.1598 12.87 10.3098 12.61 9.65978 12.08L6.52978 9.57997C6.20978 9.31997 6.14978 8.84997 6.40978 8.52997C6.66978 8.20997 7.13978 8.14997 7.45978 8.40997L10.5898 10.91C11.3498 11.52 12.6398 11.52 13.3998 10.91L16.5298 8.40997C16.8498 8.14997 17.3298 8.19997 17.5798 8.52997C17.8398 8.84997 17.7898 9.32997 17.4598 9.57997L14.3298 12.08C13.6898 12.61 12.8398 12.87 11.9998 12.87Z"
+                    fill="#6A6A6A"
+                  />
+                </svg>
               </div>
             </label>
             <div class="flex items-center gap-1">
-              <label
-                for="accept"
-                class="flex w-full items-center  gap-1"
-              >
+              <label for="accept" class="flex w-full items-center gap-1">
                 <div class="option flex items-center gap-1.5">
                   <input
                     id="accept"
@@ -1680,7 +1735,7 @@
             </div>
             <label
               for="phone-number-whatsapp"
-              class="peer has-[input:disabled]:opacity-50 input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
+              class="peer input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:disabled]:opacity-50 has-[input:focus]:border-black"
             >
               <div>
                 <div class="relative pb-2.5">
@@ -1732,7 +1787,7 @@
             </label>
             <label
               for="phone-number-telegram"
-              class="peer input has-[input:disabled]:opacity-50 rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:focus]:border-black"
+              class="peer input rounded-xxl flex items-center justify-between border border-gray-300 bg-white p-2 ps-5 pe-3.5 has-[input:disabled]:opacity-50 has-[input:focus]:border-black"
             >
               <div>
                 <div class="relative pb-2.5">
@@ -1785,23 +1840,31 @@
           </div>
         </div>
         <div class="mt-16.5 flex items-center justify-between">
-          <button class="flex transition-colors hover:bg-gray-400 items-center gap-2 rounded-xl border border-black px-25 py-2">
+          <button
+            class="flex items-center gap-2 rounded-xl border border-black px-25 py-2 transition-colors hover:bg-gray-400"
+          >
             <p class="font-bold">بازگشت</p>
           </button>
           <div class="flex items-center gap-6">
-           
-            <button class="flex transition-colors hover:bg-gray-200 hover:text-black items-center gap-2 rounded-xl  bg-black px-13 py-2 text-white">
+            <button
+              class="flex items-center gap-2 rounded-xl bg-black px-13 py-2 text-white transition-colors hover:bg-gray-200 hover:text-black"
+            >
               <p class="font-bold">تایید اطلاعات و پرداخت</p>
             </button>
           </div>
         </div>
       </div>
     </main>
-  <footer class="page-content text-white my-20">
-      <div class="bg-gray-750 relative rounded-[1.25rem] p-12.5 pt-17 px-20">
+    <footer class="page-content my-20 text-white">
+      <div class="bg-gray-750 relative rounded-[1.25rem] p-12.5 px-20 pt-17">
         <div class="flex items-start">
           <div>
-            <img width="70" height="70" src="@assets/images/logo-contrast.webp" alt="" />
+            <img
+              width="70"
+              height="70"
+              src="@assets/images/logo-contrast.webp"
+              alt=""
+            />
           </div>
           <div class="">
             <div class="absolute top-0 mr-10">
@@ -1816,9 +1879,9 @@
           </div>
         </div>
         <div>
-          <div class="flex items-center justify-between mt-7 ">
+          <div class="mt-7 flex items-center justify-between">
             <div>
-              <p class=" max-w-[50ch] text-justify font-light">
+              <p class="max-w-[50ch] text-justify font-light">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
                 استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله
                 در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
@@ -1876,7 +1939,7 @@
                 <p>تهران، چهارراه جهان کودک، ضلع جنوب شرقی، برج آوان، طبقه 9</p>
               </div>
             </div>
-            <div class="flex  gap-10 *:text-nowrap">
+            <div class="flex gap-10 *:text-nowrap">
               <dl>
                 <dt class="mb-6 text-[1.25rem] font-bold">دسترسی سریع</dt>
                 <dd class="mb-4">
@@ -1955,7 +2018,7 @@
               </p>
               <div
                 dir="ltr"
-                class="mt-3.5 w-full flex w-fit items-center justify-between rounded-2xl bg-[#ececec] pe-2"
+                class="mt-3.5 flex w-fit w-full items-center justify-between rounded-2xl bg-[#ececec] pe-2"
               >
                 <input
                   placeholder="john@doe.com"
@@ -2031,14 +2094,27 @@
                   />
                 </svg>
               </button>
-               <button
+              <button
                 class="rounded-xxl flex min-h-10 w-[11rem] items-center gap-2 bg-white ps-3.5 text-sm font-semibold text-black transition-colors hover:bg-gray-400"
               >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.4" d="M9 7.2L9 16.79C9 20 11 22 14.2 22L16.79 22C19.99 22 21.99 20 21.99 16.8L21.99 7.2C22 4 20 2 16.8 2L14.2 2C11 2 9 4 9 7.2Z" fill="#212121"/>
-                <path d="M12.43 8.11953L15.78 11.4695C16.07 11.7595 16.07 12.2395 15.78 12.5295L12.43 15.8795C12.14 16.1695 11.66 16.1695 11.37 15.8795C11.08 15.5895 11.08 15.1095 11.37 14.8195L13.44 12.7495L2.75 12.7495C2.34 12.7495 2 12.4095 2 11.9995C2 11.5895 2.34 11.2495 2.75 11.2495L13.44 11.2495L11.37 9.17953C11.22 9.02953 11.15 8.83953 11.15 8.64953C11.15 8.45953 11.22 8.26953 11.37 8.11953C11.66 7.81953 12.13 7.81953 12.43 8.11953Z" fill="#212121"/>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    opacity="0.4"
+                    d="M9 7.2L9 16.79C9 20 11 22 14.2 22L16.79 22C19.99 22 21.99 20 21.99 16.8L21.99 7.2C22 4 20 2 16.8 2L14.2 2C11 2 9 4 9 7.2Z"
+                    fill="#212121"
+                  />
+                  <path
+                    d="M12.43 8.11953L15.78 11.4695C16.07 11.7595 16.07 12.2395 15.78 12.5295L12.43 15.8795C12.14 16.1695 11.66 16.1695 11.37 15.8795C11.08 15.5895 11.08 15.1095 11.37 14.8195L13.44 12.7495L2.75 12.7495C2.34 12.7495 2 12.4095 2 11.9995C2 11.5895 2.34 11.2495 2.75 11.2495L13.44 11.2495L11.37 9.17953C11.22 9.02953 11.15 8.83953 11.15 8.64953C11.15 8.45953 11.22 8.26953 11.37 8.11953C11.66 7.81953 12.13 7.81953 12.43 8.11953Z"
+                    fill="#212121"
+                  />
                 </svg>
-                
+
                 ثبت نام آژانس ها
               </button>
             </div>
@@ -2193,35 +2269,35 @@
           });
         });
 
-        const dialog = document.getElementById("prev-passengers")
-    const openBtn = document.querySelectorAll(".open-modal");
-    const closeBtn = document.querySelectorAll(".close-modal");
+      const dialog = document.getElementById("prev-passengers");
+      const openBtn = document.querySelectorAll(".open-modal");
+      const closeBtn = document.querySelectorAll(".close-modal");
 
-    openBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        dialog.showModal();
+      openBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          dialog.showModal();
+        });
       });
-    });
 
-    closeBtn.forEach((btn) => {
-      btn.addEventListener("click", () => {
+      closeBtn.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          dialog.close();
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.contains(dialog)) return;
         dialog.close();
       });
-    });
 
-    document.addEventListener("click", (event) => {
-      if (!event.target.contains(dialog)) return;
-      dialog.close();
-    });
+      const accept = document.getElementById("accept");
+      const whatsappNumber = document.getElementById("phone-number-whatsapp");
+      const telegramNumber = document.getElementById("phone-number-telegram");
 
-    const accept = document.getElementById("accept")
-    const whatsappNumber = document.getElementById("phone-number-whatsapp")
-    const telegramNumber = document.getElementById("phone-number-telegram")
-
-    accept.addEventListener("change" , () => {
-      whatsappNumber.disabled = !whatsappNumber.disabled
-      telegramNumber.disabled = !telegramNumber.disabled
-    })
+      accept.addEventListener("change", () => {
+        whatsappNumber.disabled = !whatsappNumber.disabled;
+        telegramNumber.disabled = !telegramNumber.disabled;
+      });
     </script>
   </body>
 </html>

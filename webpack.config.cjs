@@ -27,6 +27,7 @@ module.exports = {
     citySelect: "./src/assets/js/citySelect.js",
     reservationManagement: "./src/assets/js/reservationManagement.js",
     inc: "./src/assets/js/inc.js",
+    passwordInput: "./src/assets/js/passwordInput.js",
   },
 
   plugins: [
@@ -70,6 +71,8 @@ module.exports = {
         "reservation-management/index":
           "./src/reservation-management/index.html",
         "airplanes/index": "./src/airplanes/index.html",
+        "payment-success/index": "./src/payment-success/index.html",
+        "payment-failed/index": "./src/payment-failed/index.html",
       },
       js: {
         filename: "js/[name].[contenthash:8].js",
